@@ -1,0 +1,146 @@
+body
+{
+	background: #E7E7E2;
+	font: normal 62.5% Tahoma, sans-serif;
+}
+
+/* headere & title */
+.header
+{
+	background: #222 url('../images/header.jpg') no-repeat;
+	height: 90px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.header .title
+{
+	color: #FFF;
+	padding-top: 20px;
+}
+
+.header .title .sitename
+{
+	color: #FFF;
+	font: normal 3em sans-serif;
+	padding-bottom: 2px;
+	text-decoration: none;
+}
+
+.header .title .slogan
+{
+	font: normal 1.1em Verdana, sans-serif;
+	padding-top: 6px;
+}
+
+/* top */
+.top
+{
+	background: #949490;
+	color: #FFF;
+	font: normal 1.0em Verdana, sans-serif;
+	padding: 3px 12px;
+}
+
+.top a
+{
+	color: #FAFAFA;
+	text-decoration: underline;
+}
+
+.top a:hover
+{
+	color: #FFC;
+	text-decoration: none;
+}
+
+/* footer */
+.footer
+{
+	background: #949490;
+	color: #F7F7F2;
+	font: 1em sans-serif;
+	text-align: center;
+	margin-top: 5px;
+	padding: 6px 12px;
+}
+
+.footer a
+{
+	color: #F7F7F2;
+	text-decoration: underline;
+}
+
+.footer a:hover
+{
+	color: #FFC;
+	text-decoration: none;
+}
+
+a
+{
+	color: #048;
+}
+
+a:hover
+{
+	color: #06C;
+}
+
+h1, h2, h3
+{
+	font: bold 1.2em sans-serif;
+	color: #553;
+	margin-bottom: 4px;
+}
+
+div.message
+{
+	border-style: solid;
+	border-width: 1px;
+	margin: 0 0 16px 8px;
+	padding: 6px;
+	background-color: #c1dc9d;
+	border-color: #7ab727;
+}
+
+div.error
+{
+	border-style: solid;
+	border-width: 1px;
+	margin: 0 0 16px 8px;
+	padding: 6px;
+	background-color: #FFEBE8;
+	border-color: #CC0000;
+}
+
+input.styled
+{
+	border: 1px solid #BBB;
+	padding: 2px;
+	font: normal 1em Verdana,sans-serif;
+}
+
+div.container
+{
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: "Lucida Sans Unicode", sans-serif;
+	font-size: 1.2em;
+	padding: 10px;
+	background-color: #FFFFFF;
+	border: 2px solid #D7D7D2;
+}
+
+.main
+{
+	padding: 6px 0 0 0;
+	background-color: #FFFFFF;
+}
+
+table.install
+{
+	margin-top: -10px;
+	width: 100%;
+}
