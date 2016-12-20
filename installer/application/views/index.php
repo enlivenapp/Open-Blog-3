@@ -69,9 +69,4 @@
 			<p><a href="index.php/installer/step_one" class="btn btn-lg btn-default">Begin Installation</a></p>
 		</div>
 	</div>
-
-	<pre class="text-left">
-
-<?php print_r($this->session) ?>
-	</pre>
 <?php $this->load->view('footer.php'); ?>

@@ -426,7 +426,7 @@ class Installer extends CI_Controller {
 
 
 		// Get the SQL for the intended database and parse it
-		$schema = file_get_contents('./sql/' .  $this->session->db_engine . '.sql');
+		$schema = file_get_contents('./src/' .  $this->session->db_engine . '.sql');
 
 		$schema = str_replace('{PREFIX}', $this->session->db_prefix, $schema);
 		$schema = str_replace('{USER-EMAIL}', $this->session->email, $schema);
@@ -497,6 +497,15 @@ class Installer extends CI_Controller {
 																							'___ENCRYPTION_KEY___' => $encryption_key,
 																							)
 		);
+	}
+
+	protected function write_file_htaccess()
+	{
+		if ($this->session->server == 'apache_w')
+		{
+			$this->write_file_vars('../.htaccess', '/src/htaccess', array());
+		}
+		return true;
 	}
 
 
