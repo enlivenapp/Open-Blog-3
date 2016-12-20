@@ -36,6 +36,31 @@
  * @filesource
  */
 
+
+
+/* sort out installation.
+	Majority of this code is
+	from the PyroCMS v2.2 community
+	index.php file.
+*/
+if ( ! file_exists('application/config/database.php') || ! file_exists('application/config/config.php') )
+{
+	// Make sure we've not already tried this
+	if (strpos($_SERVER['REQUEST_URI'], 'installer/'))
+	{
+		header('Status: 404');
+		exit('Open Blog is missing application/config/database.php or application/config/config.php and cannot find the installer folder. Please check permission to access these files or upload the installer folder.');
+	}
+	
+	// Otherwise go to installer
+	header('Location: '.rtrim($_SERVER['REQUEST_URI'], '/').'/installer/');
+	exit;
+}
+
+
+
+
+
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
