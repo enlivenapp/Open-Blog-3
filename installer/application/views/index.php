@@ -13,7 +13,7 @@
 			<ul class="text-left">
 				<li>MySQL/MariaDB database with name, hostname, username, and password</li>
 				<li>PHP 5.6 or higher</li>
-				<li>Writable Directories: /application/config, /uploads, </li>
+				<li>Writable Directories: /application/config, /uploads, / (home for .htaccess)</li>
 			</ul>
 
 		</div>
@@ -57,7 +57,7 @@
 			<ul class="text-left">
 				<li>/Application/Config : <?php echo ($config_dir) ? 'Yes <i class="fa fa-check text-success"></i>' : 'No <i class="fa fa-times text-danger"></i>'; ?></li>
 				<li>/uploads : <?php echo ($uploads_dir) ? 'Yes <i class="fa fa-check text-success"></i>' : 'No <i class="fa fa-times text-danger"></i>'; ?></li>
-				<li></li>
+				<li>/ : <?php echo ($home_dir) ? 'Yes <i class="fa fa-check text-success"></i>' : 'No <i class="fa fa-times text-danger"></i>'; ?></li>
 			</ul>
 
 		</div>		

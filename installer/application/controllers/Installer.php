@@ -32,6 +32,7 @@ class Installer extends CI_Controller {
 		// writable files
 		$data['config_dir'] = $this->dir_writable('../application/config');
 		$data['uploads_dir'] = $this->dir_writable('../uploads');
+		$data['home_dir'] = $this->dir_writable('../');
 
 	//	echo '<pre style="text-align: left;">';
 	//	print_r($data);
@@ -164,16 +165,15 @@ class Installer extends CI_Controller {
 	        	
 	        	$installed = $this->install();
 
-	        	print_r($installed);
-
 	        	if ($installed['status'] = 'success')
 	        	{
-
+	        		redirect('step_three');
 	        	}
 	        	else
 	        	{
 	        		// cry about it.
-	        		
+	        		$data['message'] = $installed['message'];
+	        		$this->load->view('step_two', $data);
 	        	}
 	        	
 	        }
@@ -188,6 +188,8 @@ class Installer extends CI_Controller {
 	public function step_three()
 	{
 		$this->set_base_url();
+
+		$this->load->view('install_complete');
 	}
 
 
@@ -202,19 +204,31 @@ class Installer extends CI_Controller {
 	 */
 	public function install()
 	{
-		// set the base_url so we can 
-		// present some meaningful results
-		$this->set_base_url();
-
 
 		// write application/config/config.php
-		$this->write_file_config();
+		if ( ! $this->write_file_config() )
+		{
+			return array('status' => false, 'message' => 'Could not write config file');
+		}
 
 		// write application/config/database.php
-		$this->write_file_db();
+		if ( ! $this->write_file_db() )
+		{
+			return array('status' => false, 'message' => 'Could not write database file');
+		}
 
 		// insert SQL into database
-		$this->process_sql($file);
+		if ( ! $this->process_sql() )
+		{
+			return array('status' => false, 'message' => 'Could not write to the database.');
+		}
+
+		// write the .htaccess file if we can
+		if ( ! $this->write_file_htaccess() )
+		{
+			return array('status' => false, 'message' => 'Could not write htaccess file');
+		}
+		return array('status' => true, 'message' => 'Installed Successfully!');
 	}
 
 
@@ -444,10 +458,11 @@ class Installer extends CI_Controller {
 
 		foreach ($queries as $query)
 		{
-			$query = rtrim( trim($query), "\n;");
+			$query = rtrim( trim($query), "\n");
 
-			if ( ! $db->query($query))
+			if ( ! $db->query($query) )
 			{
+				print_r($db->error);
 				return false;
 			}
 		}
@@ -472,7 +487,7 @@ class Installer extends CI_Controller {
 			'___DRIVER___'   	=> class_exists($this->session->db_engine) ? $this->session->db_engine : 'mysqli'
 		);
 
-		return $this->_write_file_vars('../application/config/database.php', '../application/config//database.php.bak', $replace);
+		return $this->write_file_vars('../application/config/database.php', '../application/config//database.php.bak', $replace);
 	}
 
 
@@ -491,7 +506,7 @@ class Installer extends CI_Controller {
 		// Make random encryption key for each website
 		$encryption_key = substr($this->encrypt->encode(str_shuffle(md5(time())), mt_rand()), 0, 42);
 
-		return $this->_write_file_vars('../application/config/config.php', '../application/config/config.php.bak', array(
+		return $this->write_file_vars('../application/config/config.php', '../application/config/config.php.bak', array(
 																							'___BASE_URL___' => $this->session->base_url,
 																							'___INDEX_PAGE___' => $index_page,
 																							'___ENCRYPTION_KEY___' => $encryption_key,
@@ -503,7 +518,10 @@ class Installer extends CI_Controller {
 	{
 		if ($this->session->server == 'apache_w')
 		{
-			$this->write_file_vars('../.htaccess', '/src/htaccess', array());
+			if ( ! $this->write_file_vars('../.htaccess', './src/htaccess', array()) )
+			{
+				return false;
+			}
 		}
 		return true;
 	}
@@ -521,7 +539,7 @@ class Installer extends CI_Controller {
 	 *
 	 * @return string
 	 */
-	protected function write_file_vars(string $dest, string $temp, $replace)
+	protected function write_file_vars($dest, $temp, $replace)
 	{
 		return (file_put_contents($dest, str_replace(array_keys($replace), $replace, file_get_contents($temp))) !== false);
 	}
