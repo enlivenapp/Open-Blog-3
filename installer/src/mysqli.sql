@@ -175,7 +175,7 @@ CREATE TABLE IF NOT EXISTS {PREFIX}posts (
 
 -- split --
 
-INSERT INTO {PREFIX}posts (id, author, date_posted, title, url_title, excerpt, content, allow_comments, sticky, `status`) VALUES(1, 1, '2016-12-21', 'Welcome to Open Blog', 'welcome-to-open-blog', '<p>Congratulations!</p>\n<p>If you can see this post, this means Open Blog was successfully installed.</p>\n<p>If you need help, don\'t hesitate and visit the Blog Pie <a href="http://open-blog.org" target="_blank">home page</a>.</p>\n<p>Sincerely,<br />The Open Blog team</p>\n<p><em>Since this is just an example post, feel free to delete it.</em></p>', '', '1', '0', 'published');
+INSERT INTO {PREFIX}posts (id, author, date_posted, title, url_title, excerpt, content, allow_comments, sticky, `status`) VALUES(1, 1, '2016-12-21', 'Welcome to Open Blog', 'welcome-to-open-blog', '<p>Congratulations!</p>\n<p>If you can see this post, this means Open Blog was successfully installed.</p>\n<p>If you need help, don\'t hesitate and visit the <a href="http://open-blog.org" target="_blank">Open Blog website</a>.</p>\n<p>Sincerely,<br />The Open Blog team</p>\n<p><em>Since this is just an example post, feel free to delete it.</em></p>', '', '1', '0', 'published');
 
 -- split --
 
