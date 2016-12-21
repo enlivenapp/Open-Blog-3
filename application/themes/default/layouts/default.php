@@ -6,10 +6,11 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title><?php echo $template['title']; ?></title>
-		<?php echo $template['metadata']; ?>
-
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    <!-- if you create CDN links, do that first before echoing $template['metadata'] so you can override default CDN settings -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
+    <!-- echo css, js, and other metadata as defined -->
+    <?php echo $template['metadata']; ?>
 	</head>
 	<body>
 		<!-- temp -->
@@ -189,7 +190,7 @@
                         <div class="row" id="footer">    
                           <div class="col-sm-6">
                             <p class="">
-                            <a href="http://www.bootply.com">Theme: Bootply</a> | <a href="http://www.enlivenapp.com">Powered by Blog Pie</a>
+                            <a href="http://www.bootply.com">Theme: Bootply</a> | <a href="http://open-blog.org">Powered by Open Blog</a>
                             </p>
                           </div>
                           <div class="col-sm-6 text-right">

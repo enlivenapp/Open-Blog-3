@@ -12,22 +12,16 @@ class MY_Controller extends CI_Controller
 		// from the database... 
 		parent::__construct();
 
-
-
 		$this->benchmark->mark('my_controller_start');
-
-		$this->load->model('blog_m');
+		// we use this everywhere
+		$this->load->library('Auth/ion_auth');
+		$this->load->library('blogcore');
 
 		// get theme info
-		$theme = $this->db->where('is_active', 1)->where('is_admin', 0)->limit(1)->get('templates')->row();
+		$theme = $this->blogcore->get_active_theme();
 
 		// get all the settings from the db
-		$settings = $this->db->get('settings')->result();
-
-		foreach ($settings as $set)
-		{
-			$this->config->set_item($set->name, $set->value);	
-		}
+		$settings = $this->blogcore->db_to_config();
 
 		if ($this->config->item('site_name'))
 		{
@@ -36,6 +30,7 @@ class MY_Controller extends CI_Controller
 
 
 		// because PITassets...
+		Asset::set_url(base_url());
 		Asset::add_path('core', base_url('application/themes/' . $theme->path . '/'));
 
 
@@ -53,55 +48,15 @@ class MY_Controller extends CI_Controller
 			->set_partial('links', 'links')
 			->set_partial('social', 'social');
 
-
-		// set vars for useful partials data
-		$this->template
-			->set('nav', $this->get_navigation())
-			->set('archives_list', $this->blog_m->get_archive())
-			->set('categories_list', $this->blog_m->get_categories())
-			->set('feeds_list', [])
-			->set('links_list', $this->blog_m->get_links())
-			->set('social_list', $this->generate_social_links());
-		
-
+			$this->template
+					->set('nav', $this->blogcore->get_navigation())
+					->set('social_list', $this->blogcore->generate_social_links());
 
 		$this->benchmark->mark('my_controller_end');
 	}
 
 
-	protected function get_navigation()
-	{
-		$this->db->select('title, description, url, external, position');
-		$this->db->order_by('position', 'ASC'); 
-		
-		$query = $this->db->get('navigation');
-			
-		if ($query->num_rows() > 0)
-		{
-			return $query->result_array();
-		}
-	}
 
-
-	public function generate_social_links()
-	{
-		if ( ! $social = $this->db->where('enabled', '1')->get('social')->result())
-		{
-			return false;
-		}
-		else
-		{
-			$return = '';
-			foreach ($social as $s)
-			{
-				$return .= anchor($s->url, $s->name) . ' | ';
-			}
-			$return .= '';
-		}
-		$return = rtrim($return, ' | ');
-
-		return $return;
-	}
 
 
 }
