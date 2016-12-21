@@ -74,8 +74,8 @@ CREATE TABLE IF NOT EXISTS {PREFIX}languages (
 -- split --
 
 INSERT INTO `{PREFIX}languages` (`id`, `language`, `abbreviation`, `author`, `author_website`, `is_default`) VALUES
-(1, 'english', 'en', 'Tomaz Muraus', 'http://www.open-blog.info', '1'),
-(2, 'slovene', 'sl', 'Tomaz Muraus', 'http://www.open-blog.info', '0');
+(1, 'english', 'en', 'Tomaz Muraus', 'http://www.open-blog.org', '1'),
+(2, 'slovene', 'sl', 'Tomaz Muraus', 'http://www.open-blog.org', '0');
 
 -- split --
 
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS {PREFIX}links (
 -- split --
 
 INSERT INTO `{PREFIX}links` (`id`, `name`, `url`, `target`, `description`, `visible`) VALUES
-(1, 'Open Blog', 'http://open-blog.org', 'blank', 'Blog Pie Website', 'yes'),
+(1, 'Open Blog', 'http://open-blog.org', 'blank', 'Open Blog Website', 'yes'),
 (2, 'CodeIgniter', 'http://www.codeigniter.com', 'blank', 'Codeigniter PHP Framework', 'yes');
 
 -- split --
@@ -356,7 +356,7 @@ CREATE TABLE IF NOT EXISTS {PREFIX}users (
 
 -- split --
 
-INSERT INTO {PREFIX}users (id, ip_address, username, `password`, salt, email, activation_code, forgotten_password_code, forgotten_password_time, remember_code, created_on, last_login, active, first_name, last_name, company, phone) VALUES(1, '127.0.0.1', '{USER-NAME}', '{PASSWORD}', '{SALT}', '{USER-EMAIL}', '', NULL, NULL, 'X6gpMsVgwyQTETr8NUKUNO', {NOW}, {NOW}, 1, '{FIRST-NAME}', '{LAST-NAME}', NULL, NULL);
+INSERT INTO {PREFIX}users (id, ip_address, username, `password`, salt, email, activation_code, forgotten_password_code, forgotten_password_time, remember_code, created_on, last_login, active, first_name, last_name, company, phone) VALUES(1, '127.0.0.1', '{USER-NAME}', '{PASSWORD}', '{SALT}', '{USER-EMAIL}', NULL, NULL, NULL, NULL, {NOW}, {NOW}, 1, '{FIRST-NAME}', '{LAST-NAME}', NULL, NULL);
 
 -- split --
 
@@ -372,11 +372,11 @@ CREATE TABLE IF NOT EXISTS {PREFIX}users_groups (
   UNIQUE KEY uc_bp_users_groups (user_id,group_id),
   KEY fk_bp_users_groups_users1_idx (user_id),
   KEY fk_bp_users_groups_groups1_idx (group_id)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- split --
 
-INSERT INTO {PREFIX}users_groups (id, user_id, group_id) VALUES(19, 1, 1);
+INSERT INTO {PREFIX}users_groups (id, user_id, group_id) VALUES(1, 1, 1);
 
 -- split --
 
