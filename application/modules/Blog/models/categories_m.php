@@ -17,12 +17,15 @@ class Categories_m extends CI_Model
 	// Public methods
 	public function get_categories()
 	{
-		$this->db->select('id, name, url_name, description');
-			
-		$query = $this->db->get('categories');
+		$this->db->select('id, name, url_name')
+		 			->select('(SELECT COUNT(' . $this->db->dbprefix($this->_table['posts_to_categories'] . '.id') . ' ) FROM ' . $this->db->dbprefix($this->_table['posts_to_categories']) . ' WHERE ' . $this->db->dbprefix($this->_table['posts_to_categories'] . '.category_id') . ' = ' . $this->db->dbprefix($this->_table['categories'] . '.id') . ') AS posts_count', FALSE) 
+					->order_by('id', 'ASC')
+					->limit($this->config->item('category_list_limit'));
+		
+		$query = $this->db->get($this->_table['categories']);
 			
 		if ($query->num_rows() > 0)
-		{
+		{			
 			return $query->result_array();
 		}
 	}
@@ -35,7 +38,7 @@ class Categories_m extends CI_Model
 			
 		if ($query->num_rows() > 0)
 		{
-			return $query->result_array();
+			return $query->result();
 		}
 	}
 	

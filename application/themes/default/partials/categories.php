@@ -1,5 +1,4 @@
-<h4 class="text-center text-muted">Categories</h4>
-
+<h4 class="text-center text-muted"><?php echo lang('categories_hdr'); ?></h4>
 <ul class="list-group">
 	<?php if ($this->template->categories_list): ?>
 		<?php foreach ($this->template->categories_list as $category): ?>

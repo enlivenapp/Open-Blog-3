@@ -1,36 +1,64 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-// Index, Archive, Category
-$lang['read_more'] 						= "Read more ...";
-$lang['older_entries']					= "&laquo; Older Entries";
-$lang['newer_entries']					= "Newer Entries &raquo;";
+// headers
+$lang['recent_posts']					= "Recent Posts";
+$lang['older_posts']					= "Older Posts";
+$lang['connect_hdr']					= "Connect";
+$lang['blog_links_hdr']					= "Blog Links";
+$lang['links_hdr']						= "Links";
+$lang['archives_hdr']					= "Archives";
+$lang['categories_hdr']					= "Categories";
+$lang['blog_feeds_hdr']					= "Blog Feeds";				
+$lang['category_hdr']					= "Posts in Category ";
+$lang['archives_for_hdr']				= "Archives for ";
 
+// General Buttons
+$lang['btn_read_more'] 					= "Read more&hellip;";
+$lang['btn_edit']						= "Edit";
+$lang['btn_remove']						= "Remove";
+$lang['btn_unpub']						= "Un-publish";
+$lang['submit']							= "Submit";
+
+
+// Comments
+$lang['comments_disabled']				= "Comments are disabled.";
+$lang['comments_disabled_post']			= "Comments are disabled for this post.";
+$lang['comments']						= "Comments";
+$lang['comment']						= "Comment";
+$lang['comments_title']					= "Comments";
+$lang['comment_submit']					= "Submit Comment";
+$lang['no_comments']					= "No comments yet";
+$lang['btn_approve_comment']			= "Approve Comment"; // Approve modded comment
+$lang['btn_remove_comment']				= "Remove Comment"; // Deletes the comment
+$lang['btn_hide_comment']				= "Hide Comment";  // Hides Comment, provides link to 'view anyway'
+$lang['btn_flag_comment']				= "Flag Comment";  // flag as inappropriate, unhelpful, or SPAM
+
+// Misc
 $lang['add_to']							= "Add to:";
 $lang['posted_in']						= "Posted in";
 $lang['in']								= "in";
 $lang['by'] 							= "by";
-$lang['comments']						= "Comments";
+
+// old pagination?
+$lang['older_entries']					= "&laquo; Older Entries";
+$lang['newer_entries']					= "Newer Entries &raquo;";
+
+
+
 
 // Single post
 $lang['leave_reply']					= "Leave a Comment";
 $lang['leave_reply_description']		= "Feel free to share your thoughts about this entry.";
-$lang['comments_disabled']				= "Comments are disabled.";
-$lang['comments_disabled_post']			= "Comments are disabled for this post.";
+
 $lang['responses_to']					= "Responses (%d) to";
 $lang['on']								= "on";
 $lang['at']								= "at";
 $lang['nickname']						= "Name";
 $lang['email']							= "Email";
-$lang['website']						= "Website";
+//$lang['website']						= "Website";  // Depreciated
 $lang['confirmation_image']				= "Confirmation image";
 $lang['confirmation_code']				= "Confirmation code";
-$lang['comment']						= "Comment";
-$lang['comments_title']					= "Comments";
-$lang['comment_submit']					= "Submit Comment";
-$lang['no_comments']					= "No comments yet";
 
-// genereal 
-$lang['submit']							= "Submit";
 
 // Tags
 $lang['posts_tagged_with']				= "Posts tagged with";

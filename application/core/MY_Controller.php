@@ -16,6 +16,8 @@ class MY_Controller extends CI_Controller
 		// we use this everywhere
 		$this->load->library('Auth/ion_auth');
 		$this->load->library('blogcore');
+		$this->load->model('blog/blog_m');
+		$this->load->language('blog');
 
 		// get theme info
 		$theme = $this->blogcore->get_active_theme();
@@ -40,17 +42,35 @@ class MY_Controller extends CI_Controller
 		// let's set up default places for template partials.
 		// all of these can be used or not as needed.
 		$this->template
+				->set_partial('nav', 'nav')
+				->set_partial('archives', 'archives')
+				->set_partial('categories', 'categories')
+				->set_partial('feeds', 'feeds')
+				->set_partial('links', 'links')
+				->set_partial('social', 'social');
 
-			->set_partial('nav', 'nav')
-			->set_partial('archives', 'archives')
-			->set_partial('categories', 'categories')
-			->set_partial('feeds', 'feeds')
-			->set_partial('links', 'links')
-			->set_partial('social', 'social');
+		$this->template
+				->set('nav', $this->blogcore->get_navigation())
+				->set('archives_list', $this->blog_m->get_archive())
+				->set('links_list', $this->blog_m->get_links())
+				->set('categories_list', $this->blog_m->get_categories())
+				->set('social_list', $this->blogcore->generate_social_links());
 
-			$this->template
-					->set('nav', $this->blogcore->get_navigation())
-					->set('social_list', $this->blogcore->generate_social_links());
+
+		// Allow for something other than 'blog' to be the 
+		// "base_controller" by means of a redirect. Similar
+		// to WordPress functionality.
+		// Your new base controller *MUST* contain an index()
+		// method or things will get ugly fast.	
+		// 
+		// TODO: Change this to actually make the base_controller
+		// the base_controller in config.php so the site root shows 
+		// the correct controller without using uri section 1
+		//if ($this->config->item('base_controller') != 'blog')
+		//{
+		//	redirect($this->config->item('base_controller'));
+		//}
+
 
 		$this->benchmark->mark('my_controller_end');
 	}

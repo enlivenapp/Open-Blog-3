@@ -1,4 +1,4 @@
-<h4 class="text-center text-muted">Blog Feeds</h4>
+<h4 class="text-center text-muted"><?php echo lang('blog_feeds_hdr'); ?></h4>
 
 <ul class="list-group">
 	<li class="list-group-item text-center"><a href="<?php echo site_url('feed/rss/posts'); ?>">RSS (posts)</a></li>

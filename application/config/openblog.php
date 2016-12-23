@@ -26,6 +26,7 @@ $config['openblog']['tables']['comments']    			= 'comments';
 $config['openblog']['tables']['users']    				= 'users';
 $config['openblog']['tables']['posts_to_categories']     = 'posts_to_categories';
 $config['openblog']['tables']['settings']          			= 'settings';
+$config['openblog']['tables']['pages']          			= 'pages';
 
 /*
  | Users table column and Group table column you want to join WITH.

@@ -1,10 +1,16 @@
-
 <div class="col-sm-12" id="recent">   
   <div class="page-header text-muted">
     <?php if (! $this->uri->segment(1)): ?>
-  Recent Posts
+  <?php echo lang('recent_posts'); ?>
 <?php else: ?>
-  Older Posts
+  <?php if ($this->uri->segment(2) == 'category'): ?>
+    <?= lang('category_hdr') . ' `' . ucfirst($this->uri->segment(3)) . '`'  ?> 
+  <?php elseif ($this->uri->segment(2) == 'archive'): ?>
+    <?= lang('archives_for_hdr') . ' ' . date('F', $this->uri->segment(4)) . ' ' . $this->uri->segment(3)  ?> 
+
+  <?php else: ?>
+    <?php echo lang('older_posts'); ?>
+  <?php endif ?>
 <?php endif ?>
   </div> 
 </div>
@@ -29,9 +35,9 @@
         <p><?php echo $post->excerpt ?></p>
         <h4>
           <small class="text-muted">
-            <a class="btn btn-default text-muted" href="<?php echo $post->url ?>">Read More</a> 
+            <a class="btn btn-default text-muted" href="<?php echo $post->url ?>"><?php echo lang('btn_read_more'); ?></a> 
             <?php if ( $this->ion_auth->is_admin() || $this->ion_auth->in_group('editor') || $this->ion_auth->logged_in() && $this->session->userdata('user_id') == $post->author  ): ?>
-            <a class="btn btn-default text-muted" href="<?php echo site_url('blog/edit_post/' . $post->id) ?>">Edit</a> 
+            <a class="btn btn-default text-muted" href="<?php echo site_url('blog/edit_post/' . $post->id) ?>"><?php echo lang('btn_edit'); ?></a> 
             <?php endif ?>
             <br>
             

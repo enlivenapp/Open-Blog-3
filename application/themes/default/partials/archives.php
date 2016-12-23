@@ -1,4 +1,4 @@
-<h4 class="text-center text-muted">Archives</h4>
+<h4 class="text-center text-muted"><?php echo lang('archives_hdr'); ?></h4>
 
 <ul class="list-group">
 	<?php if ($this->template->archives_list): ?>

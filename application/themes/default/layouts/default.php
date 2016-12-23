@@ -144,7 +144,7 @@
 
                         <div class="col-sm-12">
                           <div class="page-header text-muted divider" id="connect">
-                            Connect
+                            <?php echo lang('connect_hdr'); ?>
                           </div>
                         </div>
                       
@@ -158,7 +158,7 @@
 
                       <div class="col-sm-12">
                           <div class="page-header text-muted divider" id="blog-links">
-                            Blog Links
+                            <?php echo lang('blog_links_hdr'); ?>
                           </div>
                         </div>
 
