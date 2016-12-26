@@ -10,7 +10,7 @@ class Pages extends MY_Controller
 		// Load needed models, libraries, helpers and language files
 		$this->load->model('pages_m');
 		
-		$this->load->language('pages');
+		$this->load->language('pages', $this->session->language);
 	}
 
 	public function index($page=null)

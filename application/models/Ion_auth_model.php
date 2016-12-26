@@ -1537,6 +1537,123 @@ class Ion_auth_model extends CI_Model
 	}
 
 	/**
+	 * permissions
+	 *
+	 * @return object
+	 * @author Ben Edmunds
+	 * @author  Enliven Applications
+	 **/
+	public function permissions()
+	{
+		$this->trigger_events('permissions');
+
+		// run each where that was passed
+		if (isset($this->_ion_where) && !empty($this->_ion_where))
+		{
+			foreach ($this->_ion_where as $where)
+			{
+				$this->db->where($where);
+			}
+			$this->_ion_where = array();
+		}
+
+		if (isset($this->_ion_limit) && isset($this->_ion_offset))
+		{
+			$this->db->limit($this->_ion_limit, $this->_ion_offset);
+
+			$this->_ion_limit  = NULL;
+			$this->_ion_offset = NULL;
+		}
+		else if (isset($this->_ion_limit))
+		{
+			$this->db->limit($this->_ion_limit);
+
+			$this->_ion_limit  = NULL;
+		}
+
+		// set the order
+		if (isset($this->_ion_order_by) && isset($this->_ion_order))
+		{
+			$this->db->order_by($this->_ion_order_by, $this->_ion_order);
+		}
+
+		$this->response = $this->db->get($this->tables['permissions']);
+
+		return $this;
+	}
+
+	/**
+	 * group
+	 *
+	 * @return object
+	 * @author Ben Edmunds
+	 **/
+	public function permission($id = NULL)
+	{
+		$this->trigger_events('group');
+
+		if (isset($id))
+		{
+			$this->where($this->tables['permissions'].'.id', $id);
+		}
+
+		$this->limit(1);
+		$this->order_by('id', 'desc');
+
+		return $this->permissions();
+	}
+
+
+		/**
+	 * update_group
+	 *
+	 * @return bool
+	 * @author aditya menon
+	 **/
+	public function update_perm($perm_id = FALSE, $perm_name = FALSE, $additional_data = array())
+	{
+		if (empty($perm_id)) return FALSE;
+
+		$data = array();
+
+		if (!empty($perm_name))
+		{
+			// we are changing the name, so do some checks
+
+			// bail if the group name already exists
+			$existing_perm = $this->db->get_where($this->tables['permissions'], array('name' => $perm_name))->row();
+			if(isset($existing_perm->id) && $existing_perm->id != $perm_id)
+			{
+				$this->set_error('perm_already_exists');
+				return FALSE;
+			}
+
+			$data['name'] = $perm_name;
+		}
+
+
+		// IMPORTANT!! Third parameter was string type $description; this following code is to maintain backward compatibility
+		// New projects should work with 3rd param as array
+		if (is_string($additional_data)) $additional_data = array('description' => $additional_data);
+
+
+		// filter out any data passed that doesnt have a matching column in the groups table
+		// and merge the set group data and the additional data
+		if (!empty($additional_data)) $data = array_merge($this->_filter_data($this->tables['permissions'], $additional_data), $data);
+
+
+		$this->db->update($this->tables['permissions'], $data, array('id' => $perm_id));
+
+		$this->set_message('group_update_successful');
+
+		return TRUE;
+	}
+
+
+
+
+
+	/**
 	 * group
 	 *
 	 * @return object
@@ -1936,6 +2053,10 @@ class Ion_auth_model extends CI_Model
 
 		return TRUE;
 	}
+
+
+
+
 
 	/**
 	* delete_group

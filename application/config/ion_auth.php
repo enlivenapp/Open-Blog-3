@@ -28,6 +28,8 @@
 | Database table names.
 */
 $config['tables']['users']           = 'users';
+$config['tables']['permissions']     = 'group_permissions';
+$config['tables']['groups_perms']     = 'groups_perms';
 $config['tables']['groups']          = 'groups';
 $config['tables']['users_groups']    = 'users_groups';
 $config['tables']['login_attempts']  = 'login_attempts';
@@ -40,6 +42,10 @@ $config['tables']['login_attempts']  = 'login_attempts';
  */
 $config['join']['users']  = 'user_id';
 $config['join']['groups'] = 'group_id';
+
+
+$config['join']['group_perms'] = 'id';
+$config['join']['groups_perms'] = 'group_id';
 
 /*
  | -------------------------------------------------------------------------
