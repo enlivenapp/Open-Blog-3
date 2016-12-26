@@ -65,8 +65,6 @@ $lang['blank_window']						= "Open in new window";
 $lang['same_window']						= "Open in same window";
 $lang['visible']							= "Visible";
 $lang['not_visible']						= "Hidden";
-
-
 $lang['save_link_btn']						= "Save Link";
 $lang['link_added_success_resp']			= "Link added successfully";
 $lang['link_added_fail_resp']				= "Could not add Link.  Please try agian.";
@@ -76,6 +74,27 @@ $lang['link_update_success_resp']			= "Link updated successfully";
 $lang['link_update_fail_resp']				= "Could not update Link.  Please try agian.";
 
 
+
+// Categories
+$lang['cats_hdr']							= "Categories";
+$lang['cat_remove_btn']					= "Remove Category";
+$lang['cat_edit_btn']						= "Edit Category";
+$lang['index_add_new_cat']					= "Add New Category";
+$lang['add_cat_subheading']				= "Please add the category information below.";
+$lang['cat_form_name']						= "Category Name";
+$lang['cat_form_url']						= "(same as above, all lowercase, no spaces)";
+$lang['cat_form_desc']						= "Description";
+$lang['blank_window']						= "Open in new window";
+$lang['same_window']						= "Open in same window";
+$lang['visible']							= "Visible";
+$lang['not_visible']						= "Hidden";
+$lang['save_cat_btn']						= "Save Category";
+$lang['cat_added_success_resp']				= "Category added successfully";
+$lang['cat_added_fail_resp']				= "Could not add Category.  Please try agian.";
+$lang['cat_removed_success_resp']			= "Category removed successfully";
+$lang['cat_removed_fail_resp']				= "Could not remove Category.  Please try agian.";
+$lang['cat_update_success_resp']			= "Category updated successfully";
+$lang['cat_update_fail_resp']				= "Could not update Category.  Please try agian.";
 
 
 

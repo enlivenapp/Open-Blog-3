@@ -45,18 +45,17 @@
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                      <li><a href="<?php echo site_url('') ?>">Create Post</a></li>
-                      <li><a href="<?php echo site_url('auth') ?>">Users</a></li>
-                      <li><a href="<?php echo site_url('') ?>">Categories</a></li>
-                      <li><a href="<?php echo site_url('') ?>">Site Settings</a></li>
-                      <li><a href="<?php echo site_url('') ?>">Links</a></li>
-                      <li><a href="<?php echo site_url('') ?>">Comments</a></li>
-                      <li><a href="<?php echo site_url('') ?>">Navigation</a></li>
-                      <li><a href="<?php echo site_url('') ?>">Pages</a></li>
-                      <li><a href="<?php echo site_url('') ?>">Social Links</a></li>
-                      <li><a href="<?php echo site_url('') ?>">Themes</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
+                      <li><a href="<?php echo site_url('admin') ?>">Admin CP</a></li>
+                      <li><a href="<?php echo site_url('admin/admin_posts') ?>">Create Post</a></li>
+                      <li><a href="<?php echo site_url('admin/admin_users') ?>">Users</a></li>
+                      <li><a href="<?php echo site_url('admin/admin_cats') ?>">Categories</a></li>
+                      <li><a href="<?php echo site_url('admin/settings') ?>">Site Settings</a></li>
+                      <li><a href="<?php echo site_url('admin/admin_links') ?>">Links</a></li>
+                      <li><a href="<?php echo site_url('admin/admin_comments') ?>">Comments</a></li>
+                      <li><a href="<?php echo site_url('admin/admin_nav') ?>">Navigation</a></li>
+                      <li><a href="<?php echo site_url('admin/admin_pages') ?>">Pages</a></li>
+                      <li><a href="<?php echo site_url('admin/admin_social') ?>">Social Links</a></li>
+                      <li><a href="<?php echo site_url('admin/admin_themes') ?>">Themes</a></li>
                     </ul>
                   </li>
                 <?php endif ?>
