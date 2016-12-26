@@ -11,7 +11,7 @@
           <ul class="nav nav-sidebar">
             <li><a href="<?= site_url('admin/admin_themes') ?>">Themes</a></li>
             <li><a href="<?= site_url('admin/admin_users') ?>">Users</a></li>
-            <li><a href="<?= site_url() ?>">View Site</a></li>
+            <li><a href="<?= site_url() ?>" target="_blank">View Site</a></li>
           </ul>
 
           <p><small>Powered by <a href="http://open-blog.org">Open Blog</a></small></p>

@@ -53,6 +53,28 @@ $lang['use_recaptcha_desc']					= 'Whould you like to enable Google Recaptcha fo
 $lang['links_hdr']							= "Links";
 $lang['link_remove_btn']					= "Remove Link";
 $lang['link_edit_btn']						= "Edit Link";
+$lang['index_add_new_link']					= "Add New Link";
+$lang['add_link_subheading']				= "Please add the link information below. These are external links, make sure to prepend http:// or https:// to your link url.";
+$lang['link_form_name']						= "Link Name";
+$lang['link_form_url']						= "http://";
+$lang['link_form_desc']						= "Description";
+$lang['link_form_position']					= "Order";
+$lang['link_form_target']					= "Target";
+$lang['link_form_visibility']				= "Visibility";
+$lang['blank_window']						= "Open in new window";
+$lang['same_window']						= "Open in same window";
+$lang['visible']							= "Visible";
+$lang['not_visible']						= "Hidden";
+
+
+$lang['save_link_btn']						= "Save Link";
+$lang['link_added_success_resp']			= "Link added successfully";
+$lang['link_added_fail_resp']				= "Could not add Link.  Please try agian.";
+$lang['link_removed_success_resp']			= "Link removed successfully";
+$lang['link_removed_fail_resp']				= "Could not remove Link.  Please try agian.";
+$lang['link_update_success_resp']			= "Link updated successfully";
+$lang['link_update_fail_resp']				= "Could not update Link.  Please try agian.";
+
 
 
 

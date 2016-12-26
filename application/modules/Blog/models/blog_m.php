@@ -55,7 +55,7 @@ class Blog_m extends CI_Model
 
 	public function get_links()
 	{
-		$query = $this->db->where('visible', 'yes')->get('links');
+		$query = $this->db->where('visible', 'yes')->order_by('position', 'ASC')->get('links');
 			
 		if ($query->num_rows() > 0)
 		{
