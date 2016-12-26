@@ -135,7 +135,7 @@ class Obcore
 					// if they've tried to submit the new value
 					// but validation failed, we'll repopulate
 					// the value here.
-					if ($this->input->post())
+					if ($this->ci->input->post())
 					{
 						// set the $cur_val to the user's input
 						$cur_val = $this->input->post($name);
@@ -149,7 +149,7 @@ class Obcore
 			// if they've tried to submit the new value
 			// but validation failed, we'll repopulate
 			// the value here.
-			if ($this->input->post())
+			if ($this->ci->input->post())
 			{
 				// set the $cur_val to the user's input
 				$cur_val = set_value($name);

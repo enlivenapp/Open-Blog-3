@@ -42,7 +42,7 @@ class Admin_m extends CI_Model
 
 			foreach ($tab->list as &$item)
 			{
-				$item->input = $this->build_form_field($item->field_type, $item->name, $item->value, $item->options);
+				$item->input = $this->obcore->build_form_field($item->field_type, $item->name, $item->value, $item->options);
 			}
 		}
 		$data->settings = $tabs;

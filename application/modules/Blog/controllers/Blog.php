@@ -55,6 +55,7 @@ class Blog extends MY_Controller {
      */
 	public function category($url_name = null)
 	{		
+	
 		if ($data = $this->blog_m->get_posts_by_category($url_name))
 		{
 			
@@ -77,8 +78,13 @@ class Blog extends MY_Controller {
 			// tasty Links
 			$data->pagination = $this->pagination->create_links();
 
-			$this->template->build('index', $data);
+			
 		}
+		else
+		{
+			$data['posts'] = FALSE;
+		}
+		$this->template->build('index', $data);
 	}
 
 

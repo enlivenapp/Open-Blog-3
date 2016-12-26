@@ -15,7 +15,7 @@
   </div> 
 </div>
 
-
+<?php if ($posts): ?>
 <?php foreach ($posts as $post): ?>
 
 	<div class="row">    
@@ -66,4 +66,10 @@
         <?php echo $pagination ?>
     </div>
 </div>
+
+<?php endif ?>
+
+<?php else: ?>
+  <h3 class="text-center"><?= lang('no_posts_found') ?></h3>
+
 <?php endif ?>
