@@ -48,6 +48,16 @@ class Admin_Controller extends CI_Controller
 				->set_partial('sidebar', 'sidebar');
 
 
+		// installer warning default
+		$this->template->set('installer_warning', FALSE);
+ 
+		// if we find the /installer directory exists 
+		// then throw the installer_warning
+		if (is_dir('./installer'))
+		{
+			// override the default
+			$this->template->set('installer_warning', lang('installer_dir_warning_notice'));
+		}
 
 		$this->benchmark->mark('admin_controller_end');
 	}

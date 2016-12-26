@@ -23,7 +23,12 @@
                     <?php echo $this->session->flashdata('warning') ?>
                   </div>
                   <?php endif ?>
-
-
                 </div>
                 <?php endif ?>
+
+                <!-- installer directory still there? -->
+                <?php if ($this->template->installer_warning): ?>
+                <div class="alert alert-danger" role="alert">
+                    <?= $this->template->installer_warning ?>
+                  </div>
+                <?php endif?>

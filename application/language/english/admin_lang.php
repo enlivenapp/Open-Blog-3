@@ -47,7 +47,7 @@ $lang['theme_image_desc']					= "";
 $lang['use_recaptcha_label']				= "Enable Recaptcha";
 $lang['use_recaptcha_desc']					= 'Whould you like to enable Google Recaptcha for your site to help elimitate SPAM and comment moderation? <a href="https://www.google.com/recaptcha/intro/" target="_blank">[More Info <i class="fa fa-external-link"></i>]</a>';
 
-//$lang['']		= "";
+
 
 // Links
 $lang['links_hdr']							= "Links";
@@ -96,7 +96,7 @@ $lang['cat_removed_fail_resp']				= "Could not remove Category.  Please try agia
 $lang['cat_update_success_resp']			= "Category updated successfully";
 $lang['cat_update_fail_resp']				= "Could not update Category.  Please try agian.";
 
-
+//$lang['']		= "";
 
 // buttons
 $lang['save_settings']						= "Save Settings";
@@ -109,6 +109,7 @@ $lang['settings_update_failed']						= "Settings Failed to Update.  Please try a
 
 
 
-
+// installer directory warning
+$lang['installer_dir_warning_notice']		= "The /installer/ directory is still present.  For security reasons, you should delete the /installer/ directory immediately!";
 
 
