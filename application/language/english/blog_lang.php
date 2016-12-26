@@ -71,7 +71,7 @@ $lang['in']								= "in";
 // Errors
 $lang['error']							= "Error";
 $lang['not_found']						= "Not found.";
-$lang['no_posts_for_this_date']			= "There are no posts for this date.";
+$lang['no_posts_for_this_tag']			= "There are no posts for this tag.";
 $lang['no_posts_for_this_date']			= "There are no posts for this date.";
 $lang['no_posts_found']					= "No posts found";
 $lang['blog_no_posts']					= "This blog has no posts.";
