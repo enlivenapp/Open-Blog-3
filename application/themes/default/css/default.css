@@ -152,3 +152,15 @@ small.text-muted {
 #admin-navbar {
   margin-bottom: 0;
 }
+
+
+/*
+ force all images to responsive
+ */
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+   }
+
+   

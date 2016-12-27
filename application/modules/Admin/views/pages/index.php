@@ -1,15 +1,23 @@
-<div>
+<h2><?= lang('pages_hdr') ?></h2>
 
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">All Pages</a></li>
-    <li role="presentation"><a href="#new-page" aria-controls="new-page" role="tab" data-toggle="tab">Create New Page</a></li>
-  </ul>
+<p><a class="btn btn-default btn-sm" href="<?php echo site_url('admin/admin_pages/add_page') ?>"><?php echo lang('index_add_new_page') ?></a></p>
 
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane fade in active" id="home">...List'm danno</div>
-    <div role="tabpanel" class="tab-pane fade" id="new-page">... create new page form</div>
-  </div>
-
-</div>
+<table class="table table-condensed">
+    <tr>
+        <th>Title</th>
+        <th>Date Created</th>
+        <th>Status</th>
+        <th></th>
+    </tr>
+    <?php foreach ($pages as $page): ?>
+        <tr>
+        <td><?= $page->title ?></td>
+        <td><?= $page->date ?></td>
+        <td><?= $page->status ?></td>
+        <td class="text-right">
+            <a href="<?= site_url('admin/admin_pages/edit_page/' . $page->id) ?>" class="btn btn-default btn-xs"><?= lang('page_edit_btn') ?></a>
+            <a href="<?= site_url('admin/admin_pages/remove_page/' . $page->id) ?>" class="btn btn-danger btn-xs"><?= lang('page_remove_btn') ?></a>
+        </td>
+    </tr>
+  <?php endforeach ?>
+</table>

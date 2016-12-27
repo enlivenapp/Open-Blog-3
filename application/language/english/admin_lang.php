@@ -98,6 +98,48 @@ $lang['cat_update_fail_resp']				= "Could not update Category.  Please try agian
 
 //$lang['']		= "";
 
+
+// pages
+$lang['pages_hdr']							= "Pages";
+$lang['optional_hdr']						= "Optional";
+$lang['optional_help_text']					= "While the options below are optional, they are highly recommended and greatly help with Search Engine Optimization (SEO). We also generate meta tags for facebook and twitter with these values.";
+$lang['page_remove_btn']					= "Remove Page";
+$lang['page_edit_btn']						= "Edit Page";
+$lang['index_add_new_page']					= "Add New Page";
+$lang['index_edit_page']					= "Edit Page";
+$lang['save_page_btn']						= "Save Page";
+$lang['page_added_success_resp']			= "Page added successfully";
+$lang['page_added_fail_resp']				= "Could not add Page.  Please try agian.";
+$lang['page_removed_success_resp']			= "Page removed successfully";
+$lang['page_removed_fail_resp']				= "Could not remove Page.  Please try agian.";
+$lang['page_update_success_resp']			= "Page updated successfully";
+$lang['page_update_fail_resp']				= "Could not update Page.  Please try agian.";
+$lang['page_form_title_text']				= "Page Title";
+$lang['page_form_title_help_text']			= "Enter the title of your page.";
+$lang['page_form_status_text']				= "Status";
+$lang['page_form_status_help_text']			= "Choose if you want the page to be Live or Draft.";
+$lang['page_form_status_active']			= "Live";
+$lang['page_form_status_inactive']			= "Draft";
+$lang['page_form_content_text']				= "Page Content";
+$lang['page_form_content_help_text']		= "Enter the content of your page below. Use the editor to help you format with Markdown.";
+$lang['page_form_meta_title_text']			= "META Title";
+$lang['page_form_meta_title_help_text']		= "Usually the same as your page title, but you can enter a different one here.";
+$lang['page_form_meta_keywords_text']		= "META Keywords";
+$lang['page_form_meta_keywords_help_text']	= "Enter the keywords for this page seperated by commas.";
+$lang['page_form_meta_desc_text']			= "META Description";
+$lang['page_form_meta_desc_help_text']		= "Enter the description for this page.  It's best to keep it between 50 and 100 characters.";
+$lang['page_form_home_text']				= "Homepage";
+$lang['page_form_home_help_text']			= "Check the box if this page is the homepage. You must choose Pages to be the default controller in Settings.  Any other page currently marked as the homepage will be removed as the homepage.";
+$lang['page_form_url_title_text']			= "URL Title";
+$lang['page_form_url_title_help_text']		= "This is the 'slug' shown in the URL of your page. If you change this value, there must be NO spaces between words, instead, used dashes. <br>IE: new-url-title";
+$lang['page_form_redirect_text']			= "Redirection";
+$lang['page_form_redirect_help_text']		= "If you change the URL Title above we automatically set up an HTTP 301 (perminent) redirect for you so the old url_title points to the new page url_title. Here, you can override the default settings.";
+$lang['page_form_redirect_none']			= "Do Not Redirect Old URL Title";
+$lang['page_form_redirect_perm']			= "Perminently Redirect to new URL Title";
+$lang['page_form_redirect_temp']			= "Temporarily Redirect to new URL Title";
+
+
+
 // buttons
 $lang['save_settings']						= "Save Settings";
 
@@ -110,6 +152,6 @@ $lang['settings_update_failed']						= "Settings Failed to Update.  Please try a
 
 
 // installer directory warning
-$lang['installer_dir_warning_notice']		= "The /installer/ directory is still present.  For security reasons, you should delete the /installer/ directory immediately!";
+$lang['installer_dir_warning_notice']		= "The /installer/ directory is still present.  For better security you should delete the installer/ directory and it's contents immediately!";
 
 

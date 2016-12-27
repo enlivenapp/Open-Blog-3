@@ -162,7 +162,40 @@ class Obcore
 
 
 
+	public function set_redirect($old_slug, $new_slug, $type='post', $code="301")
+	{	
+		// is the redirect already set?
+		$current = $this->ci->db
+						->where('old_slug', $old_slug)
+						->where('new_slug', $new_slug)
+						->limit(1)
+						->get('redirects')
+						->row();
 
+		// is there already a record?
+		if ($current)
+		{
+			// we'll update code rather than insert a new record.
+			// this is the only time one should be changing these
+			// otherwise, delete and enter new information
+			$update = [
+				'code' => $code
+			];
+			return $this->ci->db
+						->where('id', $current->id)
+						->update('redirects', $update);
+		}
+
+		// There's no records that appear for this one
+		// so we'll insert the new redirects record.
+		$insert = [
+			'old_slug' 	=> $old_slug,
+			'new_slug' 	=> $new_slug,
+			'type'		=> $type,
+			'code'		=> $code
+		];
+		return $this->ci->db->insert('redirects', $insert);
+	}
 
 
 }

@@ -10,6 +10,33 @@ body {
 
 
 /*
+ force all images to responsive
+ */
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+   }
+
+
+   /*
+   top margins
+    */
+   
+   .m-t-s {
+    margin-top: 5px;
+   }
+
+   .m-t-m {
+    margin-top: 10px;
+   }
+
+   .m-t-l {
+    margin-top: 15px;
+   }
+
+
+/*
  * Global add-ons
  */
 

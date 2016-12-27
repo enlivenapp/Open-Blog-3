@@ -76,8 +76,8 @@ class Asset {
 	 */
 	protected static $default_options = array(
 		'enabled' => true,
-		'combine' => true,
-		'min' => true,
+		'combine' => false,
+		'min' => false,
 		'inline' => false,
 		'attr' => array(),
 		'deps' => array(),
