@@ -15,31 +15,21 @@ class Pages extends MY_Controller
 
 	public function index($page=null)
 	{
-		//$data = new stdClass();
-
+		// get page data
 		$data['page'] = $this->pages_m->get_home_page();
 
-		$this->template->set_metadata('title', $data['page']['meta_title']);
-		$this->template->set_metadata('keywords', $data['page']['meta_keywords']);
-		$this->template->set_metadata('description', $data['page']['meta_description']);
+		// set the meta/og/twitter meta tags
+		$this->obcore->set_meta($data['page'], 'page', true);
 
+		// build it
 		$this->template->build('index', $data);
 	}
 
-	// Public methods
+	
 	public function page($url_title)
 	{
-		$data['page_data'] = $this->pages_m->get_page_by_url($url_title);
+		$data['page'] = $this->pages_m->get_page_by_url($url_title);
 			
-		if ($data['page_data'] != "")
-		{
-			$this->_template['page']	= 'pages/page';
-		}
-		else
-		{
-			$this->_template['page']	= 'errors/404';
-		}
-			
-		$this->system_library->load($this->_template['page'], $data);
+		$this->template->build('index', $data);
 	}
 }

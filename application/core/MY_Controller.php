@@ -10,6 +10,8 @@ class MY_Controller extends CI_Controller
 		// here's where we'll autoload all the site specific stuff
 		// from the database... 
 		parent::__construct();
+
+		//$this->output->enable_profiler($this->config->item('enable_profiler'));
 		
 		$this->benchmark->mark('my_controller_start');
 

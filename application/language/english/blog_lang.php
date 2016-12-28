@@ -83,3 +83,4 @@ $lang['recaptcha']						= "reCAPTCHA";
 // Success
 $lang['add_comment_success']			= "Comment Added Successfully.";
 $lang['add_comment_success_modded']		= "Comment Added Successfully. Your comment will appear once approved by an administrator.";
+

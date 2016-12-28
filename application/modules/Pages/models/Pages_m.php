@@ -43,6 +43,13 @@ class Pages_m extends CI_Model
 
 	public function get_page_by_url($url_title)
 	{
+		// check for redirects...
+		if ($redirected = $this->obcore->has_redirect($url_title))
+		{
+			header("Location: " . site_url('pages/' . $redirected->new_slug), TRUE, $redirected->code);
+		}
+
+		// not redirected...  moving on...
 		$this->load->library('markdown');
 
 		$this->db->where('url_title', $url_title)
@@ -53,11 +60,12 @@ class Pages_m extends CI_Model
 		
 		if ($query->num_rows() == 1)
 		{	
+			$page = $query->row_array();
 			// parse markdown
-			$query->content = $this->markdown->parse($query->content);
+			$page['content'] = $this->markdown->parse($page['content']);
 
 			// return it...
-			return $query->row();
+			return $page;
 		}
 		return false;
 	}

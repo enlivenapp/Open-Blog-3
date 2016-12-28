@@ -47,6 +47,13 @@ class Admin_pages_m extends CI_Model
 
 	public function remove_page($id)
 	{
+		// get the outgoing page information
+		$page = $this->db->where('id', $id)->limit(1)->get('pages')->row();
+
+		// does this page have redirects that need
+		// to be removed as well?
+		$this->obcore->remove_redirects($page->url_title);
+		
 		return $this->db->delete($this->_table['pages'], ['id' => $id]);
 	}
 

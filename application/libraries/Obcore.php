@@ -197,6 +197,55 @@ class Obcore
 		return $this->ci->db->insert('redirects', $insert);
 	}
 
+	public function has_redirect($url_title)
+	{
+		return $this->ci->db->limit(1)->where('old_slug', $url_title)->get('redirects')->row();
+
+	}
+
+	public function remove_redirects($slug=false)
+	{
+		return $this->ci->db->where('new_slug', $slug)->delete('redirects');
+	}
+
+
+	public function set_meta($data, $type='post', $home=false)
+	{
+		if ($type == 'page')
+		{
+			$this->ci->template->set_metadata('title', $data['meta_title']);
+			$this->ci->template->set_metadata('keywords', $data['meta_keywords']);
+			$this->ci->template->set_metadata('description', $data['meta_description']);
+
+			$this->ci->template->set_metadata('title', $data['meta_title'], 'og');
+			$this->ci->template->set_metadata('type', 'website', 'og');
+			$this->ci->template->set_metadata('description', $data['meta_description'], 'og');
+
+			// the homepage being called?
+			if ($home)
+			{
+				$this->ci->template->set_metadata('url', site_url(), 'og');
+			}
+			else
+			{
+				$this->ci->template->set_metadata('url', site_url('pages/' . $data['url_title']), 'og');
+			}
+			
+
+		}
+		elseif ($type == 'post')
+		{
+
+		}
+		
+	}
+
+		
+
+
+
+
+
 
 }
 
