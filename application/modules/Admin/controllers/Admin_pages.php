@@ -16,6 +16,8 @@ class Admin_pages extends Admin_Controller {
 		$this->load->model('admin_pages_m');
 		//$this->load->model('ion_auth_model');
 
+		$this->template->set('active_link', 'pages');
+
 		$this->load->helper('form');
 
 		$this->load->library('form_validation');
@@ -37,7 +39,7 @@ class Admin_pages extends Admin_Controller {
 	}
 
 
-		public function add_page()
+	public function add_page()
 	{	
 		$this->template->append_css('markdown.min.css');
 		$this->template->append_js('markdown.min.js');

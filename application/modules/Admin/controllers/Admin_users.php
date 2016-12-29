@@ -16,6 +16,8 @@ class Admin_users extends Admin_Controller {
 		$this->load->model('admin_m');
 		//$this->load->model('ion_auth_model');
 
+		$this->template->set('active_link', 'users');
+
 		$this->load->helper('form');
 
 		$this->load->library('form_validation');

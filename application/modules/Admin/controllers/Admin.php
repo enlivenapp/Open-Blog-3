@@ -28,6 +28,8 @@ class Admin extends Admin_Controller {
 
 		$data = $this->admin_m->get_dashboard();
 
+		$this->template->set('active_link', 'dashboard');
+
 		$this->template->build('index', $data);
 	}
 
@@ -35,6 +37,7 @@ class Admin extends Admin_Controller {
 	public function posts()
 	{
 		$data='';
+		$this->template->set('active_link', 'posts');
 		$this->template->build('posts/index', $data);
 	}
 
@@ -77,6 +80,9 @@ class Admin extends Admin_Controller {
 
 	public function settings()
 	{
+
+		$this->template->set('active_link', 'settings');
+
 		// do we have a submitted form?
 		if ($this->input->post())
 		{

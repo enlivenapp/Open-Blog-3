@@ -15,6 +15,8 @@ class Admin_cats extends Admin_Controller {
 
 		$this->load->model('admin_cats_m');
 		//$this->load->model('ion_auth_model');
+		//
+		$this->template->set('active_link', 'cats');
 
 		$this->load->helper('form');
 

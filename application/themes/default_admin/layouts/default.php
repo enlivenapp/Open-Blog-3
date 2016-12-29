@@ -44,10 +44,10 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="<?= site_url('admin') ?>">Dashboard</a></li>
-            <li><a href="<?= site_url('admin/settings') ?>">Settings</a></li>
-            <li><a href="<?= site_url('admin/profile') ?>">Profile</a></li>
-            <li><a href="<?= site_url('admin/updates') ?>">Updates</a></li>
+            <li class="<?php echo ($this->template->active_link == 'dashboard')? "active": ''; ?>"><a href="<?= site_url('admin') ?>">Dashboard</a></li>
+            <li class="<?php echo ($this->template->active_link == 'settings')? "active": ''; ?>"><a href="<?= site_url('admin/settings') ?>">Settings</a></li>
+            <li class="<?php echo ($this->template->active_link == 'profile')? "active": ''; ?>"><a href="<?= site_url('admin/profile') ?>">Profile</a></li>
+            <li class="<?php echo ($this->template->active_link == 'updates')? "active": ''; ?>"><a href="<?= site_url('admin/updates') ?>">Updates</a></li>
             <li><a href="http://open-blog.org" target="_blank">Help</a></li>
           </ul>
         </div>

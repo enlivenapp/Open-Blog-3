@@ -1,15 +1,23 @@
-<div>
+<h2><?= lang('posts_hdr') ?></h2>
 
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">All Posts</a></li>
-    <li role="presentation"><a href="#new-post" aria-controls="new-post" role="tab" data-toggle="tab">Create New Post</a></li>
-  </ul>
+<p><a class="btn btn-default btn-sm" href="<?php echo site_url('admin/admin_posts/add_post') ?>"><?php echo lang('index_add_new_post') ?></a></p>
 
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane fade in active" id="home">...</div>
-    <div role="tabpanel" class="tab-pane fade" id="new-post">... create new post form</div>
-  </div>
-
-</div>
+<table class="table table-condensed">
+    <tr>
+        <th>Title</th>
+        <th>Date Created</th>
+        <th>Status</th>
+        <th></th>
+    </tr>
+    <?php foreach ($posts as $post): ?>
+        <tr>
+        <td><?= $post->title ?></td>
+        <td><?= $post->date_posted ?></td>
+        <td><?= $post->status ?></td>
+        <td class="text-right">
+            <a href="<?= site_url('admin/admin_posts/edit_post/' . $post->id) ?>" class="btn btn-default btn-xs"><?= lang('post_edit_btn') ?></a>
+            <a href="<?= site_url('admin/admin_posts/remove_post/' . $post->id) ?>" class="btn btn-danger btn-xs"><?= lang('post_remove_btn') ?></a>
+        </td>
+    </tr>
+  <?php endforeach ?>
+</table>

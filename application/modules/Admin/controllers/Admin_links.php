@@ -16,6 +16,8 @@ class Admin_links extends Admin_Controller {
 		$this->load->model('admin_links_m');
 		//$this->load->model('ion_auth_model');
 
+		$this->template->set('active_link', 'links');
+
 		$this->load->helper('form');
 
 		$this->load->library('form_validation');
