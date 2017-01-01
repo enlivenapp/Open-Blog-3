@@ -98,8 +98,6 @@ $lang['cat_removed_fail_resp']				= "Could not remove Category.  Please try agia
 $lang['cat_update_success_resp']			= "Category updated successfully";
 $lang['cat_update_fail_resp']				= "Could not update Category.  Please try agian.";
 
-//$lang['']		= "";
-
 
 // pages
 $lang['pages_hdr']							= "Pages";
@@ -187,10 +185,69 @@ $lang['post_form_redirect_perm']			= "Perminently Redirect to new URL Title";
 $lang['post_form_redirect_temp']			= "Temporarily Redirect to new URL Title";
 
 
-// buttons
+
+// navigation
+$lang['nav_hdr']							= "Navigation";
+$lang['nav_new_hdr']						= "Create Navigation item";
+$lang['nav_right_side_hdr']					= "Navigation Link";
+$lang['nav_right_side_desc']				= "Below you can link to a specific page or post. Leave all options blank to point to your homepage.";
+$lang['index_add_new_nav']					= "Add Navigation Item";
+$lang['tab_all_nav_items']					= "All Navigation Items";
+$lang['tab_nav_redirects']					= "Redirects";
+$lang['nav_hdr']							= "Navigation";
+$lang['index_nav_desc']						= "Drag and Drop items to reorder the links shown on the front navigation of your site.";
+$lang['index_redirect_desc']				= "The table below shows any redirects for posts &amp; pages on your site. It also includes the type (page or post) and the type of redirect (301 - Perminant or 302 - Temporary). <b>Editing and Removing Redirects should be performed by experienced users</b>.";
+$lang['nav_no_redirects_found']				= "No Redirects Found";
+$lang['redir_edit_btn']						= "Edit Redirect";
+$lang['redir_remove_btn']					= "Remove Redirect";
+$lang['nav_edit_btn']						= "Edit";
+$lang['nav_remove_btn']						= "Remove";
+$lang['nav_edit_hdr']						= "Edit Navigation Item";
+$lang['nav_save_btn']						= "Save Navigation item";
+$lang['nav_form_title_text']				= "Title";
+$lang['nav_form_title_help_text']			= "This is the text shown in the navigation bar that visitors see and click.";
+$lang['nav_form_desc_text']					= "Description";
+$lang['nav_form_desc_help_text']			= "This is the description of this link and it used for the title field. Visitors see this when hovering the mouse over the link text.";
+$lang['nav_form_url_text']					= "URI";
+$lang['nav_form_url_help_text']				= "This is the URI portion of your link. We automatically add your site's URL for you when generating links.";
+$lang['nav_form_url_text_example']			= "about   <-- example usage";
+$lang['nav_form_redirect_text']				= "Redirection";
+$lang['nav_form_redirect_help_text']		= "If you changed the 'Choose A Page' or 'Choose A Post' field we automatically set up an HTTP 301 (perminent) redirect for you so the old URI points to the new page URI. Here, you can override the default settings.";
+$lang['nav_form_redirect_text']				= "Redirection";
+$lang['nav_form_type_text']					= "Type";
+$lang['nav_form_type_help_text']			= "If you changed the 'Choose A Page' or 'Choose A Post', please choose if this navigation item points to a page or a post. We need this to correctly point the redirection.";
+$lang['nav_form_type_page']					= "This is a Page";
+$lang['nav_form_type_post']					= "This is a Blog Post";
+$lang['nav_update_success_resp']			= "Updated Navigation Item Successfully";
+$lang['nav_update_fail_resp']				= "Unable to update navigation item. Please try again.";
+$lang['nav_form_choose_page']				= "Choose A Page";
+$lang['nav_form_choose_page_help_text']		= "Choose from existing pages.";
+$lang['nav_form_choose_post']				= "Choose A Blog Post";
+$lang['nav_form_choose_post_help_text']		= "Choose from existing blog posts.";
+$lang['pages_index_controller_label']		= "Page Marked As Homepage";
+
+// redirection
+$lang['nav_redir_edit_hdr']					= "Editing Redirection";
+$lang['nav_redir_edit_subheading']			= "<b><em>Important</em></b>:  Only experienced users should edit or remove redirection items.  Changing these can have a negative impact on SEO and the number of 404 errors reported to visitors.  Use this function with great care.";
+
+$lang['nav_redirect_removed_success_resp']	= "Removed Redirection Successfully";
+$lang['nav_redirect_removed_fail_resp']		= "Unable to remove Redirection item. Please try again.";
+$lang['nav_redirect_edit_success_resp']		= "Updated Redirection Successfully";
+$lang['nav_redirect_edit_fail_resp']		= "Unable to update Redirection item. Please try again.";
+$lang['nav_redir_form_old_slug_text']		= "From";
+$lang['nav_redir_form_old_slug_desc']		= "The From field is the old URI segment, the one that will be initially called.";
+$lang['nav_redir_form_new_slug_text']		= "To";
+$lang['nav_redir_form_new_slug_desc']		= "The To field is the new URI segment, the one the visitor will be redirected to.";
+$lang['nav_redir_form_type_text']			= "Type";
+$lang['nav_redir_form_type_desc']			= "Whether this is a Page or a Post";
+$lang['nav_redir_form_code_text']			= "HTTP Redirect Type";
+$lang['nav_redir_form_code_desc']			= "Should this redirect be Perminent (301) or Temporary (302)?";
+
+
+
 $lang['save_settings']						= "Save Settings";
 
-
+//$lang['']		= "";
 
 // form action responses
 $lang['settings_update_success']						= "Settings Updated Successfully";

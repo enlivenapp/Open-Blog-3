@@ -19,14 +19,16 @@ $config['results_per_page'] = '10';
 
 $config['openblog']['tables']['posts']          			= 'posts';
 $config['openblog']['tables']['categories']     			= 'categories';
-$config['openblog']['tables']['tags']    				= 'tags';
-$config['openblog']['tables']['tags_to_post']  			= 'tags_to_post';
-$config['openblog']['tables']['links']    				= 'links';
-$config['openblog']['tables']['comments']    			= 'comments';
-$config['openblog']['tables']['users']    				= 'users';
-$config['openblog']['tables']['posts_to_categories']     = 'posts_to_categories';
+$config['openblog']['tables']['tags']    					= 'tags';
+$config['openblog']['tables']['tags_to_post']  				= 'tags_to_post';
+$config['openblog']['tables']['links']    					= 'links';
+$config['openblog']['tables']['comments']    				= 'comments';
+$config['openblog']['tables']['users']    					= 'users';
+$config['openblog']['tables']['posts_to_categories']     	= 'posts_to_categories';
 $config['openblog']['tables']['settings']          			= 'settings';
 $config['openblog']['tables']['pages']          			= 'pages';
+$config['openblog']['tables']['navigation']        			= 'navigation';
+$config['openblog']['tables']['redirects']          		= 'redirects';
 
 /*
  | Users table column and Group table column you want to join WITH.

@@ -15,6 +15,11 @@ function post_url($url_title, $date)
 	return site_url('blog/' . date('Y', strtotime($date)) . '/' . date('m', strtotime($date)) . '/' . date('d', strtotime($date)) . '/' . $url_title);
 }
 
+function post_uri($url_title, $date)
+{
+	return 'blog/' . date('Y', strtotime($date)) . '/' . date('m', strtotime($date)) . '/' . date('d', strtotime($date)) . '/' . $url_title;
+}
+
 function archive_url($url)
 {
 	return site_url('blog/archive/' . $url);

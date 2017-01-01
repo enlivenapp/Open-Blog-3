@@ -130,7 +130,6 @@ class Admin_posts_m extends CI_Model
 			}
 		}
 
-
 		// insert new categories
 		if ( $cats )
 		{
