@@ -2,6 +2,10 @@
 
 Open Blog is a free and open source blogging platform built using the CodeIgniter PHP framework. It provides users with a very powerful yet easy to use interface which makes blogging simple and enjoyable.
 
+#Notice
+
+###This is the Development Repository for OB3.  
+
 
 ## Bug Reports, Feature Requests
 
