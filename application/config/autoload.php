@@ -103,7 +103,7 @@ $autoload['helper'] = array('url', 'inflector', 'text');
 | config files.  Otherwise, leave it blank.
 |
 */
-$autoload['config'] = array('openblog');
+$autoload['config'] = array('openblog', 'obinfo');
 
 /*
 | -------------------------------------------------------------------

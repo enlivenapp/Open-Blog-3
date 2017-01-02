@@ -40,5 +40,3 @@ $config['join']['users']  = 'user_id';
 $config['join']['groups'] = 'group_id';
 
 
-
-

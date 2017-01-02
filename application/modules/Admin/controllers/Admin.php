@@ -34,19 +34,6 @@ class Admin extends Admin_Controller {
 	}
 
 
-	public function posts()
-	{
-		$data='';
-		$this->template->set('active_link', 'posts');
-		$this->template->build('posts/index', $data);
-	}
-
-
-	public function pages()
-	{
-		$data='';
-		$this->template->build('pages/index', $data);
-	}
 
 	public function social()
 	{
@@ -54,23 +41,6 @@ class Admin extends Admin_Controller {
 		$this->template->build('social/index', $data);
 	}
 
-	public function updates()
-	{
-		$data='';
-		$this->template->build('updates/index', $data);
-	}
-
-	public function comments()
-	{
-		$data='';
-		$this->template->build('comments/index', $data);
-	}
-
-	public function navigation()
-	{
-		$data='';
-		$this->template->build('navigation/index', $data);
-	}
 
 	public function themes()
 	{

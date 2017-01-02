@@ -279,6 +279,19 @@ $lang['comments_author']					= "Author";
 $lang['comments_date_posted']				= "Date Received";
 $lang['comments_current_status']			= "Current Status";
 
+// updates
+$lang['updates_hdr']						= "Updates";
+$lang['updates_subheader']					= "You can update Open Blog and the CodeIgniter framework upon which it is built. Below is the current status of your installation.";
+$lang['updates_failed_connection']			= "Failed to connect to the open-blog.org API.";
+$lang['updates_update_available']			= "There is an update available!";
+$lang['updates_update_not_available']		= "You installation of Open Blog is up to date.";
+$lang['updates_ob_install_text']			= "Your Open Blog Installation";
+$lang['updates_ob_current_stable_text']		= "Current Stable Release";
+$lang['updates_install_up_to_date_text']	= "Your Open Blog installation is up to date.  You don't need to do anything.";
+$lang['updates_update_now_btn']				= "Update Now";
+
+
+
 
 $lang['save_settings']						= "Save Settings";
 
