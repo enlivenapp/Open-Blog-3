@@ -45,7 +45,7 @@ $lang['site_name_desc']						= "Enter the name of your website.";
 $lang['theme_image_label']					= "";
 $lang['theme_image_desc']					= "";
 $lang['use_recaptcha_label']				= "Enable Recaptcha";
-$lang['use_recaptcha_desc']					= 'Whould you like to enable Google Recaptcha for your site to help elimitate SPAM and comment moderation? <a href="https://www.google.com/recaptcha/intro/" target="_blank">More Info <sup><i class="fa fa-external-link"></i></sup></a>';
+$lang['use_recaptcha_desc']					= 'Would you like to enable Google Recaptcha for your site to help eliminate SPAM and comment moderation? <a href="https://www.google.com/recaptcha/intro/" target="_blank">More Info <sup><i class="fa fa-external-link"></i></sup></a>';
 $lang['use_honeypot_label']					= "Enable Form Honey Pots";
 $lang['use_honeypot_desc']					= "To help prevent SPAM, you can use a honey pot, a SPAMmer filling in a hidden field that should not be. This will help protect your comment and registration forms from robots but not humans. ";
 
@@ -69,11 +69,11 @@ $lang['visible']							= "Visible";
 $lang['not_visible']						= "Hidden";
 $lang['save_link_btn']						= "Save Link";
 $lang['link_added_success_resp']			= "Link added successfully";
-$lang['link_added_fail_resp']				= "Could not add Link.  Please try agian.";
+$lang['link_added_fail_resp']				= "Could not add Link.  Please try again.";
 $lang['link_removed_success_resp']			= "Link removed successfully";
-$lang['link_removed_fail_resp']				= "Could not remove Link.  Please try agian.";
+$lang['link_removed_fail_resp']				= "Could not remove Link.  Please try again.";
 $lang['link_update_success_resp']			= "Link updated successfully";
-$lang['link_update_fail_resp']				= "Could not update Link.  Please try agian.";
+$lang['link_update_fail_resp']				= "Could not update Link.  Please try again.";
 
 
 
@@ -92,11 +92,11 @@ $lang['visible']							= "Visible";
 $lang['not_visible']						= "Hidden";
 $lang['save_cat_btn']						= "Save Category";
 $lang['cat_added_success_resp']				= "Category added successfully";
-$lang['cat_added_fail_resp']				= "Could not add Category.  Please try agian.";
+$lang['cat_added_fail_resp']				= "Could not add Category.  Please try again.";
 $lang['cat_removed_success_resp']			= "Category removed successfully";
-$lang['cat_removed_fail_resp']				= "Could not remove Category.  Please try agian.";
+$lang['cat_removed_fail_resp']				= "Could not remove Category.  Please try again.";
 $lang['cat_update_success_resp']			= "Category updated successfully";
-$lang['cat_update_fail_resp']				= "Could not update Category.  Please try agian.";
+$lang['cat_update_fail_resp']				= "Could not update Category.  Please try again.";
 
 
 // pages
@@ -109,11 +109,11 @@ $lang['index_add_new_page']					= "Add New Page";
 $lang['index_edit_page']					= "Edit Page";
 $lang['save_page_btn']						= "Save Page";
 $lang['page_added_success_resp']			= "Page added successfully";
-$lang['page_added_fail_resp']				= "Could not add Page.  Please try agian.";
+$lang['page_added_fail_resp']				= "Could not add Page.  Please try again.";
 $lang['page_removed_success_resp']			= "Page removed successfully";
-$lang['page_removed_fail_resp']				= "Could not remove Page.  Please try agian.";
+$lang['page_removed_fail_resp']				= "Could not remove Page.  Please try again.";
 $lang['page_update_success_resp']			= "Page updated successfully";
-$lang['page_update_fail_resp']				= "Could not update Page.  Please try agian.";
+$lang['page_update_fail_resp']				= "Could not update Page.  Please try again.";
 $lang['page_form_title_text']				= "Page Title";
 $lang['page_form_title_help_text']			= "Enter the title of your page.";
 $lang['page_form_status_text']				= "Status";
@@ -125,7 +125,7 @@ $lang['page_form_content_help_text']		= "Enter the content of your page below. U
 $lang['page_form_meta_title_text']			= "META Title";
 $lang['page_form_meta_title_help_text']		= "Usually the same as your page title, but you can enter a different one here.";
 $lang['page_form_meta_keywords_text']		= "META Keywords";
-$lang['page_form_meta_keywords_help_text']	= "Enter the keywords for this page seperated by commas.";
+$lang['page_form_meta_keywords_help_text']	= "Enter the keywords for this page separated by commas.";
 $lang['page_form_meta_desc_text']			= "META Description";
 $lang['page_form_meta_desc_help_text']		= "Enter the description for this page.  It's best to keep it between 50 and 100 characters.";
 $lang['page_form_home_text']				= "Homepage";
@@ -133,9 +133,9 @@ $lang['page_form_home_help_text']			= "Check the box if this page is the homepag
 $lang['page_form_url_title_text']			= "URL Title";
 $lang['page_form_url_title_help_text']		= "This is the 'slug' shown in the URL of your page. If you change this value, there must be NO spaces between words, instead, used dashes. <br>IE: new-url-title";
 $lang['page_form_redirect_text']			= "Redirection";
-$lang['page_form_redirect_help_text']		= "If you change the URL Title above we automatically set up an HTTP 301 (perminent) redirect for you so the old url_title points to the new page url_title. Here, you can override the default settings.";
+$lang['page_form_redirect_help_text']		= "If you change the URL Title above we automatically set up an HTTP 301 (permanent) redirect for you so the old url_title points to the new page url_title. Here, you can override the default settings.";
 $lang['page_form_redirect_none']			= "Do Not Redirect Old URL Title";
-$lang['page_form_redirect_perm']			= "Perminently Redirect to new URL Title";
+$lang['page_form_redirect_perm']			= "Permanently Redirect to new URL Title";
 $lang['page_form_redirect_temp']			= "Temporarily Redirect to new URL Title";
 
 
@@ -150,11 +150,11 @@ $lang['index_add_new_post']					= "Add New Post";
 $lang['index_edit_post']					= "Edit Post";
 $lang['save_post_btn']						= "Save Post";
 $lang['post_added_success_resp']			= "Post added successfully";
-$lang['post_added_fail_resp']				= "Could not add post.  Please try agian.";
+$lang['post_added_fail_resp']				= "Could not add post.  Please try again.";
 $lang['post_removed_success_resp']			= "Post removed successfully";
-$lang['post_removed_fail_resp']				= "Could not remove post.  Please try agian.";
+$lang['post_removed_fail_resp']				= "Could not remove post.  Please try again.";
 $lang['post_update_success_resp']			= "post updated successfully";
-$lang['post_update_fail_resp']				= "Could not update post.  Please try agian.";
+$lang['post_update_fail_resp']				= "Could not update post.  Please try again.";
 $lang['post_form_title_text']				= "Post Title";
 $lang['post_form_title_help_text']			= "Enter the title of your post.";
 $lang['post_form_status_text']				= "Status";
@@ -169,7 +169,7 @@ $lang['post_form_cats_help_text']			= "Choose any categories.  To choose multipl
 $lang['post_form_meta_title_text']			= "META Title";
 $lang['post_form_meta_title_help_text']		= "Usually the same as your post title, but you can enter a different one here.";
 $lang['post_form_meta_keywords_text']		= "META Keywords";
-$lang['post_form_meta_keywords_help_text']	= "Enter the keywords for this post seperated by commas.";
+$lang['post_form_meta_keywords_help_text']	= "Enter the keywords for this post separated by commas.";
 $lang['post_form_meta_desc_text']			= "META Description";
 $lang['post_form_meta_desc_help_text']		= "Enter the description for this post.  It's best to keep it between 50 and 100 characters.";
 $lang['post_form_home_text']				= "Homepage";
@@ -179,7 +179,7 @@ $lang['post_form_url_title_help_text']		= "This is the 'slug' shown in the URL o
 $lang['post_add_form_url_title_help_text']	= "This is the 'slug' shown in the URL of your post. If you enter this, there must be NO spaces between words, instead, used dashes. You can leave this blank and we'll build one for you based on the title of your post. <br>IE: new-url-title";
 
 $lang['post_form_redirect_text']			= "Redirection";
-$lang['post_form_redirect_help_text']		= "If you change the URL Title above we automatically set up an HTTP 301 (perminent) redirect for you so the old url_title points to the new post url_title. Here, you can override the default settings.";
+$lang['post_form_redirect_help_text']		= "If you change the URL Title above we automatically set up an HTTP 301 (permanent) redirect for you so the old url_title points to the new post url_title. Here, you can override the default settings.";
 $lang['post_form_redirect_none']			= "Do Not Redirect Old URL Title";
 $lang['post_form_redirect_perm']			= "Perminently Redirect to new URL Title";
 $lang['post_form_redirect_temp']			= "Temporarily Redirect to new URL Title";
@@ -196,7 +196,7 @@ $lang['tab_all_nav_items']					= "All Navigation Items";
 $lang['tab_nav_redirects']					= "Redirects";
 $lang['nav_hdr']							= "Navigation";
 $lang['index_nav_desc']						= "Drag and Drop items to reorder the links shown on the front navigation of your site.";
-$lang['index_redirect_desc']				= "The table below shows any redirects for posts &amp; pages on your site. It also includes the type (page or post) and the type of redirect (301 - Perminant or 302 - Temporary). <b>Editing and Removing Redirects should be performed by experienced users</b>.";
+$lang['index_redirect_desc']				= "The table below shows any redirects for posts &amp; pages on your site. It also includes the type (page or post) and the type of redirect (301 - Permanent or 302 - Temporary). <b>Editing and Removing Redirects should be performed by experienced users</b>.";
 $lang['nav_no_redirects_found']				= "No Redirects Found";
 $lang['redir_edit_btn']						= "Edit Redirect";
 $lang['redir_remove_btn']					= "Remove Redirect";
@@ -241,7 +241,7 @@ $lang['nav_redir_form_new_slug_desc']		= "The To field is the new URI segment, t
 $lang['nav_redir_form_type_text']			= "Type";
 $lang['nav_redir_form_type_desc']			= "Whether this is a Page or a Post";
 $lang['nav_redir_form_code_text']			= "HTTP Redirect Type";
-$lang['nav_redir_form_code_desc']			= "Should this redirect be Perminent (301) or Temporary (302)?";
+$lang['nav_redir_form_code_desc']			= "Should this redirect be Permanent (301) or Temporary (302)?";
 
 // Comments
 $lang['comments_hdr']						= "Manage Comments";
@@ -283,12 +283,14 @@ $lang['comments_current_status']			= "Current Status";
 $lang['updates_hdr']						= "Updates";
 $lang['updates_subheader']					= "You can update Open Blog and the CodeIgniter framework upon which it is built. Below is the current status of your installation.";
 $lang['updates_failed_connection']			= "Failed to connect to the open-blog.org API.";
-$lang['updates_update_available']			= "There is an update available!";
+$lang['updates_update_available']			= "There is an update available! <br><b><em>IMPORTANT NOTICE: Make a FULL site Backup before your begin the update!</em></b>";
 $lang['updates_update_not_available']		= "You installation of Open Blog is up to date.";
 $lang['updates_ob_install_text']			= "Your Open Blog Installation";
 $lang['updates_ob_current_stable_text']		= "Current Stable Release";
 $lang['updates_install_up_to_date_text']	= "Your Open Blog installation is up to date.  You don't need to do anything.";
 $lang['updates_update_now_btn']				= "Update Now";
+$lang['updates_update_success_resp']		= "Update Succeeded. Make sure to check your settings";
+$lang['updates_update_failed_resp']			= "Unable to update Open Blog.  Please try again or find help on the Open Blog website.";
 
 
 

@@ -37,5 +37,18 @@ class Admin_updates extends Admin_Controller {
 		$this->template->build('updates/index', $data);
 	}
 
+	public function do_update()
+	{
+		if ($this->admin_updates_m->perform_update())
+		{
+    		// succeeded
+    		$this->session->set_flashdata('success', lang('updates_update_success_resp'));
+			redirect('admin/admin_updates');
+        }
+        // failed
+		$this->session->set_flashdata('error', lang('updates_update_failed_resp'));
+		redirect('admin/admin_updates');
+    }
+
 
 }

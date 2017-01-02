@@ -25,7 +25,7 @@
     <h4><?= lang('updates_install_up_to_date_text') ?></h4>
     <?php elseif ($this->config->item('ob_version') < $update_avail['current_version']): ?>
     <h4><?= lang('updates_update_available') ?></h4>
-    <a href="" class="btn btn-warning btn-lg btn-block"><?= lang('updates_update_now_btn') ?></a>
+    <a href="<?= base_url('admin/admin_updates/do_update') ?>" class="btn btn-warning btn-lg btn-block"><?= lang('updates_update_now_btn') ?></a>
 
     <?php endif ?> 
   </div>

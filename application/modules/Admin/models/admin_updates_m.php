@@ -40,6 +40,12 @@ class Admin_updates_m extends CI_Model
 	}
 
 
+	public function perform_update()
+	{
+		return false;
+	}
+
+
 
 
 
