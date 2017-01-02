@@ -32,6 +32,9 @@ $lang['btn_approve_comment']			= "Approve Comment"; // Approve modded comment
 $lang['btn_remove_comment']				= "Remove Comment"; // Deletes the comment
 $lang['btn_hide_comment']				= "Hide Comment";  // Hides Comment, provides link to 'view anyway'
 $lang['btn_flag_comment']				= "Flag Comment";  // flag as inappropriate, unhelpful, or SPAM
+$lang['comment_help_text']				= "Note: No HTML";
+
+
 
 // Misc
 $lang['add_to']							= "Add to:";

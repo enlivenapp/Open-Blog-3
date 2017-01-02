@@ -38,16 +38,13 @@ class Comments_m extends CI_Model
 		// do we have results?
 		if ($query->num_rows() > 0)
 		{
-			// load the markdown lib
-			$this->load->library('markdown');
-
 			// tasty results
 			$result = $query->result();
 
 			// foreach and parse markdown in content
 			foreach ($result as &$item)
 			{
-				$item->content = $this->markdown->parse($item->content);
+				$item->content = nl2br($item->content);
 
 				if ($item->user_id)
 				{

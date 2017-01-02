@@ -94,7 +94,7 @@
 		      <textarea name="comment" id="comment" rows="6" cols="46" class="form-control" placeholder="<?php echo lang('comments_title'); ?>" required><?php echo set_value('comment'); ?></textarea>
 		  </div>
 		  <div>
-		  	<p><small><em>Note: Markdown OK, No HTML</em></small></p>
+		  	<p><small><em><?= lang('comment_help_text') ?></em></small></p>
 		  </div>
 
 		  <?php if ($this->config->item('use_recaptcha') == 1): ?>

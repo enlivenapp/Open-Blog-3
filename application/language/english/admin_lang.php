@@ -243,6 +243,41 @@ $lang['nav_redir_form_type_desc']			= "Whether this is a Page or a Post";
 $lang['nav_redir_form_code_text']			= "HTTP Redirect Type";
 $lang['nav_redir_form_code_desc']			= "Should this redirect be Perminent (301) or Temporary (302)?";
 
+// Comments
+$lang['comments_hdr']						= "Manage Comments";
+$lang['comments_no_comments_found_mod']		= "No Comments Found for moderation";
+$lang['comments_no_comments_found_act']		= "No Published Comments";
+$lang['comments_tab_moderated']				= "Moderated";
+$lang['comments_tab_active']				= "Published";
+$lang['comments_btn_edit']					= "Edit";
+$lang['comments_btn_remove']				= "Delete";
+$lang['comments_btn_view']					= "Details";
+$lang['comments_btn_accept']				= "Accept";
+$lang['comments_btn_hide']					= "Hide";
+$lang['comments_tbl_hdr_post_title']		= "Post Title";
+$lang['comments_tbl_hdr_author']			= "Author";
+$lang['comments_tbl_hdr_date']				= "Date";
+$lang['comments_tbl_hdr_short_excerpt']		= "Short Excerpt";
+$lang['comments_reg_user']					= "Registered User";
+$lang['comment_removed_success_resp']		= "Comment Successfully Deleted";
+$lang['comment_removed_fail_resp']			= "Unable to delete comment. Please try again.";
+$lang['comment_accept_success_resp']		= "Comment Successfully Accepted";
+$lang['comment_accept_fail_resp']			= "Unable to accept comment. Please try again.";
+$lang['comment_hide_success_resp']			= "Comment Successfully Hidden";
+$lang['comment_hide_fail_resp']				= "Unable to hide comment. Please try again.";
+$lang['comment_update_success_resp']		= "Comment Successfully Updated";
+$lang['comment_update_fail_resp']			= "Unable to update the comment. Please try again.";
+$lang['comment_form_field_content']			= "Content";
+$lang['comment_form_field_content_hlp_txt']	= "You can edit the content of the user's comment below.";
+$lang['comment_edit_hdr']					= "Edit Comment";
+$lang['comment_edit_subheading']			= "";
+$lang['comment_details_hdr']				= "Details";
+$lang['comments_save_btn']					= "Save Comment";
+$lang['comments_blog_post_hdr']				= "Blog Post";
+$lang['comments_comment_id']				= "Comment ID";
+$lang['comments_author']					= "Author";
+$lang['comments_date_posted']				= "Date Received";
+$lang['comments_current_status']			= "Current Status";
 
 
 $lang['save_settings']						= "Save Settings";
