@@ -291,7 +291,7 @@ $lang['updates_install_up_to_date_text']	= "Your Open Blog installation is up to
 $lang['updates_update_now_btn']				= "Update Now";
 $lang['updates_update_success_resp']		= "Update Succeeded. Make sure to check your settings";
 $lang['updates_update_failed_resp']			= "Unable to update Open Blog.  Please try again or find help on the Open Blog website.";
-
+$lang['updates_download_btn']				= "Download The Update";
 
 
 
