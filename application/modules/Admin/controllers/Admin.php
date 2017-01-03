@@ -42,12 +42,6 @@ class Admin extends Admin_Controller {
 	}
 
 
-	public function themes()
-	{
-		$data='';
-		$this->template->build('themes/index', $data);
-	}
-
 	public function settings()
 	{
 

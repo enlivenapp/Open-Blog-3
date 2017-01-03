@@ -295,6 +295,23 @@ $lang['updates_download_btn']				= "Download The Update";
 
 
 
+
+// themes
+$lang['themes_hdr']							= "Themes";
+$lang['themes_subheader']					= 'Below is a list of currently installed themes.  To find more themes and installation instructions, visit us at the <a href="http://open-blog.org" target="_blank">Open Blog website</a>.';
+$lang['themes_theme_in_use']				= "This theme is Active";
+$lang['themes_theme_not_in_use']			= "This theme is NOT Active.";
+$lang['theme_author_title']					= "Author";
+$lang['theme_author_email']					= "Support Email";
+$lang['theme_version']						= "Version";
+$lang['themes_activate_theme']				= "Activate Theme";
+$lang['themes_theme_type_desc']				= "Theme Type";
+$lang['themes_type_admin']					= "Admin";
+$lang['themes_type_front']					= "Regular";
+$lang['themes_activated_success_resp']		= "Theme Successfully Activated";
+$lang['themes_activated_fail_resp']			= "Couldn't Activate Theme. Please try again.";
+
+
 $lang['save_settings']						= "Save Settings";
 
 //$lang['']		= "";

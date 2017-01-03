@@ -29,6 +29,7 @@ $config['openblog']['tables']['settings']          			= 'settings';
 $config['openblog']['tables']['pages']          			= 'pages';
 $config['openblog']['tables']['navigation']        			= 'navigation';
 $config['openblog']['tables']['redirects']          		= 'redirects';
+$config['openblog']['tables']['templates']          		= 'templates';
 
 /*
  | Users table column and Group table column you want to join WITH.
