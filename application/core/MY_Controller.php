@@ -40,7 +40,6 @@ class MY_Controller extends CI_Controller
 		//	redirect($this->config->item('base_controller'));
 		//}
 
-
 		// we use this everywhere
 		$this->load->library('ion_auth');
 		$this->load->model('blog/blog_m');

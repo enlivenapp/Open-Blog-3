@@ -79,6 +79,7 @@ class Obcore
 		$default_lang = $this->ci->db->where('is_default', '1')->limit(1)->get('languages')->row();
 
 		$this->ci->session->set_userdata('language', $default_lang->language);
+		$this->ci->session->set_userdata('language_abbr', $default_lang->abbreviation);
 	}
 
 

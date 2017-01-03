@@ -190,6 +190,7 @@ class Installer extends CI_Controller {
 		$this->set_base_url();
 
 		$this->load->view('install_complete');
+		$this->session->sess_destroy();
 	}
 
 
