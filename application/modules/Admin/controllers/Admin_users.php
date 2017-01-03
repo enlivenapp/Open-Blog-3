@@ -6,6 +6,11 @@ class Admin_users extends Admin_Controller {
 	{
 		parent::__construct();
 
+		if ( ! $this->ion_auth->has_permission('users'))
+		{
+			$this->session->set_flashdata('error', lang('permission_check_failed'));
+			redirect();
+		}
 
 		$this->template->append_css('default.css');
 		$this->template->append_css('ie10-viewport-bug-workaround.css');
@@ -26,8 +31,6 @@ class Admin_users extends Admin_Controller {
 		$this->load->language('ion_auth', $this->session->language);
 
 		$this->form_validation->set_error_delimiters('<div class="alert alert-danger" role="alert">', '</div>');
-
-
 	}
 
 	
@@ -39,12 +42,6 @@ class Admin_users extends Admin_Controller {
 			// redirect them to the login page
 			$this->session->set_flashdata('error', "'You must be logged in to view this page.'");
 			redirect('auth/login');
-		}
-		elseif (!$this->ion_auth->is_admin()) // remove this elseif if you want to enable this for non-admins
-		{
-			// redirect them to the home page because they must be an administrator to view this
-			$this->session->set_flashdata('error', 'You must be an administrator to view this page.');
-			redirect();
 		}
 		else
 		{

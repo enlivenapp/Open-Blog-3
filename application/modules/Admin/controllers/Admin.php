@@ -25,6 +25,11 @@ class Admin extends Admin_Controller {
 	
 	public function index()
 	{
+		if ( ! $this->ion_auth->has_permission('dashboard'))
+		{
+			$this->session->set_flashdata('error', lang('permission_check_failed'));
+			redirect();
+		}
 
 		$data = $this->admin_m->get_dashboard();
 
@@ -44,6 +49,11 @@ class Admin extends Admin_Controller {
 
 	public function settings()
 	{
+		if ( ! $this->ion_auth->has_permission('settings'))
+		{
+			$this->session->set_flashdata('error', lang('permission_check_failed'));
+			redirect();
+		}
 
 		$this->template->set('active_link', 'settings');
 

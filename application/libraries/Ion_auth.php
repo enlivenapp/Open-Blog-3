@@ -531,6 +531,46 @@ class Ion_auth
 		return null;
 	}
 
+	/**
+	 * Has Permission
+	 *
+	 * @author Enliven Applications
+	 * 
+	 * @param   $perm The name of permission being checked
+	 * 
+	 * @return bool
+	 **/
+	public function has_permission($perm)
+	{
+		// if they're not logged in
+		// bounce'm
+		if (! $this->logged_in())
+		{
+			return false;
+		}
+
+		// if they are an admin, they can
+		// do anything
+		if ($this->is_admin())
+		{
+			return true;
+		}
+
+		// the user can be in multiple groups, so we'll 
+		// check them all.  we return true on the first
+		// one we find
+		foreach ($this->ion_auth_model->get_users_groups()->result() as $group)
+		{
+			// logged in, but not admin
+			if ($this->ion_auth_model->check_perm($perm, $group->id))
+			{
+				return true;
+			}
+		}
+		// didn't find any, bounce'm
+		return false;
+	}
+
 
 	/**
 	 * is_admin

@@ -317,10 +317,12 @@ $lang['save_settings']						= "Save Settings";
 //$lang['']		= "";
 
 // form action responses
-$lang['settings_update_success']						= "Settings Updated Successfully";
-$lang['settings_update_failed']						= "Settings Failed to Update.  Please try again.";
+$lang['settings_update_success']			= "Settings Updated Successfully";
+$lang['settings_update_failed']				= "Settings Failed to Update.  Please try again.";
 
 
+// permissions
+$lang['permission_check_failed']			= "You must be an logged in and have permission to view this page.";
 
 // installer directory warning
 $lang['installer_dir_warning_notice']		= "The /installer/ directory is still present.  For better security you should delete the installer/ directory and it's contents immediately!";

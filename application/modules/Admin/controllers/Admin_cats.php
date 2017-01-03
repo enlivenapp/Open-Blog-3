@@ -6,6 +6,11 @@ class Admin_cats extends Admin_Controller {
 	{
 		parent::__construct();
 
+		if ( ! $this->ion_auth->has_permission('posts'))
+		{
+			$this->session->set_flashdata('error', lang('permission_check_failed'));
+			redirect();
+		}
 
 		$this->template->append_css('default.css');
 		$this->template->append_css('ie10-viewport-bug-workaround.css');

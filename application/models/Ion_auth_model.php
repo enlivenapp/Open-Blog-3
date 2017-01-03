@@ -1604,6 +1604,33 @@ class Ion_auth_model extends CI_Model
 	}
 
 
+	/**
+	 * check permissions
+	 *
+	 * 
+	 * @author Enliven Applications
+	 * 
+	 * @return bool
+	 **/
+	public function check_perm($perm, $group_id)
+	{
+		// first get the permmission info
+		if ( ! $perm_db = $this->db->where('name', $perm)->limit(1)->get($this->tables['permissions'])->row() )
+		{
+			return false;
+		}
+
+		// now we have all the info we need to 
+		// decide if the group has permission
+		// to do the thing...
+		if ( $this->db->where('group_id', $group_id)->where('perms_id', $perm_db->id)->limit(1)->count_all_results($this->tables['groups_perms']) == 1 )
+		{
+			return true;
+		}
+		return false;
+	}
+
+
 		/**
 	 * update_group
 	 *
