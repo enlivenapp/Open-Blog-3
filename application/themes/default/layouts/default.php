@@ -46,7 +46,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <li><a href="<?php echo site_url('admin') ?>" target="_blank">Admin CP</a></li>
-                      <li><a href="<?php echo site_url('admin/admin_posts') ?>">Create Post</a></li>
+                      <li><a href="<?php echo site_url('admin/admin_posts') ?>">Posts</a></li>
                       <li><a href="<?php echo site_url('admin/admin_users') ?>">Users</a></li>
                       <li><a href="<?php echo site_url('admin/admin_cats') ?>">Categories</a></li>
                       <li><a href="<?php echo site_url('admin/settings') ?>">Site Settings</a></li>

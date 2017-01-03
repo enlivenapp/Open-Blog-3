@@ -104,6 +104,12 @@
 		  </div>
 			<?php endif ?>
 
+			<?php if ($this->config->item('use_honeypot') == 1): ?>
+			<div style="position: absolute; left: -999em;">
+				<input name="date_stamp_gotcha" id="date_stamp_gotcha" type="text" value="" class="form-control">
+			</div>
+			<?php endif ?>
+
 		  <div class="form-group">
 		    <div class="col-sm-offset-2 col-sm-10">
 		      <input type="submit" name="submit" class="btn btn-primary" value="<?php echo lang('comment_submit'); ?>" />

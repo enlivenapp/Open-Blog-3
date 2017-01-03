@@ -198,6 +198,15 @@ class Blog extends MY_Controller {
 		{
 			$this->form_validation->set_rules('g-recaptcha-response', 'lang:recaptcha', 'callback_verify_recaptcha');
 		}
+
+		// are we using the honeypot?
+		if ($this->config->item('use_honeypot') == 1)
+		{
+			if (!empty($this->input->post('date_stamp_gotcha')))
+			{
+				redirect();
+			}
+		}
 		
 		// looged in user? no need to worry them for
 		// info we already have.	

@@ -37,7 +37,7 @@
           <small class="text-muted">
             <a class="btn btn-default text-muted" href="<?php echo $post->url ?>"><?php echo lang('btn_read_more'); ?></a> 
             <?php if ( $this->ion_auth->is_admin() || $this->ion_auth->in_group('editor') || $this->ion_auth->logged_in() && $this->session->userdata('user_id') == $post->author  ): ?>
-            <a class="btn btn-default text-muted" href="<?php echo site_url('blog/edit_post/' . $post->id) ?>"><?php echo lang('btn_edit'); ?></a> 
+            <a class="btn btn-default text-muted" href="<?php echo site_url('admin/admin_posts/edit_post/' . $post->id) ?>"><?php echo lang('btn_edit'); ?></a> 
             <?php endif ?>
             <br>
             
@@ -46,7 +46,7 @@
       </div>
 
       <div class="col-sm-2">
-        <a href="#" class="pull-right"><img src="/assets/example/bg_sailboat.jpg" class="img-circle"></a>
+        
       </div> 
 
     </div>
