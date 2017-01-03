@@ -229,7 +229,7 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}pages` (
 -- split --
 
 INSERT INTO `{PREFIX}pages` (`id`, `title`, `url_title`, `author`, `date`, `content`, `status`, `is_home`, `meta_title`, `meta_keywords`, `meta_description`) VALUES
-(1, 'Welcome to Open Blog', 'welcome-to-open-blog', 1, '2016-12-22', '### Welcome\r\n\r\nIf you can see this page, this means Open Blog was successfully installed.\r\n\r\nIf you need help, don\'t hesitate and visit the Open Blog home page.\r\n\r\nSincerely,\r\n\r\nThe Open Blog team\r\n\r\n*Since this is just an example post, feel free to delete it.*', 'active', 0, 'Open Blog Home Page', 'Open, Blog, Open Blog', 'The Open Blog Homepage');
+(1, 'Welcome to Open Blog', 'welcome-to-open-blog', 1, '2016-12-22', '### Welcome\r\n\r\nIf you can see this page, this means Open Blog was successfully installed.\r\n\r\nIf you need help, don\'t hesitate and visit the Open Blog home page.\r\n\r\nSincerely,\r\n\r\nThe Open Blog team\r\n\r\n*Since this is just an example post, feel free to delete it.*', 'active', 1, 'Open Blog Home Page', 'Open, Blog, Open Blog', 'The Open Blog Homepage');
 
 -- split --
 
@@ -324,12 +324,12 @@ INSERT INTO `{PREFIX}settings` (`name`, `value`, `tab`, `field_type`, `options`,
 ('mod_user_comments', '0', 'comments', 'dropdown', '1=yes|0=no', 1),
 ('months_per_archive', '10', 'archives', 'dropdown', '10=10|20=20|30=30', 1),
 ('posts_per_page', '10', 'blog', 'dropdown', '10=10|20=20|30=30', 1),
-('recaptcha_private_key', '6Ld0gQwUAAAAAJhZeKrgyFIbJJAoaClgG6qAcpMA', 'captcha', 'text', '', 0),
-('recaptcha_site_key', '6Ld0gQwUAAAAAPZA0EO95ni91yrNEGylSgI_0kiN', 'captcha', 'text', '', 0),
+('recaptcha_private_key', '', 'captcha', 'text', '', 0),
+('recaptcha_site_key', '', 'captcha', 'text', '', 0),
 ('site_name', 'Open Blog', 'general', 'text', '', 1),
 ('theme_image', 'bg_suburb.jpg', 'theme', 'text', '', 0),
-('use_honeypot', '1', 'captcha', 'dropdown', '1=yes|0=no', 1),
-('use_recaptcha', '1', 'captcha', 'dropdown', '1=yes|0=no', 1);
+('use_honeypot', '0', 'captcha', 'dropdown', '1=yes|0=no', 1),
+('use_recaptcha', '0', 'captcha', 'dropdown', '1=yes|0=no', 1);
 
 -- split --
 
