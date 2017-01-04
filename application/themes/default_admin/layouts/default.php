@@ -46,8 +46,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="<?php echo ($this->template->active_link == 'dashboard')? "active": ''; ?>"><a href="<?= site_url('admin') ?>">Dashboard</a></li>
             <li class="<?php echo ($this->template->active_link == 'settings')? "active": ''; ?>"><a href="<?= site_url('admin/settings') ?>">Settings</a></li>
-            <li class="<?php echo ($this->template->active_link == 'profile')? "active": ''; ?>"><a href="<?= site_url('admin/profile') ?>">Profile</a></li>
-            <li class="<?php echo ($this->template->active_link == 'updates')? "active": ''; ?>"><a href="<?= site_url('admin/admin_updates') ?>">Updates</a></li>
+            <li class="<?php echo ($this->template->active_link == 'updates')? "active": ''; ?>"><a href="<?= site_url('admin_updates') ?>">Updates</a></li>
             <li><a href="http://open-blog.org" target="_blank">Help</a></li>
           </ul>
         </div>
