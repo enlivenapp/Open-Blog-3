@@ -1,27 +1,50 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-
+/**
+ * OB_AdminController
+ * 
+ * OB_AdminController Controller Class
+ *
+ * @access  public
+ * @author  Enliven Appications
+ * @version 3.0
+ * 
+*/
 class OB_AdminController extends CI_Controller
 {
-	
+
+	/**
+     * Construct
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function __construct()
 	{
 		parent::__construct();
 
+		// start benchmarking...
 		$this->benchmark->mark('admin_controller_start');
 
+		// load up the core library for
+		// Open Blog
 		$this->load->library('obcore');
 
-
-
-
+		// if we can't find a language set
+		// we'll set one now
 		if ( ! $this->session->language )
 		{
 			$this->obcore->set_lang();
 		}
 
-		//$this->load->language('blog', $this->session->language);
+		// load admin language
 		$this->load->language('admin', $this->session->language);
+
+		// we're always using this in the
+		// admin area so we'll essentually autoload
 		$this->load->library('ion_auth');
 
 		// get admin theme info
@@ -30,6 +53,8 @@ class OB_AdminController extends CI_Controller
 		// get all the settings from the db
 		$settings = $this->obcore->db_to_config();
 
+		// roll the database setting into 
+		// $this->config so we can use them
 		if ($this->config->item('site_name'))
 		{
 			$this->template->title($this->config->item('site_name'));
@@ -41,7 +66,7 @@ class OB_AdminController extends CI_Controller
 		Asset::add_path('core', base_url('application/themes/' . $theme->path . '/'));
 		$this->template->set_theme($theme->path);
 
-
+		// set some partials
 		$this->template
 				->set_partial('flashdata', 'flashdata')
 				->set_partial('sidebar', 'sidebar');
@@ -58,6 +83,9 @@ class OB_AdminController extends CI_Controller
 			$this->template->set('installer_warning', lang('installer_dir_warning_notice'));
 		}
 
+		// end benchmarking
 		$this->benchmark->mark('admin_controller_end');
+
+		// and we're off.....
 	}
 }

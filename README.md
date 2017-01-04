@@ -13,7 +13,9 @@ Please use the [Issues Tracker](https://github.com/enlivenapp/Open-Blog-3/issues
 
 ## Links
 
-[Open-Blog.org](http://open-blog.org)
+[Open-Blog.org Home](http://open-blog.org)
+
+[Open-Blog.org Blog](http://blog.open-blog.org)
 
 Docs - Coming soon
 
