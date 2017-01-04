@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Auth extends MY_Controller {
+class Auth extends OB_Controller {
 
 	public function __construct()
 	{
@@ -77,7 +77,7 @@ class Auth extends MY_Controller {
 					$this->session->set_flashdata('error', $this->ion_auth->errors());
 				}
 				
-				redirect('login', 'refresh'); // use redirects instead of loading views for compatibility with MY_Controller libraries
+				redirect('auth/login', 'refresh'); // use redirects instead of loading views for compatibility with MY_Controller libraries
 			}
 		}
 		else
@@ -100,7 +100,7 @@ class Auth extends MY_Controller {
 				'type' => 'password',
 			);
 
-			$this->template->build('login', $this->data);
+			$this->template->build('auth/login', $this->data);
 		}
 	}
 

@@ -11,7 +11,7 @@ class OB_Controller extends CI_Controller
 		// from the database... 
 		parent::__construct();
 
-		$this->output->enable_profiler($this->config->item('enable_profiler'));
+		//$this->output->enable_profiler($this->config->item('enable_profiler'));
 		
 		$this->benchmark->mark('my_controller_start');
 

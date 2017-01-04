@@ -49,8 +49,20 @@
 <div class="row">
     <div class="colxs-12">
         <h2>Open Blog News</h2>
-        <pre>
-            <?php print_r($news) ?>
-        </pre>
+        <?php if ($news): ?>
+            <?php foreach ($news as $item): ?>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><?= $item->title ?> <span class="pull-right"><?= $item->date_posted ?></span></h3>
+                </div>
+                <div class="panel-body">
+                    <?= $item->excerpt ?> <br><span class="pull-right"><a href="http://open-blog.org" target="_blank">Visit the Open Blog Website for more Help and News.</a></span>
+                </div>
+            </div>
+            <?php endforeach ?>
+
+        <?php else: ?>
+        <h3 class="text-center">No News Found</h3>
+        <?php endif ?>
     </div>
 </div>
