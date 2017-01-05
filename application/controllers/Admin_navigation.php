@@ -1,65 +1,107 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Admin Comments
+ * 
+ * Admin Comments Controller Class
+ *
+ * @access  public
+ * @author  Enliven Appications
+ * @version 3.0
+ * 
+*/
 class Admin_navigation extends OB_AdminController {
 
+	/**
+     * Construct
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function __construct()
 	{
 		parent::__construct();
 
+		// does this user have permission to access this?
 		if ( ! $this->ion_auth->has_permission('navigation'))
 		{
+			// nope!  Away!
 			$this->session->set_flashdata('error', lang('permission_check_failed'));
 			redirect();
 		}
 
+		// load up template stuff
 		$this->template->append_css('default.css');
 		$this->template->append_css('ie10-viewport-bug-workaround.css');
-		
-		
 		$this->template->append_js('ie10-viewport-bug-workaround.js');
-
-		$this->load->model('Admin_navs_m');
-		//$this->load->model('ion_auth_model');
-
 		$this->template->set('active_link', 'navigation');
 
+		// load models et al
+		$this->load->model('Admin_navs_m');
 		$this->load->helper('form');
-
 		$this->load->library('form_validation');
 
+		// language files
 		$this->load->language('auth', $this->session->language);
 		$this->load->language('ion_auth', $this->session->language);
 
+		// form validation
 		$this->form_validation->set_error_delimiters('<div class="alert alert-danger" role="alert">', '</div>');
-
-
 	}
 
-
+	/**
+     * index
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function index()
 	{
+		// load JS for fancy drag and drop
 		$this->template->append_css('jquery-ui.min.css');
 		$this->template->append_css('jquery-ui.structure.min.css');
 		$this->template->append_js('jquery-ui.min.js');
 
-
+		// get a list of the nav items
 		$data['navs'] = $this->Admin_navs_m->get_navs();
+
+		// get the list of redirects
 		$data['redirects']	= $this->Admin_navs_m->get_redirects();
 
+		// off you go sonnie
 		$this->template->build('admin/navigation/index', $data);
 	}
 
-
-
+	/**
+     * add_nav
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function add_nav()
 	{	
+		// default empty array
 		$data = [];
 
+		// get page slugs...
 		$data['page_slugs'] = $this->Admin_navs_m->get_page_slugs();
+
+		// get post slugs
 		$data['post_slugs'] = $this->Admin_navs_m->get_post_slugs();
 
+		// form submit attempt?
 		if ($this->input->post())
 		{
+			// indeed, set rules
 			$this->form_validation->set_rules('title', lang('nav_form_title_text'), 'required');
 			$this->form_validation->set_rules('description', lang('nav_form_description_text'), 'required');
 
@@ -93,19 +135,35 @@ class Admin_navigation extends OB_AdminController {
         	$data['message'] = lang('nav_added_fail_resp');
 			$this->template->build('admin/navigation/add_nav', $data); 
         }
+
+        // no love for forms... build the form
         $this->template->build('admin/navigation/add_nav', $data);       
 	}
 
-
+	/**
+     * edit
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function edit($id)
 	{
-
+		// get nav items
 		$data['nav'] = $this->Admin_navs_m->get_nav($id);
+
+		// get page slugs
 		$data['page_slugs'] = $this->Admin_navs_m->get_page_slugs();
+
+		// get post slugs
 		$data['post_slugs'] = $this->Admin_navs_m->get_post_slugs();
 
+		// form submit attempt?
 		if ($this->input->post())
 		{
+			// sì, set validation rules
 			$this->form_validation->set_rules('title', lang('nav_form_title_text'), 'required');
 			$this->form_validation->set_rules('description', lang('nav_form_description_text'), 'required');
 			
@@ -139,7 +197,15 @@ class Admin_navigation extends OB_AdminController {
 
 	}
 
-
+	/**
+     * remove_nav
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function remove_nav($id)
 	{
 		// remove the nav
@@ -154,7 +220,21 @@ class Admin_navigation extends OB_AdminController {
 		redirect('admin_navigation');
 	}
 
+	/*
 
+	AJAX STUFF
+
+ 	*/
+ 
+	/**
+     * update_nav_order
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  json
+     */
 	public function update_nav_order()
 	{
 		if ($this->admin_navs_m->update_nav_order($this->input->post()))
@@ -164,21 +244,33 @@ class Admin_navigation extends OB_AdminController {
 		echo json_encode(['status' => 'false']);
 	}
 
-
 	/*
 	
 	Redirects
 
 	 */
 
+	/**
+     * edit_redirect
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function edit_redirect($id)
 	{
+		// init emplty array
 		$data = [];
 
+		// get the single redirect item
 		$data['redir'] = $this->admin_navs_m->get_redirect($id);
 
+		// form submit attempt?
 		if ($this->input->post())
 		{
+			// yup, set rules
 			$this->form_validation->set_rules('old_slug', lang('nav_redir_form_old_slug_text'), 'required');
 			$this->form_validation->set_rules('new_slug', lang('nav_redir_form_new_slug_text'), 'required');
 			$this->form_validation->set_rules('type', lang('nav_redir_form_type_text'), 'required');
@@ -203,8 +295,15 @@ class Admin_navigation extends OB_AdminController {
 		$this->template->build('navigation/edit_redir', $data);
 	}
 
-
-
+	/**
+     * remove_redirect
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function remove_redirect($id)
 	{
 		// remove the nav
@@ -218,19 +317,5 @@ class Admin_navigation extends OB_AdminController {
 		$this->session->set_flashdata('error', lang('nav_redirect_removed_fail_resp'));
 		redirect('admin/admin_navigation');
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

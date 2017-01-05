@@ -1,6 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-
 /**
  * Admin Comments
  * 
@@ -200,7 +199,5 @@ class Admin_comments extends OB_AdminController
 		$this->session->set_flashdata('error', lang('comment_hide_fail_resp'));
 		redirect('admin_comments');
 	}
-
-
 
 }
