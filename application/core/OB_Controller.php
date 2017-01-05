@@ -1,10 +1,27 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-
+/**
+ * OB_Controller
+ * 
+ * OB_Controller Controller Class
+ *
+ * @access  public
+ * @author  Enliven Appications
+ * @version 3.0
+ * 
+*/
 class OB_Controller extends CI_Controller
 {
 
-
+	/**
+     * Construct
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function __construct()
 	{
 		// here's where we'll autoload all the site specific stuff
