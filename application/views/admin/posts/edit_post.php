@@ -9,7 +9,7 @@
 		<?php endif ?>
 
 		<h2><?= lang('index_edit_post');?></h2>
-		<?= form_open(current_url());?>
+		<?= form_open_multipart(current_url());?>
 		<p><?= lang('add_post_subheading');?></p>
 	</div>
 </div>
@@ -64,6 +64,18 @@
 
 
 				<h4><?= lang('optional_hdr') ?></h4>
+
+				<div class="form-group">
+					<label for="feature_image"><?= lang('post_form_feature_image_text') ?></label>
+					<?php if($post['feature_image']): ?>
+			          <img src="<?= base_url('uploads/' . $post['feature_image']) ?>" class="img-responsive" alt="<?php echo $post['title'] ?>">
+			        <?php endif ?>
+					
+					<p class="help-block"><?= lang('post_edit_form_feature_image_help_text') ?></p>
+					<?= form_upload(['name' => 'feature_image', 'class' => 'form-control', 'placeholder' => lang('post_form_feature_image_text') ]) ?>
+		  		</div>
+
+
 				<p class="help-block"><?= lang('optional_help_text') ?></p>
 				<div class="form-group">
 					<label for="meta_title"><?= lang('post_form_meta_title_text') ?></label>

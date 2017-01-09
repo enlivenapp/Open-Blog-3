@@ -9,7 +9,7 @@
 		<?php endif ?>
 
 		<h2><?= lang('index_add_new_post');?></h2>
-		<?= form_open(current_url());?>
+		<?= form_open_multipart(current_url());?>
 		<p><?= lang('add_post_subheading');?></p>
 	</div>
 </div>
@@ -57,6 +57,12 @@
 
 
 		<h4><?= lang('optional_hdr') ?></h4>
+
+		<div class="form-group">
+			<label for="feature_image"><?= lang('post_form_feature_image_text') ?></label>
+			<p class="help-block"><?= lang('post_add_form_feature_image_help_text') ?></p>
+			<?= form_upload(['name' => 'feature_image', 'class' => 'form-control', 'placeholder' => lang('post_form_feature_image_text') ]) ?>
+  		</div>
 
 		<div class="form-group">
 			<label for="url_title"><?= lang('post_form_url_title_text') ?></label>

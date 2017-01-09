@@ -46,7 +46,9 @@
       </div>
 
       <div class="col-sm-2">
-        
+        <?php if($post->feature_image): ?>
+          <img src="<?= base_url('uploads/' . $post->feature_image) ?>" class="img-responsive" alt="Responsive image">
+        <?php endif ?>
       </div> 
 
     </div>

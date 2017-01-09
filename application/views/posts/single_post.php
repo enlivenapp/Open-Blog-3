@@ -1,6 +1,9 @@
 <div class="row">
 	<div class="col-sm-9">
 		<h3><?php echo $post['title'] ?></h3>
+		<?php if($post['feature_image']): ?>
+          <img src="<?= base_url('uploads/' . $post['feature_image']) ?>" class="img-responsive" alt="<?php echo $post['title'] ?>">
+        <?php endif ?>
         <h4>
           <small class="text-muted">
           	<span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php echo nice_date($post['date_posted'], 'M d Y') ?>

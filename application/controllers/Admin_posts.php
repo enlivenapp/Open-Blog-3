@@ -110,8 +110,32 @@ class Admin_posts extends OB_AdminController {
 		// did they pass validations?
 		if ($this->form_validation->run() == TRUE)
         {
+        		
         	// yes, so we'll start.
         	$post_data = $this->input->post();
+
+        	// did they upload a feature image?
+        	if ($_FILES['feature_image'])
+        	{
+        		$config['upload_path']          = './uploads/';
+                $config['allowed_types']        = 'gif|jpg|png|mp4|mpeg|mpg';
+
+                $this->load->library('upload', $config);
+
+                if ( ! $this->upload->do_upload('feature_image'))
+                {
+                	$data['message'] = $this->upload->display_errors();
+
+                    $this->template->build('admin/posts/edit_post', $data);  
+                }
+                else
+                {
+                    $img_data = $this->upload->data();
+
+                    $post_data['feature_image'] = $img_data['file_name'];
+                	
+                }
+        	}
 
         	// do we need to build the slug/url_title?
         	if ($build_slug)
@@ -171,6 +195,7 @@ class Admin_posts extends OB_AdminController {
 
 		if ($this->input->post())
 		{
+
 			// set default for changing url_title
 			$new_slug = false;
 
@@ -195,6 +220,30 @@ class Admin_posts extends OB_AdminController {
         {
         	// yes, so we'll start updating.
         	$post_data = $this->input->post();
+
+
+        	// did they upload a feature image?
+        	if ($_FILES['feature_image'])
+        	{
+        		$config['upload_path']          = './uploads/';
+                $config['allowed_types']        = 'gif|jpg|png|mp4|mpeg|mpg';
+
+                $this->load->library('upload', $config);
+
+                if ( ! $this->upload->do_upload('feature_image'))
+                {
+                	$data['message'] = $this->upload->display_errors();
+
+                    $this->template->build('admin/posts/edit_post', $data);  
+                }
+                else
+                {
+                    $img_data = $this->upload->data();
+
+                    $post_data['feature_image'] = $img_data['file_name'];
+                	
+                }
+        	}
 
         	// get the redirect out of the update data
         	$redirect_val = $this->input->post('redirection');

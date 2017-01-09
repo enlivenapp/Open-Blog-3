@@ -183,6 +183,9 @@ $lang['post_form_redirect_help_text']		= "If you change the URL Title above we a
 $lang['post_form_redirect_none']			= "Do Not Redirect Old URL Title";
 $lang['post_form_redirect_perm']			= "Perminently Redirect to new URL Title";
 $lang['post_form_redirect_temp']			= "Temporarily Redirect to new URL Title";
+$lang['post_form_feature_image_text']		= "Feature Image";
+$lang['post_add_form_feature_image_help_text']		= "Upload a feature image or leave blank.";
+$lang['post_edit_form_feature_image_help_text']		= "Upload a feature image to replace current or leave blank to keep the same.";
 
 
 
