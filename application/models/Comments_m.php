@@ -1,11 +1,29 @@
-<?php
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Comments M
+ * 
+ * Public Comments Model Class
+ *
+ * @access  public
+ * @author  Enliven Appications
+ * @version 3.0
+ * 
+*/
 class Comments_m extends CI_Model
 {
 	// Protected or private properties
 	protected $_table;
 	
-	// Constructor
+	/**
+     * Construct
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function __construct()
 	{
 		parent::__construct();
@@ -61,9 +79,15 @@ class Comments_m extends CI_Model
 		return [];
 	}
 	
-
-
-
+	/**
+     * get_latest_comments
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function get_latest_comments($number = 10, $offset = 0)
 	{
 		$this->db->select('comments.id, comments.user_id, comments.author, comments.author_email, comments.content, comments.date, posts.title, posts.url_title, posts.date_posted');
@@ -80,6 +104,15 @@ class Comments_m extends CI_Model
 		}
 	}
 	
+	/**
+     * get_comment_author
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function get_comment_author($id)
 	{
 		$this->db->select('user_id, author');
@@ -147,6 +180,3 @@ class Comments_m extends CI_Model
 		return false;
 	}
 }
-
-/* End of file comments_model.php */
-/* Location: ./application/modules/blog/models/comments_model.php */

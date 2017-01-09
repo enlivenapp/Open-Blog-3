@@ -10,7 +10,6 @@
  * @version 3.0
  * 
 */
-
 class Admin_updates_m extends CI_Model
 {
 	// Protected or private properties

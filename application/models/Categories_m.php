@@ -1,11 +1,29 @@
-<?php
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Categories M
+ * 
+ * Public Categories Model Class
+ *
+ * @access  public
+ * @author  Enliven Appications
+ * @version 3.0
+ * 
+*/
 class Categories_m extends CI_Model
 {
 	// Protected or private properties
 	protected $_table;
 	
-	// Constructor
+	/**
+     * Construct
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function __construct()
 	{
 		parent::__construct();
@@ -14,7 +32,15 @@ class Categories_m extends CI_Model
 		$this->_table = $tables['tables'];
 	}
 
-	// Public methods
+	/**
+     * get_categories
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function get_categories()
 	{
 		$this->db->select('id, name, url_name')
@@ -29,7 +55,16 @@ class Categories_m extends CI_Model
 			return $query->result_array();
 		}
 	}
-	
+
+	/**
+     * get_categories_by_ids
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function get_categories_by_ids($category_ids)
 	{
 		$this->db->where_in('id', $category_ids);
@@ -41,7 +76,16 @@ class Categories_m extends CI_Model
 			return $query->result();
 		}
 	}
-	
+
+	/**
+     * get_categories_by_post
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */	
 	public function get_categories_by_post($post_id)
 	{
 		$this->db->select('categories.name');
@@ -56,6 +100,3 @@ class Categories_m extends CI_Model
 		}
 	}
 }
-
-/* End of file categories.php */
-/* Location: ./application/modules/blog/models/categories.php */

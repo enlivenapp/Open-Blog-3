@@ -1,8 +1,27 @@
-<?php
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Pages
+ * 
+ * Public Pages Controller Class
+ *
+ * @access  public
+ * @author  Enliven Appications
+ * @version 3.0
+ * 
+*/
 class Pages extends OB_Controller
 {
-	// Constructor
+
+	/**
+     * Construct
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function __construct()
 	{
 		parent::__construct();
@@ -13,6 +32,19 @@ class Pages extends OB_Controller
 		$this->load->language('pages', $this->session->language);
 	}
 
+	/**
+     * index 
+     * 
+     * gets homepage... it's the default page
+     * listed in the database. 
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @param  string $page  o_O
+     * @return  null
+     */
 	public function index($page=null)
 	{
 		// get page data
@@ -25,7 +57,19 @@ class Pages extends OB_Controller
 		$this->template->build('pages/index', $data);
 	}
 
-	
+	/**
+     * page
+     * 
+     * Gets single page
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @param  string $url_title (slug) for the page.
+     * 
+     * @return  null
+     */
 	public function page($url_title)
 	{
 		$data['page'] = $this->Pages_m->get_page_by_url($url_title);

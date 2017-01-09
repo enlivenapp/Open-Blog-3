@@ -12,6 +12,15 @@
 */
 class Admin_updates extends OB_AdminController {
 
+	/**
+     * Construct
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function __construct()
 	{
 		parent::__construct();
