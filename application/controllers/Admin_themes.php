@@ -1,7 +1,29 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Admin Themes
+ * 
+ * Admin Themes Controller Class
+ *
+ * @access  public
+ * @author  Enliven Appications
+ * @version 3.0
+ * 
+*/
 class Admin_themes extends OB_AdminController {
 
+	/**
+     * Construct
+     * 
+     * Don't have much done with theming just
+     * yet, but this will get more later
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function __construct()
 	{
 		parent::__construct();
@@ -35,7 +57,15 @@ class Admin_themes extends OB_AdminController {
 
 	}
 
-
+	/**
+     * Construct
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function index()
 	{
 		$data['themes'] = $this->Admin_themes_m->get_themes();
@@ -43,6 +73,18 @@ class Admin_themes extends OB_AdminController {
 		$this->template->build('admin/themes/index', $data);
 	}
 
+	/**
+     * activate
+     * 
+     * activates a new theme and deactivates
+     * the current one
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function activate($id)
 	{
 		// this activates the theme of a 

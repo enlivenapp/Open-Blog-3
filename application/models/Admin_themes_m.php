@@ -1,11 +1,29 @@
-<?php
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Admin Themes M
+ * 
+ * Admin Themes Model Class
+ *
+ * @access  public
+ * @author  Enliven Appications
+ * @version 3.0
+ * 
+*/
 class Admin_themes_m extends CI_Model
 {
 	// Protected or private properties
 	protected $_table;
 	
-	// Constructor
+	/**
+     * Construct
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function __construct()
 	{
 		parent::__construct();
@@ -14,6 +32,17 @@ class Admin_themes_m extends CI_Model
 		$this->_table = $tables['tables'];
 	}
 
+	/**
+     * get_themes
+     * 
+     * gets all themes
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  object
+     */
 	public function get_themes()
 	{
 		// load the helper file
@@ -52,13 +81,29 @@ class Admin_themes_m extends CI_Model
 		return $this->db->get($this->_table['templates'])->result();
 	}
 
-
+	/**
+     * get_theme_by_id
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function get_theme_by_id($id)
 	{
 		return $this->db->where('id', $id)->limit(1)->get($this->_table['templates'])->row();
 	}
 
-
+	/**
+     * activate_new_theme
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  bool
+     */
 	public function active_new_theme($new_theme)
 	{
 		// first we need to get the currently active theme
@@ -90,6 +135,8 @@ class Admin_themes_m extends CI_Model
 	 *
 	 * Checks to see if a theme_details.php exists and returns 
 	 * a class if it does
+	 * 
+	 * @author  Phil Sturgeon ?
 	 *
 	 * @param $path The path to the current folder
 	 * @param  $dir The directory in application/themes/...
@@ -117,7 +164,15 @@ class Admin_themes_m extends CI_Model
 		return class_exists($class) ? new $class : false;
 	}
 
-
+	/**
+     * save_theme
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	private function save_theme($data)
 	{
 		// TODO: deal with version changes

@@ -1,5 +1,15 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Admin Updates
+ * 
+ * Admin Updates Controller Class
+ *
+ * @access  public
+ * @author  Enliven Appications
+ * @version 3.0
+ * 
+*/
 class Admin_updates extends OB_AdminController {
 
 	public function __construct()
@@ -30,11 +40,17 @@ class Admin_updates extends OB_AdminController {
 		$this->load->language('ion_auth', $this->session->language);
 
 		$this->form_validation->set_error_delimiters('<div class="alert alert-danger" role="alert">', '</div>');
-
-
 	}
 
-
+	/**
+     * index
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function index()
 	{
 		$data['update_avail'] = $this->Admin_updates_m->check_for_update();
@@ -42,6 +58,18 @@ class Admin_updates extends OB_AdminController {
 		$this->template->build('admin/updates/index', $data);
 	}
 
+	/**
+     * do_update
+     * 
+     * Don't have much done with updates just
+     * yet, but this will get more later
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function do_update()
 	{
 		if ($this->Admin_updates_m->perform_update())
