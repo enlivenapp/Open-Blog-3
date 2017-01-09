@@ -1,7 +1,26 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Admin Pages
+ * 
+ * Admin Pages Controller Class
+ *
+ * @access  public
+ * @author  Enliven Appications
+ * @version 3.0
+ * 
+*/
 class Admin_pages extends OB_AdminController {
 
+	/**
+     * Construct
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function __construct()
 	{
 		parent::__construct();
@@ -35,20 +54,42 @@ class Admin_pages extends OB_AdminController {
 
 	}
 
-
+	/**
+     * index
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function index()
 	{
+		// get all pages
 		$data['pages'] = $this->Admin_pages_m->get_pages();
 
 		$this->template->build('admin/pages/index', $data);
 	}
 
-
+	/**
+     * add_page
+     * 
+     * Allows the user to add pages to 
+     * their website/blog
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function add_page()
 	{	
+		// load markdown libraries
 		$this->template->append_css('markdown.min.css');
 		$this->template->append_js('markdown.min.js');
 		
+		// submitting attempt of the form?
 		if ($this->input->post())
 		{
 
@@ -56,7 +97,10 @@ class Admin_pages extends OB_AdminController {
 			$this->form_validation->set_rules('status', lang('page_form_status_text'), 'required|in_list[active,inactive]');
 			$this->form_validation->set_rules('content', lang('page_form_content_text'), 'required');
 			
+			// default, we need to build the
+			// url_title (slug) for them
 			$build_slug = true;
+
 			// Did an advanced user enter the url_title/slug?
 			if ($this->input->post('url_title'))
 			{	
@@ -80,14 +124,19 @@ class Admin_pages extends OB_AdminController {
 				    'title' => $post_data['title'],
 				    'table' => 'pages'
 				];
+
+				// since we're building it here
+				// load the slug library
         		$this->load->library('slug', $config);
 
+        		// create the slug
         		$post_data['url_title'] = $this->slug->create_uri($post_data['title']);
         		
         	}
 
         	// determine if is_home should be set to 1 or 0
         	// default is 0
+        	// 
         	$post_data['is_home'] = 0;
         	if ($this->input->post('is_home'))
         	{
@@ -111,20 +160,39 @@ class Admin_pages extends OB_AdminController {
         	$data['message'] = lang('page_added_fail_resp');
 			$this->template->build('admin/pages/add_page'); 
         }
+
+        // not submit attempt, build the page...
         $this->template->build('admin/pages/add_page');       
 	}
 
 
+	/**
+     * edit_page
+     * 
+     * Allows the user to edit an 
+     * existing page
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function edit_page($id)
 	{
+		// load markdown libs
 		$this->template->append_css('markdown.min.css');
 		$this->template->append_js('markdown.min.js');
 
-
+		// get the current information
+		// set in the page
 		$data['page'] = $this->Admin_pages_m->get_page($id);
 
+		// form submit attempt?
 		if ($this->input->post())
 		{
+			// yes
+
 			// set default for changing url_title
 			$new_slug = false;
 
@@ -197,7 +265,18 @@ class Admin_pages extends OB_AdminController {
 
 	}
 
-
+	/**
+     * remove_page
+     * 
+     * Allows a user to remove an
+     * existing page
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function remove_page($id)
 	{
 		// remove the page
@@ -211,10 +290,5 @@ class Admin_pages extends OB_AdminController {
 		$this->session->set_flashdata('error', lang('page_removed_fail_resp'));
 		redirect('admin_pages');
 	}
-
-
-
-
-
 
 }

@@ -1,7 +1,26 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Admin Posts
+ * 
+ * Admin Posts Controller Class
+ *
+ * @access  public
+ * @author  Enliven Appications
+ * @version 3.0
+ * 
+*/
 class Admin_posts extends OB_AdminController {
 
+	/**
+     * Construct
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function __construct()
 	{
 		parent::__construct();
@@ -35,7 +54,15 @@ class Admin_posts extends OB_AdminController {
 
 	}
 
-
+	/**
+     * index
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function index()
 	{
 		$data['posts'] = $this->Admin_posts_m->get_posts();
@@ -44,7 +71,15 @@ class Admin_posts extends OB_AdminController {
 	}
 
 
-
+	/**
+     * add_post
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function add_post()
 	{	
 		$this->template->append_css('markdown.min.css');
@@ -115,7 +150,17 @@ class Admin_posts extends OB_AdminController {
         $this->template->build('admin/posts/add_post', $data);       
 	}
 
-
+	/**
+     * edit_post
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @param  string $id the post ID
+     * 
+     * @return  null
+     */
 	public function edit_post($id)
 	{
 		$this->template->append_css('markdown.min.css');
@@ -191,7 +236,17 @@ class Admin_posts extends OB_AdminController {
 
 	}
 
-
+	/**
+     * remove_post
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @param  string $id the post ID
+     * 
+     * @return  null
+     */
 	public function remove_post($id)
 	{
 		// remove the post

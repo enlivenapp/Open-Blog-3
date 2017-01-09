@@ -1,11 +1,29 @@
-<?php
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Admin Posts M
+ * 
+ * Admin Posts Model Class
+ *
+ * @access  public
+ * @author  Enliven Appications
+ * @version 3.0
+ * 
+*/
 class Admin_posts_m extends CI_Model
 {
 	// Protected or private properties
 	protected $_table;
 	
-	// Constructor
+	/**
+     * Construct
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function __construct()
 	{
 		parent::__construct();
@@ -14,62 +32,130 @@ class Admin_posts_m extends CI_Model
 		$this->_table = $tables['tables'];
 	}
 
+	/**
+     * get_posts
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
 	public function get_posts()
 	{
 		 return $this->db->get($this->_table['posts'])->result();
 	}
 
+	/**
+     * get_post
+     * 
+     * gets a single post
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  array
+     */
 	public function get_post($id)
 	{
+		// get the post
 		$post = $this->db->where('id', $id)->limit(1)->get($this->_table['posts'])->row_array();
 
+		// get post's categories
 		$query_cats = $this->db->select('category_id')->where('post_id', $post['id'])->get($this->_table['posts_to_categories'])->result_array();
 
-		//$post['selected_cats'] = $query_cats;
+		// build for multi-select
 		foreach ($query_cats as $k => $v)
 		{
 			$post['selected_cats'][] = $v['category_id'];
 		}
 
+		// build the multi-select 
 		$post['cats'] = $this->get_cats_form();
 
+		// return 
 		return $post;
 	}
 
+	/**
+     * add_post
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @param  array $data the array data for the new post
+     * @return  bool
+     */
 	public function add_post($data)
 	{
+		// separate the categories from 
+		// post data
 		$cats = $data['cats'];
 		unset($data['cats']);
 
+		// attempt to insert the post
 		if ($this->db->insert($this->_table['posts'], $data))
 		{
+			// it works, so get the new id
 			$new_post_id = $this->db->insert_id();
 
+			// attempt to add the categories
 			if ($this->insert_cats_to_post($new_post_id, $cats))
 			{
+				// everything went well
 				return true;
 			}
+
+			// couldn't insert the post
 			return false;
 		}
+
+		// default failure
 		return false;
 	}
 
-	
+
+	/**
+     * update_post
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @param  string $id the existing post id
+     * @param  array $data the new data for the post
+     * 
+     * @return  bool
+     */
 	public function update_post($id, $data)
 	{
+		// separate the categories
 		$cats = $data['cats'];
 		unset($data['cats']);
 
 		// update the curent record and categories
 		if ($this->db->where('id', $id)->update($this->_table['posts'], $data) && $this->update_cats_to_post($id, $cats))
 		{
+			// woot!
 			return true;
 		}
 		// default failure
 		return false;
 	}
 
-
+	/**
+     * remove_post
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @param  string $id the id to be removed
+     * 
+     * @return  null
+     */
 	public function remove_post($id)
 	{
 		// get the outgoing post information
@@ -82,17 +168,35 @@ class Admin_posts_m extends CI_Model
 		return $this->db->delete($this->_table['posts'], ['id' => $id]);
 	}
 
+	/**
+     * update_cats_to_post
+     * 
+     * Updates categories for an
+     * existing post
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @param  string $post_id
+     * @param  array $cats an array of new categories
+     * 
+     * @return bool
+     */
 	public function update_cats_to_post($post_id, $cats)
 	{
+		// do we have needed info?
 		if ( ! $cats || ! $post_id )
 		{
+			// fail
 			return false;
 		}
 
-		$cur_cats = $this->db->where('post_id', $post_id)->get($this->_table['posts_to_categories'])->result_array();
+		// help switch on success...
+		$return = true;
 
-		// holds array of category IDs to delete
-		$del_cats = [];
+		// get the current categories for the post
+		$cur_cats = $this->db->where('post_id', $post_id)->get($this->_table['posts_to_categories'])->result_array();
 
 		// decide which goes where, if anything...
 		// we foreach loop through the current categories
@@ -121,13 +225,13 @@ class Admin_posts_m extends CI_Model
 			{
 				if (! $this->db->where('id', $cat['id'])->delete($this->_table['posts_to_categories']) )
 				{
-					return false;
+					$return = false;
 				}
 			}
 		}
 
 		// insert new categories
-		if ( $cats )
+		if ( $cats && $return == true)
 		{
 			return $this->insert_cats_to_post($post_id, $cats);
 		}
@@ -135,38 +239,63 @@ class Admin_posts_m extends CI_Model
 		return true;
 	}
 
+	/**
+     * insert_cats_into_post
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @param  string $post_id 
+     * @param  array $cats array of caregories
+     * 
+     * @return  bool
+     */
 	public function insert_cats_to_post($post_id, $cats)
 	{
+		// build insert array
 		foreach ($cats as $k => $v)
 		{
 			$insert[] = ['post_id' => $post_id, 'category_id' => $v];
 		}
 
+		// attempt to insert categories for the post
 		if ($this->db->insert_batch($this->_table['posts_to_categories'], $insert))
 		{
+			// yay!
 			return true;
 		}
+
+		// boo!
 		return false;
 	}
 
-
+	/**
+     * get_cats_form
+     *
+     * builds the array to populate
+     * the categories multi-select input
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  array
+     */
 	public function get_cats_form()
 	{
+		// get'm
 		$cats = $this->db->select('id, name')->get('categories')->result_array();
 
+		// default empty array
 		$ret = [];
 
+		// foreach getting id and name
 		foreach ($cats as $k => $v)
 		{
 			$ret[$v['id']] = $v['name'];
 		}
 
+		// return array
 		return $ret;
-
-
-
 	}
-
-
-
 }
