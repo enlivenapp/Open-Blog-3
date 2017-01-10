@@ -305,7 +305,7 @@ class Obcore
 		}
 
 		// if $bcc
-		if ($cc)
+		if ($bcc)
 		{
 			$this->ci->email->bcc($bcc);
 		}
