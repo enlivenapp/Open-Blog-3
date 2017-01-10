@@ -246,6 +246,7 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}posts` (
   `url_title` varchar(200) NOT NULL,
   `excerpt` text NOT NULL,
   `content` longtext NOT NULL,
+  `feature_image` varchar(255) DEFAULT NULL,
   `allow_comments` enum('0','1') NOT NULL DEFAULT '1',
   `sticky` enum('0','1') NOT NULL DEFAULT '0',
   `status` enum('draft','published') NOT NULL DEFAULT 'published',
@@ -258,7 +259,7 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}posts` (
 -- split --
 
 INSERT INTO `{PREFIX}posts` (`id`, `author`, `date_posted`, `title`, `url_title`, `excerpt`, `content`, `allow_comments`, `sticky`, `status`, `meta_title`, `meta_keywords`, `meta_description`) VALUES
-(1, 1, '2016-12-21', 'Welcome to Open Blog', 'welcome-to-open-blog', 'Congratulations! If you can see this page, this means Open Blog was successfully installed. If you need help, don\'t hesitate and visit the Open Blog home page.\r\n', '#### Congratulations!\r\n\r\nIf you can see this page, this means Open Blog was successfully installed.\r\n\r\nIf you need help, don\'t hesitate and visit the Open Blog home page.\r\n\r\nSincerely,\r\n\r\nThe Open Blog team\r\n\r\n*Since this is just an example post, feel free to delete it.*', '1', '0', 'published', 'Open Blog Home Page', 'Open, Blog, Open Blog', 'The Open Blog Homepage');
+(1, 1, '2016-12-21', 'Welcome to Open Blog', 'welcome-to-open-blog', 'Congratulations! If you can see this page, this means Open Blog was successfully installed. If you need help, don\'t hesitate and visit the Open Blog home page.\r\n', '#### Congratulations!\r\n\r\nIf you can see this page, this means Open Blog was successfully installed.\r\n\r\nIf you need help, don\'t hesitate and visit the Open Blog home page.\r\n\r\nSincerely,\r\n\r\nThe Open Blog team\r\n\r\n*Since this is just an example post, feel free to delete it.*', NULL ,'1', '0', 'published', 'Open Blog Home Page', 'Open, Blog, Open Blog', 'The Open Blog Homepage');
 
 -- split --
 
