@@ -179,7 +179,7 @@
                           </div>
 
                           <div class="col-sm-3">
-                            <?php echo $template['partials']['feeds']; ?>
+                            <?php echo $template['partials']['notices']; ?>
                           </div>
 
                         </div>

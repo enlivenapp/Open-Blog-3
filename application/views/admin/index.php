@@ -32,10 +32,10 @@
     <div class="col-md-3 col-sm-6 col-xs-6"> 
         <div class="panel status panel-warning">
             <div class="panel-heading">
-                <h1 class="panel-title text-center"><?= $new_notices_count ?></h1>
+                <h1 class="panel-title text-center"><?= $notification_count ?></h1>
             </div>
             <div class="panel-body text-center">                        
-                <strong>Unread Notifications</strong>
+                <strong>Subscriptions to New Content</strong>
             </div>
         </div>  
     </div>

@@ -1,13 +1,8 @@
 <?php
 
 /**
- * CodeIgniter Template Class
+ * Open Blog Core Class
  *
- * Build your CodeIgniter pages much easier with partials, breadcrumbs, layouts and themes
- *
- * @package			CodeIgniter
- * @subpackage		Open Blog Core
- * @category		Libraries
  * @author			Enliven Applications
  * @license			MIT
  * @link			http://open-blog.org
@@ -139,7 +134,7 @@ class Obcore
 					if ($this->ci->input->post())
 					{
 						// set the $cur_val to the user's input
-						$cur_val = $this->input->post($name);
+						$cur_val = $this->ci->input->post($name);
 					}
 				}
 			}
@@ -242,6 +237,93 @@ class Obcore
 	}
 
 
+	public function send_email($to, $subject, $message, $cc=false, $bcc=false)
+	{
+		$this->ci->load->library('email');
+
+		//set up the email config 
+		$mail_protocol = $this->ci->config->item('mail_protocol');
+
+		// protocol
+		$config['protocol'] = $mail_protocol;
+
+		// we switch on $mail_protocol so we
+		// can add additional config items 
+		// as the protocol changes
+		switch ($mail_protocol) {
+			// the simple mail protocol
+			case 'mail':
+				// we don't need to do anything for mail...
+				break;
+
+			// smtp... 	
+			case 'smtp':
+				$config['smtp_host'] = $this->ci->config->item('smtp_host');
+				$config['smtp_user'] = $this->ci->config->item('smtp_user');
+				$config['smtp_pass'] = $this->ci->config->item('smtp_pass');
+				$config['smtp_port'] = $this->ci->config->item('smtp_port');
+				break;
+
+			// lastly, sendmail
+			case 'sendmail':
+				//The server path to Sendmail. Usually '/usr/sbin/sendmail'
+				$config['mailpath'] = $this->ci->config->item('sendmail_path');
+				break;
+
+			// default is 'mail'
+			default:
+				// $mail_protocol ended up being something 
+				// other than the 3 we check for, so we override
+				// whatever it was and go with 'mail'
+				$config['protocol'] = 'mail';
+				break;
+		}
+		
+		// the rest of the config items we don't
+		// need to worry about which protocol the
+		// site is using...
+		$config['charset'] = 'iso-8859-1';
+		$config['wordwrap'] = TRUE;
+		$config['useragent'] = 'OpenBlogv3';
+		$config['mailtype'] = 'html';
+		
+		
+
+		// init and let's send some email
+		$this->ci->email->initialize($config);
+
+		// from db settings
+		$this->ci->email->from($this->ci->config->item('server_email'), $this->ci->config->item('site_name'));
+
+		// set who it's going to...
+		$this->ci->email->to($to);
+
+		// if $cc
+		if ($cc)
+		{
+			$this->ci->email->cc($cc);
+		}
+
+		// if $bcc
+		if ($cc)
+		{
+			$this->ci->email->bcc($bcc);
+		}
+
+		// set the subject
+		$this->ci->email->subject($subject);
+		
+		// set the message...
+		$this->ci->email->message($message);
+
+		// and off we go
+		if (!$this->ci->email->send())
+		{
+			$this->ci->email->print_debugger();
+		}
+		return true;
+
+	}
 
 
 

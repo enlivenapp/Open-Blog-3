@@ -89,7 +89,7 @@ class OB_Controller extends CI_Controller
 				->set_partial('nav', 'nav')
 				->set_partial('archives', 'archives')
 				->set_partial('categories', 'categories')
-				->set_partial('feeds', 'feeds')
+				->set_partial('notices', 'notices')
 				->set_partial('links', 'links')
 				->set_partial('social', 'social');
 

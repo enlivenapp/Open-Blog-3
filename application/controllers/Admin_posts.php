@@ -165,7 +165,7 @@ class Admin_posts extends OB_AdminController {
 
         		// succeeded
         		$this->session->set_flashdata('success', lang('post_added_success_resp'));
-				redirect('admin/admin_posts');
+				redirect('admin_posts');
         	}
         	// failed
         	$data['message'] = lang('post_added_fail_resp');

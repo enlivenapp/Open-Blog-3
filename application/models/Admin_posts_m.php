@@ -105,6 +105,20 @@ class Admin_posts_m extends CI_Model
 			if ($this->insert_cats_to_post($new_post_id, $cats))
 			{
 				// everything went well
+				if ($data['status'] == 'published')
+				{
+					$this->load->library('markdown');
+					// email subscribers
+					// get subscribers
+					$subs = $this->db->where('verified', 1)->get('notifications')->result();
+
+					foreach ($subs as $sub)
+					{
+						$this->obcore->send_email( $sub->email_address, $data['title'] . ' - ' . $this->config->item('site_name'), lang('post_new_post_notification_msg') . $this->markdown->parse($data['content']) . lang('post_new_post_notification_msg_foot') . '[<a href="' . site_url('notices/unsub') . '">Unsubscribe</a>]');
+					}
+					
+				}
+				
 				return true;
 			}
 
@@ -131,6 +145,7 @@ class Admin_posts_m extends CI_Model
      */
 	public function update_post($id, $data)
 	{
+		$old = $this->db->where('id', $id)->limit(1)->get($this->_table['posts'])->row();
 		// separate the categories
 		$cats = $data['cats'];
 		unset($data['cats']);
@@ -138,6 +153,21 @@ class Admin_posts_m extends CI_Model
 		// update the curent record and categories
 		if ($this->db->where('id', $id)->update($this->_table['posts'], $data) && $this->update_cats_to_post($id, $cats))
 		{
+			// if we've updated a post and we're taking a formerly 'draft' post
+			// to 'published', we should send out the notices.
+			if ($data['status'] == 'published' && $old->status == 'draft')
+				{
+					$this->load->library('markdown');
+					// email subscribers
+					// get subscribers
+					$subs = $this->db->where('verified', 1)->get('notifications')->result();
+
+					foreach ($subs as $sub)
+					{
+						$this->obcore->send_email( $sub->email_address, $data['title'] . ' - ' . $this->config->item('site_name'), lang('post_new_post_notification_msg') . $this->markdown->parse($data['content']) . lang('post_new_post_notification_msg_foot') . '[<a href="' . site_url('notices/unsub') . '">Unsubscribe</a>]');
+					}
+					
+				}
 			// woot!
 			return true;
 		}
@@ -164,9 +194,28 @@ class Admin_posts_m extends CI_Model
 		// does this post have redirects that need
 		// to be removed as well?
 		$this->obcore->remove_redirects($post->url_title);
+
+		$this->remove_post_to_cats($id);
 		
 		return $this->db->delete($this->_table['posts'], ['id' => $id]);
 	}
+
+	/**
+     * remove_post_to_cats
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @param  string $id the id to be removed
+     * 
+     * @return  null
+     */
+	public function remove_post_to_cats($post_id)
+	{
+		return $this->db->delete($this->_table['posts_to_categories'], ['post_id' => $post_id]);
+	}
+
 
 	/**
      * update_cats_to_post

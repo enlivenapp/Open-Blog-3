@@ -60,7 +60,7 @@ class Admin_m extends CI_Model
 		$data->modded_comments_count = $this->count_comments(1);
 
 		// get any new notices
-		$data->new_notices_count = $this->count_notices();
+		$data->notification_count = $this->count_notices();
 
 		// get news from open-blog api
 		$data->news = $this->get_news();
@@ -215,7 +215,7 @@ class Admin_m extends CI_Model
      */
 	public function count_notices()
 	{
-		return $this->db->where('user_id', $this->ion_auth->get_user_id())->where('notice_read', 0)->count_all_results('notifications');
+		return $this->db->where('verified', 1)->count_all_results('notifications');
 	}
 
 	/**

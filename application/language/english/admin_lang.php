@@ -48,7 +48,25 @@ $lang['use_recaptcha_label']				= "Enable Recaptcha";
 $lang['use_recaptcha_desc']					= 'Would you like to enable Google Recaptcha for your site to help eliminate SPAM and comment moderation? <a href="https://www.google.com/recaptcha/intro/" target="_blank">More Info <sup><i class="fa fa-external-link"></i></sup></a>';
 $lang['use_honeypot_label']					= "Enable Form Honey Pots";
 $lang['use_honeypot_desc']					= "To help prevent SPAM, you can use a honey pot, a SPAMmer filling in a hidden field that should not be. This will help protect your comment and registration forms from robots but not humans. ";
-
+$lang['mail_protocol_label']				= "Mail Protocol";
+$lang['mail_protocol_desc']					= "Choose the mail protocol you would like to send emails with.";
+$lang['smtp']								= 'SMTP (Requires smtp email account IE: your server, google, yahoo, etc)';
+$lang['mail']								= 'MAIL (Easy to use, bad for large list of recipients)';
+$lang['sendmail']							= "SENDMAIL (Some servers don't allow the 'mail' protocol.)";
+$lang['sendmail_path_label']				= "Sendmail Path";
+$lang['sendmail_path_desc']					= "(Required if usung Sendmail) Enter the sendmail path. Usually found in your server control panel.";
+$lang['smtp_user_label']					= "SMTP User";
+$lang['smtp_user_desc']						= "(Required if usung SMTP) Enter the username for your SMTP account";
+$lang['smtp_host_label']					= "SMTP Host";
+$lang['smtp_host_desc']						= "(Required if usung SMTP) Enter the SMTP Host for your account.  (IE: google.com, mail.yourdomain.com, etc)";
+$lang['smtp_pass_label']					= "SMTP Password";
+$lang['smtp_pass_desc']						= "(Required if usung SMTP) Enter the SMTP Password for your username";
+$lang['smtp_port_label']					= "SMTP Port";
+$lang['smtp_port_desc']						= "(Required if usung SMTP) Enter the SMTP Port number provided by your host.";
+$lang['admin_email_label']					= "Admin Email";
+$lang['admin_email_desc']					= "The email address in which you would like to receive notices from the website.";
+$lang['server_email_label']					= "Server Email";
+$lang['server_email_desc']					= "The email address in which you would like the server to set as 'From'. This can be 'noreply@' or your email address so people can reply and get a human.";
 
 
 // Links
@@ -186,7 +204,9 @@ $lang['post_form_redirect_temp']			= "Temporarily Redirect to new URL Title";
 $lang['post_form_feature_image_text']		= "Feature Image";
 $lang['post_add_form_feature_image_help_text']		= "Upload a feature image or leave blank.";
 $lang['post_edit_form_feature_image_help_text']		= "Upload a feature image to replace current or leave blank to keep the same.";
-
+$lang['post_new_post_notification_sbj']		= "New Post";
+$lang['post_new_post_notification_msg']		= "Hi!   We just added new content.  Below is the new post. <br><br>";
+$lang['post_new_post_notification_msg_foot']		= "<br><br>You're receiving this email because you've requested new content when we post it. ";
 
 
 // navigation

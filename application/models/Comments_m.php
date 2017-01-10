@@ -48,8 +48,10 @@ class Comments_m extends CI_Model
      */
 	public function get_comments($post_id)
 	{
-		$this->db->where('post_id', $post_id)
-					->order_by('id', 'ASC');
+		$this->db
+				->where('post_id', $post_id)
+				->where('modded', 0)
+				->order_by('id', 'ASC');
 
 		$query = $this->db->get($this->_table['comments']);
 
@@ -175,6 +177,8 @@ class Comments_m extends CI_Model
 		// do the insert...
 		if ($this->db->insert($this->_table['comments'], $data))
 		{
+			// send the comment email notice
+			$this->obcore->send_email($this->config->item('admin_email'), $this->config->item('site_name') . ' ' . lang('email_new_comment_sbj'), lang('email_new_comment_msg') . $this->input->post('comment'));
 			return true;
 		}
 		return false;

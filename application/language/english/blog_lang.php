@@ -8,9 +8,10 @@ $lang['blog_links_hdr']					= "Blog Links";
 $lang['links_hdr']						= "Links";
 $lang['archives_hdr']					= "Archives";
 $lang['categories_hdr']					= "Categories";
-$lang['blog_feeds_hdr']					= "Blog Feeds";				
+$lang['blog_notices_hdr']				= "Subscribe";				
 $lang['category_hdr']					= "Posts in Category ";
 $lang['archives_for_hdr']				= "Archives for ";
+$lang['blog_notices_help_txt']			= "Get an email when new content is added.";
 
 // General Buttons
 $lang['btn_read_more'] 					= "Read more&hellip;";
@@ -86,4 +87,31 @@ $lang['recaptcha']						= "reCAPTCHA";
 // Success
 $lang['add_comment_success']			= "Comment Added Successfully.";
 $lang['add_comment_success_modded']		= "Comment Added Successfully. Your comment will appear once approved by an administrator.";
+
+
+// Emails
+$lang['email_new_comment_sbj']			= "New Comment";
+$lang['email_new_comment_msg']			= "You have a new comment.  You can manage it in the Control Panel <br><br>The new Comment:<br><br>";
+
+
+// notices
+$lang['notices_enter_email_address']	= "Enter Email Address";
+$lang['notices_get_notices']			= "Get Notified!";
+$lang['notices_no_post_data']			= "Error. Please try again.";
+$lang['email_address']					= "Email Address";
+$lang['notify_new_notification']		= 'Nofifications Requested';
+$lang['notices_email_verify_msg']		= "Someone requested this email address to receive notifications when we post new content on our website.  If this is correct, click or follow the link below to verify the email, if you did not, you can ignore this email and we will not send you any notices. <br><br>Verification Link: ";
+$lang['notices_verify_failed']			= 'It seems the verification failed for some reason.  Please check your email and try again.';
+$lang['notices_verify_success']			= "Thank you for verifying your email address.  We'll send you a confirmation email too!";
+$lang['notify_success']					= 'Successful Verification';
+$lang['notices_success_verifed_msg']	= 'Thank you for verifying your email address.  We will begin sending you a notice when we add content to our blog.';
+$lang['notices_add_success']			= 'Thank you for your interest in our content!  Please check your email for further instructions to verify your email address.';
+$lang['notices_email_exists']			= 'Looks like we already have this address.';
+
+
+
+
+//$lang['']	= '';
+
+
 
