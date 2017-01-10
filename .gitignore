@@ -1,4 +1,8 @@
 /application/config/database.php
 /application/config/config.php
 /.htaccess
-/assets/cache
+/assets/cache/*
+/uploads/*.jpg
+/uploads/*.gif
+/uploads/*.png
+/application/cache/*
