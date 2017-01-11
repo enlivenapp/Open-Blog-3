@@ -395,14 +395,4 @@ class Admin_m extends CI_Model
     	return function_exists('curl_init');
 	}
 
-
-
-
-
-
-
-
-
-
 }
-

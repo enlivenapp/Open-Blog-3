@@ -141,19 +141,9 @@
                         <?php echo $template['body']; ?>
                       
 
-                        <div class="col-sm-12">
-                          <div class="page-header text-muted divider" id="connect">
-                            <?php echo lang('connect_hdr'); ?>
-                          </div>
-                        </div>
-                      
-                        <div class="row">
-                          <div class="col-sm-12">
+
                             <?php echo $template['partials']['social']; ?>
-                          </div>
-                        </div>
-                        
-                        <hr>
+                            
 
                       <div class="col-sm-12">
                           <div class="page-header text-muted divider" id="blog-links">

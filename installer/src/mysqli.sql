@@ -380,8 +380,8 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}social` (
 -- split --
 
 INSERT INTO `{PREFIX}social` (`id`, `name`, `url`, `enabled`) VALUES
-(1, 'Facebook', NULL, 1),
-(2, 'Twitter', NULL, 1);
+(1, 'Facebook', NULL, 0),
+(2, 'Twitter', NULL, 0);
 
 -- split --
 

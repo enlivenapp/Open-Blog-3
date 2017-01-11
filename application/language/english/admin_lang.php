@@ -335,9 +335,33 @@ $lang['themes_activated_success_resp']		= "Theme Successfully Activated";
 $lang['themes_activated_fail_resp']			= "Couldn't Activate Theme. Please try again.";
 
 
+
+// social
+$lang['social_hdr']							= "Social";
+$lang['social_hdr_help_txt']				= "Add, Edit, or Remove Links to your social media accounts.";
+$lang['social_add_new']						= "Add";
+$lang['social_edit_btn']					= "Edit";
+$lang['social_remove_btn']					= "Remove";
+$lang['social_removed_success_resp']		= "Social Link Successfully Removed";
+$lang['social_removed_fail_resp']			= "Could not remove Social Link. Please try again.";
+$lang['index_add_new_social']				= "Add Social Link";
+$lang['social_form_name']					= "Name";
+$lang['social_form_url']					= "URL";
+$lang['social_form_active']					= "Active";
+$lang['add_social_subheading']				= "Add a new social link. Just enter the Name of the social media service, the full URL (include http://) and if you want it to be active.  Active links are shown on the public pages of your site.";
+$lang['save_social_btn']					= "Save Social Link";
+$lang['social_update_success_resp']			= "Social Link Successfully Updated";
+$lang['social_update_fail_resp']			= "Could not update Social Link. Please try again.";
+$lang['social_added_success_resp']			= "Social Link Successfully Added";
+$lang['social_added_fail_resp']				= "Could not add Social Link. Please try again.";
+
+
+
+
+
 $lang['save_settings']						= "Save Settings";
 
-//$lang['']		= "";
+//
 
 // form action responses
 $lang['settings_update_success']			= "Settings Updated Successfully";

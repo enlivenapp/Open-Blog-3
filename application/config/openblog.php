@@ -30,6 +30,8 @@ $config['openblog']['tables']['pages']          			= 'pages';
 $config['openblog']['tables']['navigation']        			= 'navigation';
 $config['openblog']['tables']['redirects']          		= 'redirects';
 $config['openblog']['tables']['templates']          		= 'templates';
+$config['openblog']['tables']['social']          			= 'social';
+$config['openblog']['tables']['notifications']          	= 'notifications';
 
 /*
  | Users table column and Group table column you want to join WITH.

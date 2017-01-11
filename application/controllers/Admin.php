@@ -80,22 +80,6 @@ class Admin extends OB_AdminController {
 
 
 	/**
-     * Social
-     *
-     * @access  public
-     * @author  Enliven Appications
-     * @version 3.0
-     * 
-     * @return  null
-     */
-	public function social()
-	{
-		$data='';
-		$this->template->build('social/index', $data);
-	}
-
-
-	/**
      * Settings
      * 
      * Shows and Updates website settings

@@ -1,15 +1,23 @@
-<div>
+<h2><?= lang('social_hdr') ?></h2>
+<p><?= lang('social_hdr_help_txt') ?></p>
+<p><a class="btn btn-default btn-sm" href="<?php echo site_url('admin_social/add') ?>"><?php echo lang('social_add_new') ?></a></p>
 
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">All Posts</a></li>
-    <li role="presentation"><a href="#new-post" aria-controls="new-post" role="tab" data-toggle="tab">Create New Post</a></li>
-  </ul>
-
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane fade in active" id="home">...</div>
-    <div role="tabpanel" class="tab-pane fade" id="new-post">... create new post form</div>
-  </div>
-
-</div>
+<table class="table table-condensed">
+    <tr>
+        <th>Name</th>
+        <th>URL</th>
+        <th>Enabled</th>
+        <th></th>
+    </tr>
+    <?php foreach ($social as $item): ?>
+        <tr>
+        <td><?= $item['name'] ?></td>
+        <td><a href="<?= $item['url'] ?>" target="_blank"><?= $item['url'] ?></a></td>
+        <td><?php echo ($item['enabled'] == '1') ? lang('yes') : lang('no'); ?></td>
+        <td class="text-right">
+            <a href="<?= site_url('admin_social/edit/' . $item['id']) ?>" class="btn btn-default btn-xs"><?= lang('social_edit_btn') ?></a>
+            <a href="<?= site_url('admin_social/remove/' . $item['id']) ?>" class="btn btn-danger btn-xs"><?= lang('social_remove_btn') ?></a>
+        </td>
+    </tr>
+  <?php endforeach ?>
+</table>
