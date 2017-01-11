@@ -7,11 +7,6 @@
 
 	<div class="row">    
       <div class="col-sm-12">
-        <h4>
-          <small class="text-muted">
-          	<span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php echo nice_date($page['date'], 'M d Y') ?>
-          </small>
-        </h4>
         <p><?php echo $page['content'] ?></p>
         <h4>
           <small class="text-muted">

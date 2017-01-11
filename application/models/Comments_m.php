@@ -65,6 +65,7 @@ class Comments_m extends CI_Model
 			foreach ($result as &$item)
 			{
 				$item->content = nl2br($item->content);
+				$item->date = DateTime::createFromFormat('Y-m-d H:i:s', $item->date)->format('M d Y');
 
 				if ($item->user_id)
 				{

@@ -75,6 +75,7 @@ class Blog_m extends CI_Model
 				$item['display_name'] = $this->concat_display_name($item['first_name'], $item['last_name']);
 				$item['categories'] = $this->Categories_m->get_categories_by_ids($this->get_post_categories($item['id']));
 				$item['comment_count'] = $this->db->where('post_id', $item['id'])->from($this->_table['comments'])->count_all_results();
+				$item['date_posted'] = DateTime::createFromFormat('Y-m-d', $item['date_posted'])->format('D M d Y');
 			}
 
 			$result['post_count'] = $query->num_rows();

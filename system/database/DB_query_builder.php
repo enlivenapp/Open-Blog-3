@@ -6,7 +6,7 @@
  *
  * This content is released under the MIT License (MIT)
  *
- * Copyright (c) 2014 - 2016, British Columbia Institute of Technology
+ * Copyright (c) 2014 - 2017, British Columbia Institute of Technology
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -29,7 +29,7 @@
  * @package	CodeIgniter
  * @author	EllisLab Dev Team
  * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
- * @copyright	Copyright (c) 2014 - 2016, British Columbia Institute of Technology (http://bcit.ca/)
+ * @copyright	Copyright (c) 2014 - 2017, British Columbia Institute of Technology (http://bcit.ca/)
  * @license	http://opensource.org/licenses/MIT	MIT License
  * @link	https://codeigniter.com
  * @since	Version 1.0.0
@@ -150,11 +150,11 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 	protected $qb_set			= array();
 
 	/**
- 	 * QB data set for update_batch()
- 	 *
- 	 * @var	array
- 	 */
- 	protected $qb_set_ub			= array();
+	 * QB data set for update_batch()
+	 *
+	 * @var	array
+	 */
+	protected $qb_set_ub			= array();
 
 	/**
 	 * QB aliased tables list
@@ -1402,7 +1402,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 			$this->qb_orderby = NULL;
 		}
 
-		$result = ($this->qb_distinct === TRUE OR ! empty($this->qb_groupby))
+		$result = ($this->qb_distinct === TRUE OR ! empty($this->qb_groupby) OR ! empty($this->qb_cache_groupby))
 			? $this->query($this->_count_string.$this->protect_identifiers('numrows')."\nFROM (\n".$this->_compile_select()."\n) CI_count_all_results")
 			: $this->query($this->_compile_select($this->_count_string.$this->protect_identifiers('numrows')));
 
@@ -1553,7 +1553,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 
 		is_bool($escape) OR $escape = $this->_protect_identifiers;
 
-		$keys = array_keys($this->_object_to_array(current($key)));
+		$keys = array_keys($this->_object_to_array(reset($key)));
 		sort($keys);
 
 		foreach ($key as $row)
@@ -1948,8 +1948,6 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 	 */
 	protected function _update_batch($table, $values, $index)
 	{
-		//$index_escaped = $this->protect_identifiers($index);
-
 		$ids = array();
 		foreach ($values as $key => $val)
 		{
@@ -2010,9 +2008,9 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 				}
 
 				$clean[$k2] = array(
- 					'field'  => $this->protect_identifiers($k2, FALSE, $escape),
- 					'value'  => ($escape === FALSE ? $v2 : $this->escape($v2))
- 				);
+					'field'  => $this->protect_identifiers($k2, FALSE, $escape),
+					'value'  => ($escape === FALSE ? $v2 : $this->escape($v2))
+				);
 			}
 
 			if ($index_set === FALSE)
@@ -2787,6 +2785,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 	{
 		$this->_reset_run(array(
 			'qb_set'	=> array(),
+			'qb_set_ub'	=> array(),
 			'qb_from'	=> array(),
 			'qb_join'	=> array(),
 			'qb_where'	=> array(),

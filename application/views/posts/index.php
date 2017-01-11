@@ -23,7 +23,7 @@
         <h3><?php echo $post->title ?></h3>
         <h4>
           <small class="text-muted">
-          	<span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php echo nice_date($post->date_posted, 'M d Y') ?>
+          	<span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?= $post->date_posted ?>
           	<span class="glyphicon glyphicon-user" aria-hidden="true"></span> <?php echo $post->display_name ?>
           	<span class="glyphicon glyphicon-comment" aria-hidden="true"></span> <?php echo $post->comment_count ?>
             <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
