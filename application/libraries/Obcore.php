@@ -251,7 +251,7 @@ class Obcore
 			}
 			else
 			{
-				$this->ci->template->set_metadata('url', site_url('pages/' . $data['url_title']), 'og');
+				$this->ci->template->set_metadata('url', post_url($data['url_title'], $data['date_posted']), 'og');
 			}
 		}
 		
