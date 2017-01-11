@@ -172,6 +172,9 @@ class Blog extends OB_Controller {
 			
 			
 		}
+
+		$this->obcore->set_meta($data['post'], 'post');
+
 		// build the page
 		$this->template->build('posts/single_post', $data);
 

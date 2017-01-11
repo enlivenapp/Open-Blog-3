@@ -231,7 +231,28 @@ class Obcore
 		}
 		elseif ($type == 'post')
 		{
+			$this->ci->template->set_metadata('title', $data['meta_title']);
+			$this->ci->template->set_metadata('keywords', $data['meta_keywords']);
+			$this->ci->template->set_metadata('description', $data['meta_description']);
 
+			$this->ci->template->set_metadata('title', $data['meta_title'], 'og');
+			$this->ci->template->set_metadata('type', 'website', 'og');
+			$this->ci->template->set_metadata('description', $data['meta_description'], 'og');
+
+			if ($data['feature_image'])
+			{
+				$this->ci->template->set_metadata('image', base_url('uploads/' . $data['feature_image']), 'og');
+			}
+
+			// the homepage being called?
+			if ($home)
+			{
+				$this->ci->template->set_metadata('url', site_url(), 'og');
+			}
+			else
+			{
+				$this->ci->template->set_metadata('url', site_url('pages/' . $data['url_title']), 'og');
+			}
 		}
 		
 	}
