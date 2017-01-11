@@ -76,4 +76,19 @@ class Notices_m extends CI_Model
 		return false;			
 	}
 
+	public function unsub($email_address)
+	{
+		if ($exists = $this->db->where('email_address', $email_address)->limit(1)->get('notifications')->row())
+		{
+			// send confirmation email
+			$this->obcore->send_email( $exists->email_address, $this->config->item('site_name') . ' ' . lang('notify_unsub_sbj'), lang('notices_success_unsub_msg') );
+
+			if ($this->db->delete('notifications', ['email_address' => $email_address]))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
 }

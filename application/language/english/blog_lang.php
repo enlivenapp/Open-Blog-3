@@ -8,10 +8,14 @@ $lang['blog_links_hdr']					= "Blog Links";
 $lang['links_hdr']						= "Links";
 $lang['archives_hdr']					= "Archives";
 $lang['categories_hdr']					= "Categories";
-$lang['blog_notices_hdr']				= "Subscribe";				
+$lang['blog_notices_hdr']				= "Subscribe";
+$lang['blog_notices_unsub_hdr']			= "Unsubscribe";
+				
 $lang['category_hdr']					= "Posts in Category ";
 $lang['archives_for_hdr']				= "Archives for ";
 $lang['blog_notices_help_txt']			= "Get an email when new content is added.";
+$lang['blog_notices_help_unsub_txt']	= "Enter the email address to Unsubscribe.";
+
 
 // General Buttons
 $lang['btn_read_more'] 					= "Read more&hellip;";
@@ -97,6 +101,7 @@ $lang['email_new_comment_msg']			= "You have a new comment.  You can manage it i
 // notices
 $lang['notices_enter_email_address']	= "Enter Email Address";
 $lang['notices_get_notices']			= "Get Notified!";
+$lang['notices_unsub_btn']				= "Unsubscribe";
 $lang['notices_no_post_data']			= "Error. Please try again.";
 $lang['email_address']					= "Email Address";
 $lang['notify_new_notification']		= 'Nofifications Requested';
@@ -107,9 +112,10 @@ $lang['notify_success']					= 'Successful Verification';
 $lang['notices_success_verifed_msg']	= 'Thank you for verifying your email address.  We will begin sending you a notice when we add content to our blog.';
 $lang['notices_add_success']			= 'Thank you for your interest in our content!  Please check your email for further instructions to verify your email address.';
 $lang['notices_email_exists']			= 'Looks like we already have this address.';
-
-
-
+$lang['notices_email_not_exists']		= "Looks like we don't have that address.  Try again?";
+$lang['notify_unsub_success']			= "Successfully Unsubscribed to new content. We're sorry to see you go";
+$lang['notify_unsub_sbj']				= 'Unsubscribed';
+$lang['notices_success_unsub_msg']		= 'This email is to confirm successfully unsubscribing from new content.  <b>We will miss you!</b><br><br>This will be the last email you receive unless you re-subscribe.';
 
 //$lang['']	= '';
 

@@ -78,12 +78,22 @@ class Notices extends OB_Controller {
 		redirect();
 	}
 
-
+     /**
+     * verify
+     * 
+     * verifies the subscriber's email via
+     * md5 hashed code.
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
      public function verify($verify_code=false)
      {
           if ( ! $verify_code )
           {
-               echo 'herre';
                $this->session->set_flashdata('error', lang('notices_verify_failed'));
                redirect();
           }
@@ -95,6 +105,35 @@ class Notices extends OB_Controller {
           }
           $this->session->set_flashdata('error', lang('notices_verify_failed'));
           redirect();
+     }
+
+     /**
+     * unsub
+     * 
+     * Unsubscribes an email address
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  null
+     */
+     public function unsub()
+     {
+          if ($this->input->post())
+          {
+               if ($this->Notices_m->unsub($this->input->post('email_address')))
+               {
+                    $this->session->set_flashdata('success', lang('notify_unsub_success'));
+                    redirect();
+
+               }
+               $this->session->set_flashdata('error', lang('notices_email_not_exists'));
+               redirect('notices/unsub');
+          }
+
+          // build the form page
+          $this->template->build('notices/unsub');
      }
 
 }
