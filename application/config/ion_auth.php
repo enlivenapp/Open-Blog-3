@@ -94,7 +94,7 @@ $config['default_group']              = 'members';           // Default group, u
 $config['admin_group']                = 'admin';             // Default administrators group, use name
 $config['identity']                   = 'email';             // You can use any unique column in your table as identity column. The values in this column, alongside password, will be used for login purposes
 $config['min_password_length']        = 8;                   // Minimum Required Length of Password
-$config['max_password_length']        = 20;                  // Maximum Allowed Length of Password
+$config['max_password_length']        = 100;                  // Maximum Allowed Length of Password
 $config['email_activation']           = FALSE;               // Email Activation for registration
 $config['manual_activation']          = FALSE;               // Manual Activation for registration
 $config['remember_users']             = TRUE;                // Allow users to be remembered and enable auto-login
@@ -174,7 +174,7 @@ $config['email_forgot_password_complete'] = 'new_password.tpl.php';
  | fbaa5e216d163a02ae630ab1a43372635dd374c0 with default salt.
  */
 $config['salt_length'] = 22;
-$config['store_salt']  = FALSE;
+$config['store_salt']  = TRUE;
 
 /*
  | -------------------------------------------------------------------------

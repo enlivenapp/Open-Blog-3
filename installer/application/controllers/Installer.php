@@ -3,6 +3,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Installer extends CI_Controller {
 
+	public function __construct()
+	{
+		parent::__construct();
+
+
+		$this->hash_method    = 'bcrypt';	// sha1 or bcrypt, bcrypt is STRONGLY recommended
+		$this->default_rounds = 8;		// This does not apply if random_rounds is set to true
+		$this->random_rounds  = FALSE;
+		$this->min_rounds     = 5;
+		$this->max_rounds     = 9;
+		$this->salt_prefix    = version_compare(PHP_VERSION, '5.3.7', '<') ? '$2a$' : '$2y$';
+		$this->salt_length    = 22;
+
+		// load the bcrypt class if needed
+		if ($this->hash_method == 'bcrypt') {
+			if ($this->random_rounds)
+			{
+				$rand = rand($this->min_rounds,$this->max_rounds);
+				$params = array('rounds' => $rand);
+			}
+			else
+			{
+				$params = array('rounds' => $this->default_rounds);
+			}
+
+			$params['salt_prefix'] = $this->salt_prefix;
+			$this->load->library('bcrypt',$params);
+		}
+
+
+
+	}
 
 	public function index($lang = null)
 	{
@@ -95,7 +127,7 @@ class Installer extends CI_Controller {
 
 	        if ($this->form_validation->run() === FALSE)
 	        {
-	        	echo 'val failed';
+
 	            $this->load->view('step_one', $data);
 	        }
 	        else
@@ -433,11 +465,9 @@ class Installer extends CI_Controller {
 		$db = new mysqli($this->session->db_host, $this->session->db_user, $this->session->db_pass, $this->session->db_name, $this->session->db_port);
 
 		// parse password
-		$user_salt = substr(md5(uniqid(rand(), true)), 0, 5);
-		$parsed_password = sha1($this->session->password . $user_salt);
-;
-		
-		
+
+		$user_salt = $this->salt();
+		$parsed_password = $this->hash_password($this->session->password, $user_salt);
 
 
 		// Get the SQL for the intended database and parse it
@@ -544,6 +574,109 @@ class Installer extends CI_Controller {
 	{
 		return (file_put_contents($dest, str_replace(array_keys($replace), $replace, file_get_contents($temp))) !== false);
 	}
+
+
+
+		/**
+	 * Generates a random salt value.
+	 *
+	 * Salt generation code taken from https://github.com/ircmaxell/password_compat/blob/master/lib/password.php
+	 *
+	 * @return void
+	 * @author Anthony Ferrera
+	 **/
+	public function salt()
+	{
+
+		$raw_salt_len = 16;
+
+ 		$buffer = '';
+        $buffer_valid = false;
+
+        if (function_exists('mcrypt_create_iv') && !defined('PHALANGER')) {
+            $buffer = mcrypt_create_iv($raw_salt_len, MCRYPT_DEV_URANDOM);
+            if ($buffer) {
+                $buffer_valid = true;
+            }
+        }
+
+        if (!$buffer_valid && function_exists('openssl_random_pseudo_bytes')) {
+            $buffer = openssl_random_pseudo_bytes($raw_salt_len);
+            if ($buffer) {
+                $buffer_valid = true;
+            }
+        }
+
+        if (!$buffer_valid && @is_readable('/dev/urandom')) {
+            $f = fopen('/dev/urandom', 'r');
+            $read = strlen($buffer);
+            while ($read < $raw_salt_len) {
+                $buffer .= fread($f, $raw_salt_len - $read);
+                $read = strlen($buffer);
+            }
+            fclose($f);
+            if ($read >= $raw_salt_len) {
+                $buffer_valid = true;
+            }
+        }
+
+        if (!$buffer_valid || strlen($buffer) < $raw_salt_len) {
+            $bl = strlen($buffer);
+            for ($i = 0; $i < $raw_salt_len; $i++) {
+                if ($i < $bl) {
+                    $buffer[$i] = $buffer[$i] ^ chr(mt_rand(0, 255));
+                } else {
+                    $buffer .= chr(mt_rand(0, 255));
+                }
+            }
+        }
+
+        $salt = $buffer;
+
+        // encode string with the Base64 variant used by crypt
+        $base64_digits   = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
+        $bcrypt64_digits = './ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        $base64_string   = base64_encode($salt);
+        $salt = strtr(rtrim($base64_string, '='), $base64_digits, $bcrypt64_digits);
+
+	    $salt = substr($salt, 0, $this->salt_length);
+
+
+		return $salt;
+
+	}
+
+	/**
+	 * Hashes the password to be stored in the database.
+	 *
+	 * @return void
+	 * @author Mathew
+	 **/
+	public function hash_password($password, $salt=false, $use_sha1_override=FALSE)
+	{
+		if (empty($password))
+		{
+			return FALSE;
+		}
+
+		// bcrypt
+		if ($use_sha1_override === FALSE && $this->hash_method == 'bcrypt')
+		{
+			return $this->bcrypt->hash($password);
+		}
+
+
+		if ($this->store_salt && $salt)
+		{
+			return  sha1($password . $salt);
+		}
+		else
+		{
+			$salt = $this->salt();
+			return  $salt . substr(sha1($salt . $password), 0, -$this->salt_length);
+		}
+	}
+
 
 
 } // /class
