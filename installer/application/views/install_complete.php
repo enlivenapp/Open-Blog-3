@@ -27,7 +27,7 @@
 					</p>
 
 					<p class="">
-						<a href="<?= $this->session->base_url . 'admin/' ?>">Click to Login</a> to the Open Blog Admin Panel!
+						<a href="<?= $this->session->base_url . '/admin/' ?>">Click to Login</a> to the Open Blog Admin Panel!
 					</p>
 
 				</div>
