@@ -28,7 +28,7 @@ $config['parser_enabled'] = TRUE;
 |
 */
 
-$config['parser_body_enabled'] = FALSE;
+$config['parser_body_enabled'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------

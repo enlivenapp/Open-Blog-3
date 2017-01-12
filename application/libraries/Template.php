@@ -761,7 +761,6 @@ class Template
 			foreach ($this->_theme_locations as $location)
 			{
 				$theme_views = array(
-					$this->_theme . '/views/modules/' . $this->_module . '/' . $view,
 					$this->_theme . '/partials/' . $view,
 					$this->_theme . '/views/' . $view
 				);

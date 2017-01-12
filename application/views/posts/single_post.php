@@ -20,7 +20,7 @@
           <small class="text-muted">
             
         </small>
-        <?php if ( $this->ion_auth->is_admin() || $this->ion_auth->in_group('editor') || $this->ion_auth->logged_in() && $this->ion_auth->get_user_id() == $post->author ): ?>
+        <?php if ( $this->ion_auth->is_admin() || $this->ion_auth->in_group('editor') ): ?>
             <br><a class="btn btn-default text-muted" href="<?php echo site_url('admin_posts/edit_post/' . $post['id']) ?>">Edit</a> 
             <?php endif ?>
       </h4>

@@ -46,16 +46,16 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <li><a href="<?php echo site_url('admin') ?>" target="_blank">Admin CP</a></li>
-                      <li><a href="<?php echo site_url('admin/admin_posts') ?>">Posts</a></li>
-                      <li><a href="<?php echo site_url('admin/admin_users') ?>">Users</a></li>
-                      <li><a href="<?php echo site_url('admin/admin_cats') ?>">Categories</a></li>
+                      <li><a href="<?php echo site_url('admin_posts') ?>">Posts</a></li>
+                      <li><a href="<?php echo site_url('admin_users') ?>">Users</a></li>
+                      <li><a href="<?php echo site_url('admin_cats') ?>">Categories</a></li>
                       <li><a href="<?php echo site_url('admin/settings') ?>">Site Settings</a></li>
-                      <li><a href="<?php echo site_url('admin/admin_links') ?>">Links</a></li>
-                      <li><a href="<?php echo site_url('admin/admin_comments') ?>">Comments</a></li>
-                      <li><a href="<?php echo site_url('admin/admin_nav') ?>">Navigation</a></li>
-                      <li><a href="<?php echo site_url('admin/admin_pages') ?>">Pages</a></li>
-                      <li><a href="<?php echo site_url('admin/admin_social') ?>">Social Links</a></li>
-                      <li><a href="<?php echo site_url('admin/admin_themes') ?>">Themes</a></li>
+                      <li><a href="<?php echo site_url('admin_links') ?>">Links</a></li>
+                      <li><a href="<?php echo site_url('admin_comments') ?>">Comments</a></li>
+                      <li><a href="<?php echo site_url('admin_navigation') ?>">Navigation</a></li>
+                      <li><a href="<?php echo site_url('admin_pages') ?>">Pages</a></li>
+                      <li><a href="<?php echo site_url('admin_social') ?>">Social Links</a></li>
+                      <li><a href="<?php echo site_url('admin_themes') ?>">Themes</a></li>
                     </ul>
                   </li>
                 <?php endif ?>
