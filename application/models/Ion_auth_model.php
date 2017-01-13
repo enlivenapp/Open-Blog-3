@@ -1628,7 +1628,12 @@ class Ion_auth_model extends CI_Model
 		                ->get($this->tables['users_groups'])
 						->result();
 
-	    	// now we have all the user's groups,
+	    
+		// default empty array
+		$result = [];
+
+		
+	    // now we have all the user's groups,
 		// now sort the perms for each group
 		// if a group is admin, we build them all.
 		foreach ($groups as $group)
@@ -1660,9 +1665,6 @@ class Ion_auth_model extends CI_Model
 									->result_array();
 			}
 		}
-
-		// default empty array
-		$result = [];
 
 		// if we've gotten to here we're 
 		// using the $perms_arr
