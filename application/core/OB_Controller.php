@@ -82,6 +82,7 @@ class OB_Controller extends CI_Controller
 
 		$this->template->append_css('default.css');
 		
+		
 
 		// let's set up default places for template partials.
 		// all of these can be used or not as needed.
@@ -94,6 +95,7 @@ class OB_Controller extends CI_Controller
 				->set_partial('social', 'social');
 
 		$this->template
+				->set('admin_nav', $this->ion_auth->get_permissions_dropdown())
 				->set('nav', $this->obcore->get_navigation())
 				->set('archives_list', $this->Blog_m->get_archive())
 				->set('links_list', $this->Blog_m->get_links())

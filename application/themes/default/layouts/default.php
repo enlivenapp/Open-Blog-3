@@ -41,39 +41,13 @@
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="admin-navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                  <?php if ($this->ion_auth->is_admin()): ?>
+                  <?php if ($this->template->admin_nav): ?>
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                      <li><a href="<?php echo site_url('admin') ?>" target="_blank">Admin CP</a></li>
-                      <li><a href="<?php echo site_url('admin_posts') ?>">Posts</a></li>
-                      <li><a href="<?php echo site_url('admin_users') ?>">Users</a></li>
-                      <li><a href="<?php echo site_url('admin_cats') ?>">Categories</a></li>
-                      <li><a href="<?php echo site_url('admin/settings') ?>">Site Settings</a></li>
-                      <li><a href="<?php echo site_url('admin_links') ?>">Links</a></li>
-                      <li><a href="<?php echo site_url('admin_comments') ?>">Comments</a></li>
-                      <li><a href="<?php echo site_url('admin_navigation') ?>">Navigation</a></li>
-                      <li><a href="<?php echo site_url('admin_pages') ?>">Pages</a></li>
-                      <li><a href="<?php echo site_url('admin_social') ?>">Social Links</a></li>
-                      <li><a href="<?php echo site_url('admin_themes') ?>">Themes</a></li>
-                    </ul>
-                  </li>
-                <?php endif ?>
-
-                <?php if ($this->ion_auth->in_group('contributors', $this->ion_auth->get_user_id())): ?>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contributors <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?php echo site_url('') ?>">Create Post</a></li>
-                      <li role="separator" class="divider"></li>
-                    </ul>
-                  </li>
-                  <?php endif ?>
-                  <?php if ($this->ion_auth->in_group('editors', $this->ion_auth->get_user_id())): ?>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Editors <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="<?php echo site_url('') ?>">Create Post</a></li>
+                      <?php foreach ($this->template->admin_nav as $nav): ?>
+                      <li><?= $nav ?></li>
+                      <?php endforeach ?>
                     </ul>
                   </li>
                 <?php endif ?>
@@ -139,8 +113,6 @@
                             <?php endif ?>
       
                         <?php echo $template['body']; ?>
-                      
-
 
                             <?php echo $template['partials']['social']; ?>
                             

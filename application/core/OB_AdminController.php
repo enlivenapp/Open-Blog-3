@@ -83,6 +83,8 @@ class OB_AdminController extends CI_Controller
 			$this->template->set('installer_warning', lang('installer_dir_warning_notice'));
 		}
 
+		$this->template->set('admin_nav', $this->ion_auth->get_permissions_dropdown(true));
+
 		// end benchmarking
 		$this->benchmark->mark('admin_controller_end');
 

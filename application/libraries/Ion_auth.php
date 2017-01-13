@@ -549,6 +549,27 @@ class Ion_auth
 
 
 	/**
+	 * get_permissions_dropdown
+	 * 
+	 * Builds permissions links (for navigation)
+	 *
+	 * @author Enliven Applications
+	 * 
+	 * @param   $dash for the admin dashboard? true|false
+	 * 
+	 * @return array
+	 **/
+	public function get_permissions_dropdown($dash=false)
+	{
+		// this works for admin and non-admin alike
+		// we'll get what they can do...
+		return $this->ion_auth_model->get_users_perms(null, $dash);
+
+	}
+
+
+
+	/**
 	 * is_admin
 	 *
 	 * @return bool
