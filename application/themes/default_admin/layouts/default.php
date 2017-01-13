@@ -44,6 +44,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
+            <li><a href="<?php echo site_url('auth/logout') ?>"><b>Log Out</b></a></li>
             <li><a href="http://open-blog.org" target="_blank">Help</a></li>
           </ul>
         </div>
