@@ -69,6 +69,19 @@ $lang['server_email_label']					= "Server Email";
 $lang['server_email_desc']					= "The email address in which you would like the server to set as 'From'. This can be 'noreply@' or your email address so people can reply and get a human.";
 
 
+$lang['email_activation_label']					= "Email Activation";
+$lang['email_activation_desc']					= "Would you like new users to verify their email prior to being allowed to log in and comment? (Recommended ON)";
+$lang['manual_activation_label']				= "Manual Activation";
+$lang['manual_activation_desc']					= "Would you like to manually verify each user who registers?";
+$lang['allow_registrations_label']				= "Allow Registrations";
+$lang['allow_registrations_desc']				= "Do you wish to allow users to create an account on your blog?";
+
+
+
+
+
+
+
 // Links
 $lang['links_hdr']							= "Links";
 $lang['link_remove_btn']					= "Remove Link";

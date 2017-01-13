@@ -149,31 +149,19 @@ class Ion_auth
 					'forgotten_password_code' => $user->forgotten_password_code
 				);
 
-				if(!$this->config->item('use_ci_email', 'ion_auth'))
+				$message = $this->load->view($this->config->item('email_templates', 'ion_auth').$this->config->item('email_forgot_password', 'ion_auth'), $data, true);
+
+				if ($this->obcore->send_email($user->email, $this->config->item('site_name') . ' - ' . $this->lang->line('email_forgotten_password_subject'), $message))
 				{
 					$this->set_message('forgot_password_successful');
-					return $data;
+					return TRUE;
 				}
 				else
 				{
-					$message = $this->load->view($this->config->item('email_templates', 'ion_auth').$this->config->item('email_forgot_password', 'ion_auth'), $data, true);
-					$this->email->clear();
-					$this->email->from($this->config->item('admin_email', 'ion_auth'), $this->config->item('site_title', 'ion_auth'));
-					$this->email->to($user->email);
-					$this->email->subject($this->config->item('site_title', 'ion_auth') . ' - ' . $this->lang->line('email_forgotten_password_subject'));
-					$this->email->message($message);
-
-					if ($this->email->send())
-					{
-						$this->set_message('forgot_password_successful');
-						return TRUE;
-					}
-					else
-					{
-						$this->set_error('forgot_password_unsuccessful');
-						return FALSE;
-					}
+					$this->set_error('forgot_password_unsuccessful');
+					return FALSE;
 				}
+
 			}
 			else
 			{
@@ -227,13 +215,7 @@ class Ion_auth
 			{
 				$message = $this->load->view($this->config->item('email_templates', 'ion_auth').$this->config->item('email_forgot_password_complete', 'ion_auth'), $data, true);
 
-				$this->email->clear();
-				$this->email->from($this->config->item('admin_email', 'ion_auth'), $this->config->item('site_title', 'ion_auth'));
-				$this->email->to($profile->email);
-				$this->email->subject($this->config->item('site_title', 'ion_auth') . ' - ' . $this->lang->line('email_new_password_subject'));
-				$this->email->message($message);
-
-				if ($this->email->send())
+				if ($this->obcore->send_email($profile->email, $this->config->item('site_name') . ' - ' . $this->lang->line('email_new_password_subject'), $message))
 				{
 					$this->set_message('password_change_successful');
 					$this->ion_auth_model->trigger_events(array('post_password_change', 'password_change_successful'));
@@ -300,7 +282,7 @@ class Ion_auth
 	{
 		$this->ion_auth_model->trigger_events('pre_account_creation');
 
-		$email_activation = $this->config->item('email_activation', 'ion_auth');
+		$email_activation = $this->config->item('email_activation');
 
 		$id = $this->ion_auth_model->register($identity, $password, $email, $additional_data, $group_ids);
 
@@ -351,7 +333,7 @@ class Ion_auth
 				'email'      => $email,
 				'activation' => $activation_code,
 			);
-			if(!$this->config->item('use_ci_email', 'ion_auth'))
+			if(!$this->config->item('allow_registrations'))
 			{
 				$this->ion_auth_model->trigger_events(array('post_account_creation', 'post_account_creation_successful', 'activation_email_successful'));
 				$this->set_message('activation_email_successful');
@@ -361,13 +343,7 @@ class Ion_auth
 			{
 				$message = $this->load->view($this->config->item('email_templates', 'ion_auth').$this->config->item('email_activate', 'ion_auth'), $data, true);
 
-				$this->email->clear();
-				$this->email->from($this->config->item('admin_email', 'ion_auth'), $this->config->item('site_title', 'ion_auth'));
-				$this->email->to($email);
-				$this->email->subject($this->config->item('site_title', 'ion_auth') . ' - ' . $this->lang->line('email_activation_subject'));
-				$this->email->message($message);
-
-				if ($this->email->send() == TRUE)
+				if ($this->obcore->send_email($email, $this->config->item('site_name') . ' - ' . $this->lang->line('email_activation_subject'), $message))
 				{
 					$this->ion_auth_model->trigger_events(array('post_account_creation', 'post_account_creation_successful', 'activation_email_successful'));
 					$this->set_message('activation_email_successful');

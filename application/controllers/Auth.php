@@ -418,7 +418,7 @@ class Auth extends OB_Controller {
 	// create a new user
 	public function create_user()
     {
-
+  		// are the already logged in?
     	if ($this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
@@ -426,6 +426,12 @@ class Auth extends OB_Controller {
 			redirect();
 		}
 
+		if ( ! $this->config->item('allow_registrations') )
+		{
+			// new registrations are turned off for this site...
+			$this->session->set_flashdata('error', "Sorry, we're not accepting new users right now");
+			redirect();
+		}
 
         $this->data['title'] = $this->lang->line('create_user_heading');
 

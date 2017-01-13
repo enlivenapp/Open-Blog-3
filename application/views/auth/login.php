@@ -22,7 +22,9 @@
               <input class="btn btn-lg btn-default btn-block" type="submit" value="Login">
               <p style="margin-top: 15px;" class="text-center">
                 <a class="" href="<?php echo site_url('auth/forgot_password') ?>"><?php echo lang('login_forgot_password');?></a> 
+                <?php if ( $this->config->item('allow_registrations') ): ?>
                 <a class="" href="<?php echo site_url('auth/create_user') ?>">Don't have an account?</a>
+                <?php endif ?>
               </p>
             </fieldset>
               </form>

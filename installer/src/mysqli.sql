@@ -315,10 +315,13 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}settings` (
 INSERT INTO `{PREFIX}settings` (`name`, `value`, `tab`, `field_type`, `options`, `required`) VALUES
 ('admin_email', '{USER-EMAIL}', 'email', 'text', '', 1),
 ('allow_comments', '1', 'comments', 'dropdown', '1=yes|0=no', 1),
+('allow_registrations', 'true', 'users', 'dropdown', 'true=yes|false=no', 1),
 ('base_controller', 'blog', 'general', 'dropdown', 'blog=blog|pages=pages', 1),
 ('blog_description', 'A blog application written with CodeIgniter. Requires PHP and MySQL', 'general', 'text', '', 0),
 ('category_list_limit', '10', 'categories', 'dropdown', '10=10|20=20|30=30', 1),
+('email_activation', 'true', 'users', 'dropdown', 'true=yes|false=no', 1),
 ('links_per_box', '10', 'links', 'dropdown', '10=10|20=20|30=30', 1),
+('manual_activation', 'false', 'users', 'dropdown', 'true=yes|false=no', 1),
 ('mail_protocol', 'mail', 'email', 'dropdown', 'mail=mail|smtp=smtp|sendmail=sendmail', 1),
 ('mod_non_user_comments', '1', 'comments', 'dropdown', '1=yes|0=no', 1),
 ('mod_user_comments', '0', 'comments', 'dropdown', '1=yes|0=no', 1),

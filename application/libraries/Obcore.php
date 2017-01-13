@@ -23,7 +23,20 @@ class Obcore
 
 		foreach ($settings as $set)
 		{
-			$this->ci->config->set_item($set->name, $set->value);	
+			// if we need a true bool value
+			if ($set->value == 'true' || $set->value == 'false')
+			{
+				// convert to true bool
+				$bool_value = filter_var($set->value, FILTER_VALIDATE_BOOLEAN);
+
+				// set the value
+				$this->ci->config->set_item($set->name, $bool_value);
+			}
+			// we don't need a bool, so do it normal like
+			else
+			{
+				$this->ci->config->set_item($set->name, $set->value);
+			}	
 		}
 	}
 
