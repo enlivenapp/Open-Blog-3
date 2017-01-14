@@ -119,13 +119,30 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}languages` (
   `is_default` enum('0','1') DEFAULT NULL,
   `is_avail` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 -- split --
 
 INSERT INTO `{PREFIX}languages` (`id`, `language`, `abbreviation`, `author`, `author_website`, `is_default`, `is_avail`) VALUES
 (1, 'english', 'en', 'Enliven Applications', 'http://www.open-blog.org', '1', 1),
-(2, 'slovenian', 'sl', 'Tomaz Muraus', 'http://www.open-blog.org', '0', 0);
+(2, 'indonesian', 'id', 'Enliven Applications', 'http://www.open-blog.org', '0', 0)
+(3, 'arabic', 'ar', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+(4, 'bulgarian', 'bg', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+(5, 'czech', 'cs', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+(6, 'french', 'fr', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+(7, 'hungarian', 'hu', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+(8, 'italian', 'it', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+(9, 'latvian', 'lv', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+(10, 'norwegian', 'no', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+(11, 'polish', 'pl', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+(12, 'portuguese', 'pt', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+(13, 'simplified-chinese', 'zh-hans', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+(14, 'slovak', 'sk', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+(15, 'slovenian', 'sl', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+(16, 'spanish', 'es', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+(17, 'traditional-chinese', 'zh-hant', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+(18, 'turkish', 'tr', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+(19, 'ukranian', 'uk', 'Enliven Applications', 'http://www.open-blog.org', '0', 0);
 
 -- split --
 

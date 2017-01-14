@@ -121,7 +121,7 @@ $lang['notices_success_unsub_msg']		= 'This email is to confirm successfully uns
 
 // public language
 $lang['language_changed_successfully']	= 'Language Changed Successfully';
-$lang['language_not_available']			= 'We don not seem to have that language available.';
+$lang['language_not_available']			= 'We do not seem to have that language available.';
 
 
 
