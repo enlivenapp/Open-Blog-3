@@ -6,8 +6,7 @@
  * Public Language Picker Controller Class
  * 
  * NOTE: This class should never output anything...
- *       get the new lang, and redirect back to the
- *       calling page.
+ *       get the new lang, and redirect whence it came
  *
  * @access  public
  * @author  Enliven Appications
@@ -46,6 +45,7 @@ class Lang_picker extends OB_Controller {
 
      public function set($lang)
      {
+
           // get the default language set by site owner
           $lang = $this->db->where('language', $lang)->limit(1)->get('languages')->row();
 
@@ -55,12 +55,12 @@ class Lang_picker extends OB_Controller {
                $this->session->set_userdata('language_abbr', $lang->abbreviation);
 
                $this->session->set_flashdata('success', lang('language_changed_successfully'));
-               redirect();
+               redirect($this->agent->referrer());
           }
           else
           {
                $this->session->set_flashdata('error', lang('language_not_available'));
-               redirect();
+               redirect($this->agent->referrer());
           }
 
           
