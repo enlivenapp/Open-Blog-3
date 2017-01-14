@@ -54,11 +54,12 @@ class Lang_picker extends OB_Controller {
                $this->session->set_userdata('language', $lang->language);
                $this->session->set_userdata('language_abbr', $lang->abbreviation);
 
+               $this->session->set_flashdata('success', lang('language_changed_successfully'));
                redirect();
           }
           else
           {
-               $this->session->set_flashdata('error', lang('That language does not seem to be available.'));
+               $this->session->set_flashdata('error', lang('language_not_available'));
                redirect();
           }
 
