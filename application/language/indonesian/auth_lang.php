@@ -143,3 +143,48 @@ $lang['reset_password_new_password_confirm_label']            = 'Konfirmasi Kata
 $lang['reset_password_submit_btn']                            = 'Ubah';
 $lang['reset_password_validation_new_password_label']         = 'Kata Sandi Baru';
 $lang['reset_password_validation_new_password_confirm_label'] = 'Konfirmasi Kata Sandi Baru';
+
+// Please translate
+// 
+// NEW for OB
+$lang['group_removed']						= 'Group Removed';
+$lang['group_protected']					= 'Protected Group. You can not remove it.';
+$lang['group_not_removed']					= 'Failed to Remove Group.  Please try again.';
+$lang['remove_group_heading']				= 'Remove Group';
+
+// permissions
+$lang['permissions_label']					= 'Permissions';
+$lang['permissions_desc']					= 'Choose the actions this group may perform.';
+$lang['admin_perm_notice']					= 'The Admin group has access to all areas of the website. Administrator permissions can not be changed.';
+$lang['index_create_perm_link']				= 'New Permission';
+$lang['permissions_name_label']				= 'Name';
+$lang['edit_perm_heading']					= 'Edit Permission';
+$lang['edit_perm_subheading']				= 'Please Edit the permission information below.';
+$lang['remove_perm_heading']				= 'Remove Permission';
+$lang['edit_perm_saved']					= 'Permission Saved';
+
+
+
+$lang['users_perms_slug']					= 'Users';
+$lang['users_perms_desc']					= 'Is this group permitted to administer users?';
+$lang['posts_perms_slug']					= 'Posts';
+$lang['posts_perms_desc']					= 'Is this group permitted to administer posts?';
+$lang['pages_perms_slug']					= 'Pages';
+$lang['pages_perms_desc']					= 'Is this group permitted to administer pages?';
+$lang['links_perms_slug']					= 'Links';
+$lang['links_perms_desc']					= 'Is this group permitted to administer links?';
+$lang['social_perms_slug']					= 'Social';
+$lang['social_perms_desc']					= 'Is this group permitted to administer social links?';
+$lang['comments_perms_slug']					= 'Comments';
+$lang['comments_perms_desc']					= 'Is this group permitted to administer comments?';
+$lang['navigation_perms_slug']					= 'Navigation';
+$lang['navigation_perms_desc']					= 'Is this group permitted to administer navigation?';
+$lang['themes_perms_slug']					= 'Themes';
+$lang['themes_perms_desc']					= 'Is this group permitted to administer themes?';
+$lang['settings_perms_slug']					= 'Settings';
+$lang['settings_perms_desc']					= 'Is this group permitted to administer settings?';
+$lang['updates_perms_slug']					= 'Updates';
+$lang['updates_perms_desc']					= 'Is this group permitted to administer updates?';
+
+
+$lang['perm_already_exists']					= 'Permission already exists.';

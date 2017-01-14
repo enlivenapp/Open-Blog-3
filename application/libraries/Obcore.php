@@ -88,6 +88,27 @@ class Obcore
 
 		$this->ci->session->set_userdata('language', $default_lang->language);
 		$this->ci->session->set_userdata('language_abbr', $default_lang->abbreviation);
+
+		// don't need you anymore.
+		unset($default_lang);
+	}
+
+	public function get_lang_options()
+	{
+		$langs = $this->ci->db->where('is_avail', '1')->get('languages')->result();
+
+		// default empty array
+		$return = [];
+
+		foreach ($langs as $lang)
+		{
+			$return[] = '<a href="' . site_url('lang_picker/set/' . $lang->language) . '">' . ucfirst(humanize($lang->language)) . '</a>';
+		}
+
+		// don't need you anymore.
+		unset($langs);
+
+		return $return;
 	}
 
 

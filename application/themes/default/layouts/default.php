@@ -80,6 +80,22 @@
                 <div class="padding">
                     <div class="full col-sm-9">
                       <h2><?php echo $template['title']; ?></h2>
+
+                      <?php if ($this->template->lang_picker): ?>
+                      <div class="col-xs-2 col-xs-offset-10">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Choose Language <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <?php foreach ($this->template->lang_picker as $lang): ?>
+                            <li><?= $lang ?></li>
+                            <?php endforeach ?>
+                            
+                          </ul>
+                        </div>
+                      </div>
+                        <?php endif ?>
                         <!-- content -->
 
                         <?php if ($this->session->flashdata()): ?>

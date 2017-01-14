@@ -96,6 +96,7 @@ class OB_Controller extends CI_Controller
 
 		$this->template
 				->set('admin_nav', $this->ion_auth->get_permissions_dropdown())
+				->set('lang_picker', $this->obcore->get_lang_options())
 				->set('nav', $this->obcore->get_navigation())
 				->set('archives_list', $this->Blog_m->get_archive())
 				->set('links_list', $this->Blog_m->get_links())

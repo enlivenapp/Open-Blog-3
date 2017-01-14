@@ -561,10 +561,13 @@ class Ion_auth
 	 **/
 	public function get_permissions_dropdown($dash=false)
 	{
-		// this works for admin and non-admin alike
+		if ($this->logged_in())
+		{
+			// this works for admin and non-admin alike
 		// we'll get what they can do...
 		return $this->ion_auth_model->get_users_perms(null, $dash);
-
+		}
+		return false;
 	}
 
 

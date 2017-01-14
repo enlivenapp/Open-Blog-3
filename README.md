@@ -7,6 +7,16 @@ Open Blog is a free and open source blogging platform built using the CodeIgnite
 ###This is the Development Repository for OB3.  
 
 
+## Transaltions
+
+We need translations.  If you would like to help translate files, please check the [Issues Tracker](https://github.com/enlivenapp/Open-Blog-3/issues).  
+
+Please include a README.me update under 'Translators' with:
+
+* Your Name
+* Link to your site/github/wherever. (optional)
+
+
 ## Bug Reports, Feature Requests
 
 Please use the [Issues Tracker](https://github.com/enlivenapp/Open-Blog-3/issues).
@@ -37,6 +47,7 @@ Open Blog v1 was released under GPL-v3 license. Open Blog v3+ will be released u
 
 * [Jason Baier](https://github.com/JasonBaier)
 
+##Translators
 
 ##FAQ
 

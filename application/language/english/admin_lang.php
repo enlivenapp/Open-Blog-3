@@ -369,12 +369,26 @@ $lang['social_added_success_resp']			= "Social Link Successfully Added";
 $lang['social_added_fail_resp']				= "Could not add Social Link. Please try again.";
 
 
-
+// languages
+$lang['languages_hdr']						= "Languages";
+$lang['languages_hdr_help_txt']				= "Enable, Disable, and set a language as default. Enabled languages are offered to site visitors.";
+$lang['languages_disable_btn']				= "Disable";
+$lang['languages_enable_btn']				= "Enable";
+$lang['languages_make_default_btn']			= "Make Default";
+$lang['languages_disable_success_resp']		= "Language Successfully Disabled";
+$lang['languages_disable_fail_resp']		= "Could not disable language. Please try again.";
+$lang['languages_enable_success_resp']		= "Language Successfully Enabled";
+$lang['languages_enable_fail_resp']			= "Could not enable language. Please try again.";
+$lang['languages_default_success_resp']		= "Successfully changed default language";
+$lang['languages_default_fail_resp']		= "Could not change default language. Please try again.";
+$lang['languages_help_text']				= 'Notes: The "Is Default" is set automatically when a visitor views your website. They can change the language to any "Enabled" language they prefer. This will <b>not</b> change any text you enter in your blog.';
+$lang['languages_table_lang_h']				= "Language";
+$lang['languages_table_abbr_h']				= "Abbreviation";
+$lang['languages_table_is_default_h']		= "Is Default";
+$lang['languages_table_enabled_h']			= "Enabled";
 
 
 $lang['save_settings']						= "Save Settings";
-
-//
 
 // form action responses
 $lang['settings_update_success']			= "Settings Updated Successfully";
