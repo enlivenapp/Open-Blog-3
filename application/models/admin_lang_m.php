@@ -85,7 +85,7 @@ class Admin_lang_m extends CI_Model
           // set all to is_default = 0
           if ($this->db->set('is_default', '0')->update($this->_table['languages']) )
           {
-               return $this->db->where('id', $id)->update($this->_table['languages'], ['is_default' => '1']);
+               return $this->db->where('id', $id)->update($this->_table['languages'], ['is_default' => '1', 'is_avail' => '1']);
           }
 
           // default false return

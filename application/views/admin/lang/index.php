@@ -20,7 +20,9 @@
                 <a href="<?= site_url('admin_lang/make_default/' . $item['id']) ?>" class="btn btn-default btn-xs"><?= lang('languages_make_default_btn') ?></a>
             <?php endif ?>
             <?php if ($item['is_avail'] == '1'): ?>
+                <?php if ($item['is_default'] == '0'): ?>
                 <a href="<?= site_url('admin_lang/disable/' . $item['id']) ?>" class="btn btn-default btn-xs"><?= lang('languages_disable_btn') ?></a>
+                <?php endif ?>
             <?php else: ?>
                 <a href="<?= site_url('admin_lang/enable/' . $item['id']) ?>" class="btn btn-default btn-xs"><?= lang('languages_enable_btn') ?></a>
             <?php endif ?>

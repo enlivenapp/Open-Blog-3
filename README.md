@@ -43,11 +43,14 @@ Open Blog v1 was released under GPL-v3 license. Open Blog v3+ will be released u
 
 * [Kami - Original Developer](https://github.com/Kami)
 
-##Contributors
+##Contributors 
+
+[Contributing Guidelines](https://github.com/enlivenapp/Open-Blog-3/blob/master/CONTRIBUTING.md) 
 
 * [Jason Baier](https://github.com/JasonBaier)
 
 ##Translators
+
 
 ##FAQ
 
