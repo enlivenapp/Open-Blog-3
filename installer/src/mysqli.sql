@@ -211,17 +211,12 @@ DROP TABLE IF EXISTS `{PREFIX}notifications`;
 -- split --
 
 CREATE TABLE IF NOT EXISTS `{PREFIX}notifications` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) NOT NULL,
-  `content` varchar(250) NOT NULL,
-  `notice_read` int(1) NOT NULL DEFAULT '0',
+  `id` int(11) NOT NULL,
+  `email_address` varchar(200) NOT NULL,
+  `verify_code` varchar(200) NOT NULL,
+  `verified` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-
--- split --
-
-INSERT INTO `{PREFIX}notifications` (`id`, `user_id`, `content`, `notice_read`) VALUES
-(1, 1, 'This is a notice', 0);
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- split --
 
