@@ -125,7 +125,7 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}languages` (
 
 INSERT INTO `{PREFIX}languages` (`id`, `language`, `abbreviation`, `author`, `author_website`, `is_default`, `is_avail`) VALUES
 (1, 'english', 'en', 'Enliven Applications', 'http://www.open-blog.org', '1', 1),
-(2, 'indonesian', 'id', 'Enliven Applications', 'http://www.open-blog.org', '0', 0)
+(2, 'indonesian', 'id', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
 (3, 'arabic', 'ar', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
 (4, 'bulgarian', 'bg', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
 (5, 'czech', 'cs', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
