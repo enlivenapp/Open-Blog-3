@@ -211,7 +211,7 @@ DROP TABLE IF EXISTS `{PREFIX}notifications`;
 -- split --
 
 CREATE TABLE IF NOT EXISTS `{PREFIX}notifications` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `email_address` varchar(200) NOT NULL,
   `verify_code` varchar(200) NOT NULL,
   `verified` int(1) NOT NULL DEFAULT '0',
