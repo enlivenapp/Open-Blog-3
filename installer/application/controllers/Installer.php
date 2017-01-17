@@ -529,13 +529,13 @@ class Installer extends CI_Controller {
 	 */
 	protected function write_file_config()
 	{
-		$this->load->library('encrypt');
+		$this->load->helper('string');
 		
 		// Able to remove index.php?
 		$index_page = ($this->session->server == 'apache_w') ? '' : 'index.php';
 		
 		// Make random encryption key for each website
-		$encryption_key = substr($this->encrypt->encode(str_shuffle(md5(time())), mt_rand()), 0, 42);
+		$encryption_key = random_string('sha1');
 
 		return $this->write_file_vars('../application/config/config.php', '../application/config/config.php.bak', array(
 																							'___BASE_URL___' => $this->session->base_url,
