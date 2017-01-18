@@ -166,44 +166,44 @@ $lang['email_new_password_subheading'] = 'Votre mot de passe a été changé pou
 // Please translate
 // 
 // NEW for OB
-$lang['group_removed']						= 'Group Removed';
-$lang['group_protected']					= 'Protected Group. You can not remove it.';
-$lang['group_not_removed']					= 'Failed to Remove Group.  Please try again.';
-$lang['remove_group_heading']				= 'Remove Group';
+$lang['group_removed']						= 'Groupe supprimé';
+$lang['group_protected']					= 'Groupe protégé. Vous ne pouvez pas le supprimer.';
+$lang['group_not_removed']					= 'Erreur lors de la suppression du groupe.  Veuillez réessayer.';
+$lang['remove_group_heading']				= 'supprimer un groupe';
 
 // permissions
 $lang['permissions_label']					= 'Permissions';
-$lang['permissions_desc']					= 'Choose the actions this group may perform.';
-$lang['admin_perm_notice']					= 'The Admin group has access to all areas of the website. Administrator permissions can not be changed.';
-$lang['index_create_perm_link']				= 'New Permission';
-$lang['permissions_name_label']				= 'Name';
-$lang['edit_perm_heading']					= 'Edit Permission';
-$lang['edit_perm_subheading']				= 'Please Edit the permission information below.';
-$lang['remove_perm_heading']				= 'Remove Permission';
-$lang['edit_perm_saved']					= 'Permission Saved';
+$lang['permissions_desc']					= 'Choisissez les actions que ce groupe peut effecctuer.';
+$lang['admin_perm_notice']					= 'Le groupe admin a accès à l\'intégralité du site. Les permissions d\'administrateur ne peuvent pas être changées.';
+$lang['index_create_perm_link']				= 'Nouvelle Permission';
+$lang['permissions_name_label']				= 'Nom';
+$lang['edit_perm_heading']					= 'Editer Permission';
+$lang['edit_perm_subheading']				= 'Veuillez Editer les informations de permission ci-dessous.';
+$lang['remove_perm_heading']				= 'Supprimer Permission';
+$lang['edit_perm_saved']					= 'Sauvegarder Permission';
 
 
 
-$lang['users_perms_slug']					= 'Users';
-$lang['users_perms_desc']					= 'Is this group permitted to administer users?';
+$lang['users_perms_slug']					= 'Utilisateurs';
+$lang['users_perms_desc']					= 'Ce groupe peut-il administrer les utilisateurs?';
 $lang['posts_perms_slug']					= 'Posts';
-$lang['posts_perms_desc']					= 'Is this group permitted to administer posts?';
+$lang['posts_perms_desc']					= 'Ce groupe peut-il administrer les posts?';
 $lang['pages_perms_slug']					= 'Pages';
-$lang['pages_perms_desc']					= 'Is this group permitted to administer pages?';
-$lang['links_perms_slug']					= 'Links';
-$lang['links_perms_desc']					= 'Is this group permitted to administer links?';
+$lang['pages_perms_desc']					= 'Ce groupe peut-il administrer les pages?';
+$lang['links_perms_slug']					= 'Liens';
+$lang['links_perms_desc']					= 'Ce groupe peut-il administrer les liens?';
 $lang['social_perms_slug']					= 'Social';
-$lang['social_perms_desc']					= 'Is this group permitted to administer social links?';
-$lang['comments_perms_slug']					= 'Comments';
-$lang['comments_perms_desc']					= 'Is this group permitted to administer comments?';
+$lang['social_perms_desc']					= 'Ce groupe peut-il administrer les liens sociaux?';
+$lang['comments_perms_slug']					= 'Commentaires';
+$lang['comments_perms_desc']					= 'Ce groupe peut-il administrer les commentaires?';
 $lang['navigation_perms_slug']					= 'Navigation';
-$lang['navigation_perms_desc']					= 'Is this group permitted to administer navigation?';
-$lang['themes_perms_slug']					= 'Themes';
-$lang['themes_perms_desc']					= 'Is this group permitted to administer themes?';
-$lang['settings_perms_slug']					= 'Settings';
-$lang['settings_perms_desc']					= 'Is this group permitted to administer settings?';
-$lang['updates_perms_slug']					= 'Updates';
-$lang['updates_perms_desc']					= 'Is this group permitted to administer updates?';
+$lang['navigation_perms_desc']					= 'Ce groupe peut-il administrer la navigation?';
+$lang['themes_perms_slug']					= 'Thèmes';
+$lang['themes_perms_desc']					= 'Ce groupe peut-il administrer les thèmes?';
+$lang['settings_perms_slug']					= 'Options';
+$lang['settings_perms_desc']					= 'Ce groupe peut-il administrer les options?';
+$lang['updates_perms_slug']					= 'Mise à Jour';
+$lang['updates_perms_desc']					= 'Ce groupe peut-il administrer les Mise à Jours?';
 
 
-$lang['perm_already_exists']					= 'Permission already exists.';
+$lang['perm_already_exists']					= 'La permission existe déjà.';
