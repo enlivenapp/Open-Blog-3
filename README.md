@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/enlivenapp/Open-Blog-3.svg?branch=master)](https://travis-ci.org/enlivenapp/Open-Blog-3)
+
 #Open-Blog v3
 
 Open Blog is a free and open source blogging platform built using the CodeIgniter PHP framework. It provides users with a very powerful yet easy to use interface which makes blogging simple and enjoyable.
