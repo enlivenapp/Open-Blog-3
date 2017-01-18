@@ -129,7 +129,7 @@ INSERT INTO `{PREFIX}languages` (`id`, `language`, `abbreviation`, `author`, `au
 (3, 'arabic', 'ar', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
 (4, 'bulgarian', 'bg', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
 (5, 'czech', 'cs', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
-(6, 'french', 'fr', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+(6, 'french', 'fr', 'Enliven Applications', 'http://www.open-blog.org', '0', 1),
 (7, 'hungarian', 'hu', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
 (8, 'italian', 'it', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
 (9, 'latvian', 'lv', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
