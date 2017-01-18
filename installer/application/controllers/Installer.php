@@ -435,11 +435,17 @@ class Installer extends CI_Controller {
 			//yup
 			$data['server_type'] = 'apache';
 
-			// mod_rewrite?
-			if (in_array('mod_rewrite', apache_get_modules()))
+			// because some numbskull turned off
+			// "for security reasons"   dafuq?
+			if (function_exists('apache_get_modules'))
 			{
-				// batting a thousand
-				$data['mod_rewrite'] = 1;
+
+			// mod_rewrite?
+				if (in_array('mod_rewrite', apache_get_modules()))
+				{
+					// batting a thousand
+					$data['mod_rewrite'] = 1;
+				}
 			}
 		}
 		elseif (preg_match('/Nginx/', $_SERVER["SERVER_SOFTWARE"]))
