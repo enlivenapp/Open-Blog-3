@@ -5,6 +5,9 @@ php:
   - 7
   - 7.1
 
+script:
+  - cd application/tests
+
 global:
   - CI=true
   - CI_ENV=testing
