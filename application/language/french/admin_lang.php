@@ -370,22 +370,22 @@ $lang['social_added_fail_resp']				= "Could not add Social Link. Please try agai
 
 
 // languages
-$lang['languages_hdr']						= "Languages";
-$lang['languages_hdr_help_txt']				= "Enable, Disable, and set a language as default. Enabled languages are offered to site visitors.";
-$lang['languages_disable_btn']				= "Disable";
-$lang['languages_enable_btn']				= "Enable";
-$lang['languages_make_default_btn']			= "Make Default";
-$lang['languages_disable_success_resp']		= "Language Successfully Disabled";
-$lang['languages_disable_fail_resp']		= "Could not disable language. Please try again.";
-$lang['languages_enable_success_resp']		= "Language Successfully Enabled";
-$lang['languages_enable_fail_resp']			= "Could not enable language. Please try again.";
-$lang['languages_default_success_resp']		= "Successfully changed default language";
-$lang['languages_default_fail_resp']		= "Could not change default language. Please try again.";
-$lang['languages_help_text']				= 'Notes: The "Is Default" is set automatically when a visitor views your website. They can change the language to any "Enabled" language they prefer. This will <b>not</b> change any text you enter in your blog.';
-$lang['languages_table_lang_h']				= "Language";
+$lang['languages_hdr']						= "Langues";
+$lang['languages_hdr_help_txt']				= "Activer, désactiver, définir le langage par défaut. Les langages activés seront disponibles sur le site public.";
+$lang['languages_disable_btn']				= "Désactiver";
+$lang['languages_enable_btn']				= "activer";
+$lang['languages_make_default_btn']			= "Définir par défaut";
+$lang['languages_disable_success_resp']		= "Langue désactivée";
+$lang['languages_disable_fail_resp']		= "Cette langue ne peut pas être désactivée. Veuillez réessayer.";
+$lang['languages_enable_success_resp']		= "Langue activée";
+$lang['languages_enable_fail_resp']			= "Cette langue ne peut pas être activée. Veuillez réessayer.";
+$lang['languages_default_success_resp']		= "Langue par défaut changée";
+$lang['languages_default_fail_resp']		= "La langue par défaut ne peut pas être changée. Veuillez réessayer.";
+$lang['languages_help_text']				= 'Notes : La mention "Par défaut" est définie automatiquement quand une personne visite votre site. Elle pourra changer la langue par toute autre langue activée. Cela ne changera <b>pas</b> le texte que ous écrivez dans votre blog.';
+$lang['languages_table_lang_h']				= "Langue";
 $lang['languages_table_abbr_h']				= "Abbreviation";
-$lang['languages_table_is_default_h']		= "Is Default";
-$lang['languages_table_enabled_h']			= "Enabled";
+$lang['languages_table_is_default_h']		= "Par défaut";
+$lang['languages_table_enabled_h']			= "Activé";
 
 
 $lang['save_settings']						= "Save Settings";
