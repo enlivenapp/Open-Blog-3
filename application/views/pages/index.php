@@ -11,7 +11,7 @@
         <h4>
           <small class="text-muted">
             <?php if ( $this->ion_auth->is_admin() || $this->ion_auth->in_group('editor') || $this->ion_auth->logged_in() && $this->session->userdata('user_id') == $post->author  ): ?>
-            <a class="btn btn-default text-muted" href="<?php echo site_url('pages/edit_page/' . $page['id']) ?>"><?php echo lang('btn_edit'); ?></a> 
+            <a class="btn btn-default text-muted" href="<?php echo site_url('admin_pages/edit_page/' . $page['id']) ?>"><?php echo lang('btn_edit'); ?></a> 
             <?php endif ?>
             <br>
             
