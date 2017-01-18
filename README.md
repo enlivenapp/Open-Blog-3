@@ -52,6 +52,11 @@ Open Blog v1 was released under GPL-v3 license. Open Blog v3+ will be released u
 * [Jason Baier](https://github.com/JasonBaier)
 
 ##Translators
+* French
+  - Paul DUBOT (https://github.com/keeganpa)
+  - Léonard GAURIAU (https://github.com/leoDisjonct)
+  - Clément TRASSOUDAINE (https://github.com/intv0id)
+  - Jean-Baptiste VALLADEAU (https://github.com/ignamarte)
 
 
 ##FAQ
