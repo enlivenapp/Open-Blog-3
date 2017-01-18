@@ -92,5 +92,4 @@ class Admin_lang_m extends CI_Model
           return false;
      }   
 
-
 }
