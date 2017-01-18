@@ -42,21 +42,6 @@ class OB_Controller extends CI_Controller
 			$this->obcore->set_lang();
 		}
 
-
-		// Allow for something other than 'blog' to be the 
-		// "base_controller" by means of a redirect. Similar
-		// to WordPress functionality.
-		// Your new base controller *MUST* contain an index()
-		// method or things will get ugly fast.	
-		// 
-		// TODO: Change this to actually make the base_controller
-		// the base_controller in config.php so the site root shows 
-		// the correct controller without using uri section 1?
-		//if ($this->config->item('base_controller') != 'blog')
-		//{
-		//	redirect($this->config->item('base_controller'));
-		//}
-
 		// we use this everywhere
 		$this->load->library('ion_auth');
 		$this->load->model('Blog_m');

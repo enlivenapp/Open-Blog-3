@@ -59,14 +59,28 @@ $route['archive/(:any)']					= 'blog/archive/$1';
 $route['category/(:any)'] 					= 'blog/category/$1';
 
 
-
-
-
-
-
-
-
-
-$route['default_controller'] = 'blog';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+/*
+   determine the default controller from the 
+   admin settings.  
+
+   code modified from: https://osvaldas.info/smart-database-driven-routing-in-codeigniter
+
+ */
+require_once( BASEPATH .'database/DB.php' );
+$db =& DB();
+if ( $result = $db->where('name', 'base_controller')->limit(1)->get('settings')->row() )
+{
+	// if we were able to connect and got a result
+	// we set it to that result.
+	$route['default_controller'] = $result->value;
+}
+else
+{
+	// else something went wrong and we'll 
+	// default to the blog controller.
+	$route['default_controller'] = 'blog';
+}
+
