@@ -203,6 +203,9 @@ class Template
 		{
 			$this->_title = $this->_guess_title();
 		}
+		// this is hack-y, but the only way I've found to 
+		// make loading assets from the layout file...  :/
+		$this->_body =  self::_load_view('layouts/'.$this->_layout, $this->_data, $this->_parser_body_enabled, self::_find_view_folder());
 
 		// Output template variables to the template
 		$template['title']	= $this->_title;
@@ -265,6 +268,7 @@ class Template
 		{
 			$this->_ci->output->set_output($this->_body);
 		}
+
 		return $this->_body;
 	}
 

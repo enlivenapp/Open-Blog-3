@@ -58,16 +58,10 @@ class OB_Controller extends CI_Controller
 			$this->template->title($this->config->item('site_name'));
 		}
 
-
 		// because PITassets...
 		Asset::set_url(base_url());
 		Asset::add_path('core', base_url('application/themes/' . $theme->path . '/'));
 		$this->template->set_theme($theme->path);
-
-
-		$this->template->append_css('default.css');
-		
-		
 
 		// let's set up default places for template partials.
 		// all of these can be used or not as needed.
@@ -91,9 +85,5 @@ class OB_Controller extends CI_Controller
 
 		$this->benchmark->mark('my_controller_end');
 	}
-
-
-
-
 
 }
