@@ -45,7 +45,3 @@
     </div>
   </div>
 </div>
-
-<pre>
-<?php print_r($this->config) ?>
-</pre>
