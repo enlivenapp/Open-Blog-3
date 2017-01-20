@@ -251,7 +251,7 @@ class Admin_pages extends OB_AdminController {
         	}
 
         	// do the update
-        	if ($this->admin_pages_m->update_page($id, $post_data))
+        	if ($this->Admin_pages_m->update_page($id, $post_data))
         	{
         		// succeeded
         		$this->session->set_flashdata('success', lang('page_update_success_resp'));
