@@ -82,7 +82,6 @@ class OB_Controller extends CI_Controller
 				->set('categories_list', $this->Blog_m->get_categories())
 				->set('social_list', $this->obcore->generate_social_links());
 
-
 		$this->benchmark->mark('my_controller_end');
 	}
 

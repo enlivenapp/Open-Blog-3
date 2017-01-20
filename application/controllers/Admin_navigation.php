@@ -307,7 +307,7 @@ class Admin_navigation extends OB_AdminController {
 	public function remove_redirect($id)
 	{
 		// remove the nav
-		if ($this->admin_navs_m->remove_redirect($id))
+		if ($this->Admin_navs_m->remove_redirect($id))
 		{
 			//it worked
 			$this->session->set_flashdata('success', lang('nav_redirect_removed_success_resp'));

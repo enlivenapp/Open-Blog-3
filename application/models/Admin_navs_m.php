@@ -79,7 +79,6 @@ class Admin_navs_m extends CI_Model
      */
 	public function add_nav($data)
 	{	
-		
 		// for devlopers I've added the 
 		// processing and form fields so
 		// one could manually enter a URI
@@ -95,7 +94,7 @@ class Admin_navs_m extends CI_Model
 
 		// if they've chosen an post's uri, then
 		// we set data['uri'] to the post's uri
-		if (! empty($nav_data['post']))
+		if (! empty($data['post']))
 		{
 			$data['url'] = $data['post'];
 		}
@@ -103,7 +102,7 @@ class Admin_navs_m extends CI_Model
 		// we set data['uri'] to the page's uri
 		elseif (! empty($data['page']))
 		{
-			$nav_data['url'] = $data['page'];
+			$data['url'] = 'page/' . $data['page'];
 		}
 
 		// unset what we don't need as this
@@ -160,7 +159,7 @@ class Admin_navs_m extends CI_Model
     	elseif (! empty($data['page']) && $data['page'] != $current['url'])
     	{
     		$new_slug = true;
-    		$data['url'] = $data['page'];
+    		$data['url'] = 'page/' . $data['page'];
     	}
 
     	// determine if we're doing the new_slug/url_title thing

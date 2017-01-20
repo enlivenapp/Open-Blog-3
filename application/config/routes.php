@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 
-$route['page/(:num)'] 						= 'blog/index/$1';
+$route['page/(:any)'] 						= 'pages/page/$1';
 $route['blog/page/(:num)'] 					= 'blog/index/$1';
 $route['blog/(:num)/(:num)/(:num)/(:any)'] 	= 'blog/post/$1/$2/$3/$4';
 $route['post/(:any)'] 						= 'post/$1';
