@@ -1,3 +1,4 @@
+<?php if ($post): ?>
 <div class="row">
 	<div class="col-sm-9">
 		<h3><?php echo $post['title'] ?></h3>
@@ -131,3 +132,8 @@
 
 	</div>
 </div>
+
+<?php else: ?>
+	<h2><?= lang('error_404_heading') ?></h2>
+	<p><?= lang('error_404_message') ?></p>
+<?php endif ?>
