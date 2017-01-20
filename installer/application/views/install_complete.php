@@ -23,11 +23,11 @@
 			<div class="row">
 				<div class="text-center" style="padding: 8px;">
 					<p class="">
-						<a href="<?= $this->session->base_url ?>">Click to see</a> your new website!
+						<a href="<?= $view_url ?>">Click to see</a> your new website!
 					</p>
 
 					<p class="">
-						<a href="<?= $this->session->base_url . '/admin/' ?>">Click to Login</a> to the Open Blog Admin Panel!
+						<a href="<?= $login_url ?>">Click to Login</a>.
 					</p>
 
 				</div>
