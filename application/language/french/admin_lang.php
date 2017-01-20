@@ -104,7 +104,7 @@ $lang['link_added_fail_resp']				= "Impossible d'ajouter le lien. Essayez ultér
 $lang['link_removed_success_resp']			= "Lien supprimé avec succès.";
 $lang['link_removed_fail_resp']				= "Impossible de supprimer le lien. Essayez ultérieurement.";
 $lang['link_update_success_resp']			= "Lien mis à jour avec succès";
-$lang['link_update_fail_resp']				= "Impossible de mettre à jour le lien. Esseyaz ultérieurement.";
+$lang['link_update_fail_resp']				= "Impossible de mettre à jour le lien. Essayez ultérieurement.";
 
 
 
@@ -189,7 +189,7 @@ $lang['post_update_fail_resp']				= "Impossible de mettre à jour le post.  Essa
 $lang['post_form_title_text']				= "Titre du post";
 $lang['post_form_title_help_text']			= "Entrez le titre de votre post.";
 $lang['post_form_status_text']				= "Statut";
-$lang['post_form_status_help_text']			= "Choisisser si vous voullez que le post soit en ligne ou en brouillon.";
+$lang['post_form_status_help_text']			= "Choisissez si vous voulez que le post soit en ligne ou en brouillon.";
 $lang['post_form_status_active']			= "En Ligne";
 $lang['post_form_status_inactive']			= "Brouillon";
 $lang['post_form_content_text']				= "Contenu du post";
@@ -218,8 +218,8 @@ $lang['post_form_feature_image_text']		= "Illustration";
 $lang['post_add_form_feature_image_help_text']		= "Upload une illustration, ou laisser vide.";
 $lang['post_edit_form_feature_image_help_text']		= "Upload une illustration pour remplacer l'actuelle, ou laisser vide pour la garder.";
 $lang['post_new_post_notification_sbj']		= "Nouveau Post";
-$lang['post_new_post_notification_msg']		= "Salut!   Nous veunons just d'ajouter du nouveau contenu. Ci dessous, le nouveau post. <br><br>";
-$lang['post_new_post_notification_msg_foot']		= "<br><br>Vous recevez cet email car vous avez demander du nouveau contenu lorsque nous l'ajoutons. ";
+$lang['post_new_post_notification_msg']		= "Salut!   Nous veunons just d'ajouter du nouveau contenu. Ci-dessous, le nouveau post. <br><br>";
+$lang['post_new_post_notification_msg_foot']		= "<br><br>Vous recevez ce mail car vous avez demander du nouveau contenu lorsque nous l'ajoutons. ";
 
 
 // navigation
@@ -266,9 +266,9 @@ $lang['pages_index_controller_label']		= "Page marquée comme page d'accueil";
 $lang['nav_redir_edit_hdr']					= "Edition de redirection";
 $lang['nav_redir_edit_subheading']			= "<b><em>Important</em></b>:  Seulement les utilisateurs confirmés devraient changer ou éditer des éléments de navigation.  Ceci pourrait avoir un impact négatif sur le SEO, et produire des erreurs 404 chez certains utilisateurs. À utiliser avec précaution.";
 $lang['nav_redirect_removed_success_resp']	= "Redirection supprimée avec succès ";
-$lang['nav_redirect_removed_fail_resp']		= "Suprression de redirection impossible. Veuillez réessayer.";
+$lang['nav_redirect_removed_fail_resp']		= "Suprression de la redirection impossible. Veuillez réessayer.";
 $lang['nav_redirect_edit_success_resp']		= "Redirection mise à jour avec succès";
-$lang['nav_redirect_edit_fail_resp']		= "Mise à jour de redirection impossible. Veuillez réessayer.";
+$lang['nav_redirect_edit_fail_resp']		= "Mise à jour de la redirection impossible. Veuillez réessayer.";
 $lang['nav_redir_form_old_slug_text']		= "De";
 $lang['nav_redir_form_old_slug_desc']		= "Le champ 'De' est l'ancien segment URI, celui qui sera initialement appelé.";
 $lang['nav_redir_form_new_slug_text']		= "À";
@@ -314,7 +314,7 @@ $lang['comments_date_posted']				= "Date reçue";
 $lang['comments_current_status']			= "Statut actuel";
 // updates
 $lang['updates_hdr']						= "Mises à jour";
-$lang['updates_subheader']					= "Vous pouvez mettre à jour les structures OpenBlog et CodeIgniter avec lesquelles il est construit. Ci dessous, statut actuel de l'installation.";
+$lang['updates_subheader']					= "Vous pouvez mettre à jour les structures OpenBlog et CodeIgniter avec lesquelles il est construit. Ci-dessous, le statut actuel de l'installation.";
 $lang['updates_failed_connection']			= "Impossible de se connecter à open-blog.org API.";
 $lang['updates_update_available']			= "Mise à jour possible ! <br><b><em>ATTENTION : faire un backup complet du site avant la mise à jour !</em></b>";
 $lang['updates_update_not_available']		= "La version de l'OpenBlog est à jour.";
@@ -327,7 +327,7 @@ $lang['updates_update_failed_resp']			= "Mise à jour OpenBlog impossible. Veuil
 $lang['updates_download_btn']				= "Télécharger la mise à jour";
 // themes
 $lang['themes_hdr']							= "Thèmes";
-$lang['themes_subheader']					= 'Ci dessous la liste des thèmes installés. Pour trouver d"autres thèmes ou des instructions d"installation, veuillez vous rendre sur <a href="http://open-blog.org" target="_blank">Open Blog website</a>.';
+$lang['themes_subheader']					= 'Ci-dessous la liste des thèmes installés. Pour trouver d"autres thèmes ou des instructions d"installation, veuillez vous rendre sur <a href="http://open-blog.org" target="_blank">Open Blog website</a>.';
 $lang['themes_theme_in_use']				= "Thème actif";
 $lang['themes_theme_not_in_use']			= "thème inactif";
 $lang['theme_author_title']					= "Auteur";
@@ -351,7 +351,7 @@ $lang['index_add_new_social']				= "Ajouter un réseau social";
 $lang['social_form_name']					= "Nom";
 $lang['social_form_url']					= "URL";
 $lang['social_form_active']					= "Activer";
-$lang['add_social_subheading']				= "Ajouter un réseau social. Entrez seulement le nom du réseau, l'URL entier (incluant http://) et s'il est actif. Les liens actifs seront montrés sur la première page du blog.";
+$lang['add_social_subheading']				= "Ajouter un réseau social. Entrez seulement le nom du réseau, l'URL entier (incluant http://) et si vous voulez qu'il soit actif. Les liens actifs seront montrés sur la première page du blog.";
 $lang['save_social_btn']					= "Sauver le réseau social";
 $lang['social_update_success_resp']			= "Réseau social mis à jour";
 $lang['social_update_fail_resp']			= "Impossible de mettre à jour le réseau. Veuillez réessayer.";
@@ -361,7 +361,7 @@ $lang['social_added_fail_resp']				= "Impossible d'ajouter le réseau social. Ve
 
 // languages
 $lang['languages_hdr']						= "Langues";
-$lang['languages_hdr_help_txt']				= "Activer, désactiver, définir le langage par défaut. Les langages activés seront disponibles sur le site public.";
+$lang['languages_hdr_help_txt']				= "Activer, désactiver, définir le langage par défaut. Les langues activés seront disponibles sur le site public.";
 $lang['languages_disable_btn']				= "Désactiver";
 $lang['languages_enable_btn']				= "activer";
 $lang['languages_make_default_btn']			= "Définir par défaut";
