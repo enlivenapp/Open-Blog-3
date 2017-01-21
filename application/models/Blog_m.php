@@ -67,14 +67,14 @@ class Blog_m extends CI_Model
 		{
 			// yes...
 			$result['posts'] = $query->result_array();
-			
+
 			// process for needed fields.
 			foreach ($result['posts'] as &$item)
 			{
 				$item['url'] = post_url($item['url_title'], $item['date_posted']);
 				$item['display_name'] = $this->concat_display_name($item['first_name'], $item['last_name']);
 				$item['categories'] = $this->Categories_m->get_categories_by_ids($this->get_post_categories($item['id']));
-				$item['comment_count'] = $this->db->where('post_id', $item['id'])->from($this->_table['comments'])->count_all_results();
+				$item['comment_count'] = $this->db->where('post_id', $item['id'])->where('modded', '0')->from($this->_table['comments'])->count_all_results();
 				$item['date_posted'] = DateTime::createFromFormat('Y-m-d', $item['date_posted'])->format('D M d Y');
 			}
 
@@ -216,7 +216,7 @@ class Blog_m extends CI_Model
 			$result['url'] = post_url($result['url_title'], $result['date_posted']);
 			$result['display_name'] = $this->concat_display_name($result['first_name'], $result['last_name']);
 			$result['categories'] = $this->Categories_m->get_categories_by_ids($this->get_post_categories($result['id']));
-			$result['comment_count'] = $this->db->where('post_id', $result['id'])->from($this->_table['comments'])->count_all_results();
+			$result['comment_count'] = $this->db->where('post_id', $result['id'])->where('modded', '0')->from($this->_table['comments'])->count_all_results();
 
 			return $result;
 		}
@@ -257,7 +257,7 @@ class Blog_m extends CI_Model
 				$item->url = post_url($item->url_title, $item->date_posted);
 				$item->display_name = $this->concat_display_name($item->first_name, $item->last_name);
 				$item->categories = $this->Categories_m->get_categories_by_ids($this->get_post_categories($item->id));
-				$item->comment_count = $this->db->where('post_id', $item->id)->from($this->_table['comments'])->count_all_results();
+				$item->comment_count = $this->db->where('post_id', $item->id)->where('modded', '0')->from($this->_table['comments'])->count_all_results();
 			}
 
 			$result->post_count = $query->num_rows();
@@ -302,7 +302,7 @@ class Blog_m extends CI_Model
 				$item->url = post_url($item->url_title, $item->date_posted);
 				$item->display_name = $this->concat_display_name($item->first_name, $item->last_name);
 				$item->categories = $this->Categories_m->get_categories_by_ids($this->get_post_categories($item->id));
-				$item->comment_count = $this->db->where('post_id', $item->id)->from($this->_table['comments'])->count_all_results();
+				$item->comment_count = $this->db->where('post_id', $item->id)->where('modded', '0')->from($this->_table['comments'])->count_all_results();
 			}
 
 			$result->post_count = $query->num_rows();
