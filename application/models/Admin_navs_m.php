@@ -272,7 +272,7 @@ class Admin_navs_m extends CI_Model
 		// and title as option text.
 		foreach ($options as $opt)
 		{
-			$return[post_uri($opt->url_title, $opt->date_posted)] = $opt->title;
+			$return[$opt->url_title] = $opt->title;
 
 		}
 

@@ -188,21 +188,18 @@ class Blog_m extends CI_Model
      * 
      * @return  array|bool
      */
-	public function get_post_by_url($year, $month, $day, $url_title)
+	public function get_post_by_url($url_title)
 	{
 		// load markdown lib
 		$this->load->library('markdown');
 
-		// build the date
-		$date = $year . '-' . $month . '-' . $day;
-		
-		// tasty results?
 		$this->db->select('posts.*, users.first_name, users.last_name')
 					->join($this->_table['users'] . ' users', 'posts.author = users.id')
 					->where('posts.status', 'published')
-					->where('posts.url_title', $url_title)
-					->where('posts.date_posted', $date)
-					->limit(1);
+					->where('posts.url_title', $url_title);
+
+
+		$this->db->limit(1);
 			
 		$query = $this->db->get($this->_table['posts']);
 			
@@ -213,7 +210,7 @@ class Blog_m extends CI_Model
 
 			// build the needed vaules
 			$result['content'] = $this->markdown->parse($result['content']);
-			$result['url'] = post_url($result['url_title'], $result['date_posted']);
+			$result['url'] = post_url($result['url_title']);
 			$result['display_name'] = $this->concat_display_name($result['first_name'], $result['last_name']);
 			$result['categories'] = $this->Categories_m->get_categories_by_ids($this->get_post_categories($result['id']));
 			$result['comment_count'] = $this->db->where('post_id', $result['id'])->where('modded', '0')->from($this->_table['comments'])->count_all_results();
@@ -225,6 +222,8 @@ class Blog_m extends CI_Model
 	
 	/**
      * get_post_by_date
+     * 
+     * AKA archived posts...
      *
      * @access  public
      * @author  Enliven Appications

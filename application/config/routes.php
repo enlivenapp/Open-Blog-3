@@ -50,15 +50,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
-
+// single pages
 $route['page/(:any)'] 						= 'pages/page/$1';
-$route['blog/page/(:num)'] 					= 'blog/index/$1';
-$route['blog/(:num)/(:num)/(:num)/(:any)'] 	= 'blog/post/$1/$2/$3/$4';
-$route['post/(:any)'] 						= 'post/$1';
+
+// blog posts
+
+// the new way...  domain.com/blog-title
+$route['blog/(:any)'] 					= 'blog/post/$1';
+
+// extra stuff 
 $route['archive/(:any)']					= 'blog/archive/$1';
 $route['category/(:any)'] 					= 'blog/category/$1';
 
-
+// default stuff
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 

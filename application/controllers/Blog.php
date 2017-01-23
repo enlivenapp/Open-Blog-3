@@ -134,14 +134,14 @@ class Blog extends OB_Controller {
      * @author  Enliven Appications
      * @version 1.0
      */
-	public function post($year = NULL, $month = NULL, $day = NULL, $url_title = NULL)
+	public function post($url_title = NULL)
 	{
 		// load up some narrowly needed stuff
 		$this->load->model('Comments_m');
 		$this->load->library('form_validation');
 		
 		// We kan haz a post?
-		if ($data['post'] = $this->Blog_m->get_post_by_url($year, $month, $day, $url_title))
+		if ($data['post'] = $this->Blog_m->get_post_by_url($url_title))
 		{
 			// Comments?
 	

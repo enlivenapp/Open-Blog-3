@@ -1,23 +1,10 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-function account_activation_url($email, $key)
-{
-	return site_url('user/account_activation/key/' . $key . '/email/' . $email);
-}
 
-function forgotten_password_url($email, $key)
+function post_url($url_title)
 {
-	return site_url('user/forgotten_password/key/' . $key . '/email/' . $email);
-}
 
-function post_url($url_title, $date)
-{
-	return site_url('blog/' . date('Y', strtotime($date)) . '/' . date('m', strtotime($date)) . '/' . date('d', strtotime($date)) . '/' . $url_title);
-}
-
-function post_uri($url_title, $date)
-{
-	return 'blog/' . date('Y', strtotime($date)) . '/' . date('m', strtotime($date)) . '/' . date('d', strtotime($date)) . '/' . $url_title;
+	return site_url('blog/' . $url_title);
 }
 
 function archive_url($url)
@@ -30,10 +17,6 @@ function category_url($url_name)
 	return site_url('blog/category/' . $url_name);
 }
 
-function tag_url($tag_name)
-{
-	return site_url('blog/tags/' . $tag_name);
-}
 
 function page_url($url_title)
 {

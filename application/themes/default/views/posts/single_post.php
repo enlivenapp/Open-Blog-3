@@ -7,7 +7,7 @@
         <?php endif ?>
         <h4>
           <small class="text-muted">
-          	<span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?= $post['date_posted'] ?>
+          	<span class="glyphicon glyphicon-time" aria-hidden="true"><time class="post-date" datetime="<?php echo date("D, d M Y H:i:s T", strtotime($post['date_posted'])) ?>"></span> <?= $post['date_posted'] ?>
           	<span class="glyphicon glyphicon-user" aria-hidden="true"></span> <?php echo $post['display_name'] ?>
             <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> <?php echo $post['comment_count'] ?>
             <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> 
