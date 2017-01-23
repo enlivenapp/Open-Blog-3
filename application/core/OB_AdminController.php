@@ -28,6 +28,21 @@ class OB_AdminController extends CI_Controller
 
 		// start benchmarking...
 		$this->benchmark->mark('admin_controller_start');
+		
+		// make sure the db is up to date
+		// using automated migrations. This
+		// is ONLY done in admin as it's a
+		// potential security risk, so we'll
+		// at least try to keep all that behind
+		// a login.
+		$this->load->library('migration');
+
+        if ($this->migration->latest() === FALSE)
+        {
+                show_error($this->migration->error_string());
+        }
+
+
 
 		// load up the core library for
 		// Open Blog
