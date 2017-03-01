@@ -150,6 +150,11 @@ class Admin_lang extends OB_AdminController {
 		if ($this->Admin_lang_m->make_default($id))
 		{
 			//it worked
+			$lang = $this->Admin_lang_m->get_language($id);
+
+			$this->session->set_userdata('language', $lang->language);
+            $this->session->set_userdata('language_abbr', $lang->abbreviation);
+
 			$this->session->set_flashdata('success', lang('languages_default_success_resp'));
 			redirect('admin_lang');
 		}

@@ -90,6 +90,21 @@ class Admin_lang_m extends CI_Model
 
           // default false return
           return false;
-     }   
+     } 
+
+
+     /**
+     * get_language
+     *
+     * @access  public
+     * @author  Enliven Appications
+     * @version 3.0
+     * 
+     * @return  array
+     */
+     public function get_language($id)
+     {
+          return $this->db->where('id', $id)->limit(1)->get('languages')->row();
+     }  
 
 }
