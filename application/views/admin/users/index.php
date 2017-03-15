@@ -20,7 +20,7 @@
       <h1><?php echo lang('index_heading');?></h1>
         <p><?php echo lang('index_subheading');?></p>
 
-        <p><a class="btn btn-default btn-sm" href="<?php echo site_url('admin/admin_users/create_user') ?>"><?php echo lang('index_create_user_link') ?></a></p>
+        <p><a class="btn btn-default btn-sm" href="<?php echo site_url('admin_users/create_user') ?>"><?php echo lang('index_create_user_link') ?></a></p>
 
         <table class="table table-condensed">
           <tr>

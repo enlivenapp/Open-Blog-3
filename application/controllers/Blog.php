@@ -25,7 +25,7 @@ class Blog extends OB_Controller {
 		 */ 
 		
 		$config['base_url'] = site_url();
-		$config['total_rows'] = $posts->post_count;
+		$config['total_rows'] = ($posts && $posts->post_count) ? $posts->post_count : 0;
 		$config['per_page'] = $this->config->item('posts_per_page');
 
 		// docs say we don't have to if we have a config file, but we have to	
@@ -33,7 +33,7 @@ class Blog extends OB_Controller {
 
 		// tasty Links
 		$data['pagination'] = $this->pagination->create_links();
-		$data['posts']= $posts->posts;
+		$data['posts']= ($posts && $posts->posts)? $posts->posts : '';
 		
 		
 
