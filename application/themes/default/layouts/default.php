@@ -22,7 +22,7 @@
 
 <div class="wrapper">
 
-    <div class="box" style="background-image:url('<?php echo Asset::get_filepath_img('bg_suburg.jpg'); ?>');">
+    <div class="box" style="background-image:url('<?php echo Asset::get_filepath_img('bg_suburb.jpg'); ?>');">
         <div class="row">
 
           <?php if ( $this->ion_auth->logged_in() ): ?>
