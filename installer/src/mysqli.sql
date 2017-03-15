@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}group_permissions` (
   `protected` int(1) NOT NULL DEFAULT '0',
   `form_name` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- split --
 
@@ -103,7 +103,8 @@ INSERT INTO `{PREFIX}group_permissions` (`id`, `name`, `description`, `protected
 (9, 'settings', 'Settings', 1, ''),
 (10, 'updates', 'Updates!', 1, ''),
 (11, 'dashboard', 'Dashboard', 1, ''),
-(12, 'lang', 'Language', 1, '');
+(12, 'cats', 'Categories', 1, ''),
+(13, 'lang', 'Language', 1, '');
 
 -- split --
 
