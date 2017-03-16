@@ -51,5 +51,15 @@ function categories_url($categories, $blank = FALSE)
 	return $result;
 }
 
+function is_home()
+{
+	if (!$this->uri->segment(1))
+	{
+		return true;
+	}
+	return false;
+}
+
+
 /* End of file MY_url_helper.php */
 /* Location: ./application/helpers/MY_url_helper.php */
