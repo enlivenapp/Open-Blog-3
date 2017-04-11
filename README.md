@@ -58,6 +58,9 @@ Open Blog v1 was released under GPL-v3 license. Open Blog v3+ will be released u
   - [Jean-Baptiste VALLADEAU](https://github.com/ignamarte)
   - [Rhagngahr](https://github.com/Rhagngahr)
 
+* Indonesian
+  - [Suhindra](https://github.com/suhindra)
+
 
 ##FAQ
 
