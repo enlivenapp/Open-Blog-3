@@ -334,7 +334,7 @@ $lang['updates_download_btn']				= "Unduh Pembaruan";
 
 // themes
 $lang['themes_hdr']							= "Tema";
-$lang['themes_subheader']					= 'Dibawah ini adalah daftar tema yang terpasang.  Untuk mencari tema lain dan instruksi pemasangan, kunjungi kami di <a href="http://open-blog.org" target="_blank">Open Blog website</a>.';
+$lang['themes_subheader']					= 'Di bawah ini adalah daftar tema yang terpasang.  Untuk mencari tema lain dan instruksi pemasangan, kunjungi kami di <a href="http://open-blog.org" target="_blank">Open Blog website</a>.';
 $lang['themes_theme_in_use']				= "Tema ini Aktif";
 $lang['themes_theme_not_in_use']			= "Tema ini TIDAK aktif.";
 $lang['theme_author_title']					= "Penulis";
