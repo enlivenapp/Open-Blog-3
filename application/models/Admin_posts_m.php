@@ -43,7 +43,7 @@ class Admin_posts_m extends CI_Model
      */
 	public function get_posts()
 	{
-		 return $this->db->get($this->_table['posts'])->result();
+		 return $this->db->order_by('date_posted', 'DESC')->get($this->_table['posts'])->result();
 	}
 
 	/**
