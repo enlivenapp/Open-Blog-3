@@ -6,7 +6,7 @@
  * Admin Updates Model Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -19,7 +19,7 @@ class Admin_updates_m extends CI_Model
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -41,7 +41,7 @@ class Admin_updates_m extends CI_Model
      * IF cURL is installed on the server...
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  array
@@ -77,7 +77,7 @@ class Admin_updates_m extends CI_Model
      * not currently used.
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  bool

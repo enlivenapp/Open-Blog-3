@@ -6,7 +6,7 @@
  * Admin Navigation Model Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -19,7 +19,7 @@ class Admin_navs_m extends CI_Model
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -39,7 +39,7 @@ class Admin_navs_m extends CI_Model
      * Gets all nav items
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  object
@@ -56,7 +56,7 @@ class Admin_navs_m extends CI_Model
      * Gets a single nav item
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  array
@@ -72,7 +72,7 @@ class Admin_navs_m extends CI_Model
      * Adds a nav item
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  bool
@@ -124,7 +124,7 @@ class Admin_navs_m extends CI_Model
      * Updates a navigation item
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  bool
@@ -201,7 +201,7 @@ class Admin_navs_m extends CI_Model
      * Removes a nav item
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id The ID to delete
@@ -220,7 +220,7 @@ class Admin_navs_m extends CI_Model
      * the results for use in a dropdown form field
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  obj
@@ -254,7 +254,7 @@ class Admin_navs_m extends CI_Model
      * the results for use in a dropdown form field
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  obj
@@ -290,7 +290,7 @@ class Admin_navs_m extends CI_Model
      *       but I'll do for now.
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  int
@@ -317,7 +317,7 @@ class Admin_navs_m extends CI_Model
      * Reorders the front nav order
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  array $post_data The array of nav items
@@ -363,7 +363,7 @@ class Admin_navs_m extends CI_Model
      * Gets the list of all redirects
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  obj
@@ -379,7 +379,7 @@ class Admin_navs_m extends CI_Model
      * Gets a single redirect
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id The ID to get
@@ -397,7 +397,7 @@ class Admin_navs_m extends CI_Model
      * Updates a redirect
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id The ID to get
@@ -416,7 +416,7 @@ class Admin_navs_m extends CI_Model
      * Removes a single redirect
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id The ID to remove

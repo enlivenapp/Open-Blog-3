@@ -6,7 +6,7 @@
  * Admin Pages Model Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -19,7 +19,7 @@ class Admin_pages_m extends CI_Model
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -38,7 +38,7 @@ class Admin_pages_m extends CI_Model
      * get's all pages
      * 
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  obj
@@ -56,7 +56,7 @@ class Admin_pages_m extends CI_Model
      * @param  string $id the page ID
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  array
@@ -72,7 +72,7 @@ class Admin_pages_m extends CI_Model
      * @param  array $data new page info
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  bool
@@ -91,7 +91,7 @@ class Admin_pages_m extends CI_Model
      * @param  array $data the updated info
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  bool
@@ -119,7 +119,7 @@ class Admin_pages_m extends CI_Model
      * @param  string $id The existing page ID
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null

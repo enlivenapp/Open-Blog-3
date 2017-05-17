@@ -6,7 +6,7 @@
  * Admin Social Model Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -19,7 +19,7 @@ class Admin_lang_m extends CI_Model
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -38,7 +38,7 @@ class Admin_lang_m extends CI_Model
      * get_social_links
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  array
@@ -55,7 +55,7 @@ class Admin_lang_m extends CI_Model
      * marks a language is_avail = 0
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the category id in the database
@@ -73,7 +73,7 @@ class Admin_lang_m extends CI_Model
      * make_default
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the language ID to make default
@@ -97,7 +97,7 @@ class Admin_lang_m extends CI_Model
      * get_language
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  array

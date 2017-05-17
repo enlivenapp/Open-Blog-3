@@ -6,7 +6,7 @@
  * Admin Social Controller Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -16,7 +16,7 @@ class Admin_lang extends OB_AdminController {
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -63,7 +63,7 @@ class Admin_lang extends OB_AdminController {
      * Index
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -85,7 +85,7 @@ class Admin_lang extends OB_AdminController {
      * marks a language is_avail = 0
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the ID to remove
@@ -111,7 +111,7 @@ class Admin_lang extends OB_AdminController {
      * marks a language is_avail = 1
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the ID to remove
@@ -138,7 +138,7 @@ class Admin_lang extends OB_AdminController {
      * marks a language is_default = 1
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the ID to remove

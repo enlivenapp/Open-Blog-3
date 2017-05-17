@@ -6,7 +6,7 @@
  * Admin Categories Model Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -19,7 +19,7 @@ class Admin_cats_m extends CI_Model
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -40,7 +40,7 @@ class Admin_cats_m extends CI_Model
      * Gets all categories
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -56,7 +56,7 @@ class Admin_cats_m extends CI_Model
      * Get's one category item
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the category id in the database
@@ -74,7 +74,7 @@ class Admin_cats_m extends CI_Model
      * Inserts new category
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  array $data the category to add to the database
@@ -92,7 +92,7 @@ class Admin_cats_m extends CI_Model
      * Updates specified cat
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the category id in the database
@@ -111,7 +111,7 @@ class Admin_cats_m extends CI_Model
      * Deletes specified cat
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the category id in the database to remove

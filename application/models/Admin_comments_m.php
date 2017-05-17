@@ -6,7 +6,7 @@
  * Admin Comments Model Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -19,7 +19,7 @@ class Admin_comments_m extends CI_Model
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -39,7 +39,7 @@ class Admin_comments_m extends CI_Model
      * get's all comments with 1|0 in modded field
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  int $modded takes 0|1 to pass to the db
@@ -85,7 +85,7 @@ class Admin_comments_m extends CI_Model
      * get's the selected comment
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  int $id the comment id in the db
@@ -131,7 +131,7 @@ class Admin_comments_m extends CI_Model
      * hides the selected comment.  modded = 1
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  int $id the comment id in the db
@@ -150,7 +150,7 @@ class Admin_comments_m extends CI_Model
      * shows the selected comment. modded = 0
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  int $id the comment id in the db
@@ -169,7 +169,7 @@ class Admin_comments_m extends CI_Model
      * updates the selected comment
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  int $id the comment id in the db
@@ -189,7 +189,7 @@ class Admin_comments_m extends CI_Model
      * deletes the selected comment. 
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  int $id the comment id in the db

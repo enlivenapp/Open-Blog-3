@@ -6,7 +6,7 @@
  * Admin Social Model Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -19,7 +19,7 @@ class Admin_social_m extends CI_Model
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -38,7 +38,7 @@ class Admin_social_m extends CI_Model
      * get_social_links
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  array
@@ -61,7 +61,7 @@ class Admin_social_m extends CI_Model
      * Inserts new social link
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  array $data the category to add to the database
@@ -79,7 +79,7 @@ class Admin_social_m extends CI_Model
      * Updates specified social link
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the category id in the database
@@ -98,7 +98,7 @@ class Admin_social_m extends CI_Model
      * remove
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the ID to remove

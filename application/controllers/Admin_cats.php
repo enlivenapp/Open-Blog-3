@@ -6,7 +6,7 @@
  * Admin Categories Controller Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -17,7 +17,7 @@ class Admin_cats extends OB_AdminController
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -56,7 +56,7 @@ class Admin_cats extends OB_AdminController
      * Index
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -77,7 +77,7 @@ class Admin_cats extends OB_AdminController
      * Add Category
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -117,7 +117,7 @@ class Admin_cats extends OB_AdminController
      * Edit Category
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the category id in the database
@@ -163,7 +163,7 @@ class Admin_cats extends OB_AdminController
      * Remove Category
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the category id in the database

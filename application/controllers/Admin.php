@@ -6,7 +6,7 @@
  * Admin Controller Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -16,7 +16,7 @@ class Admin extends OB_AdminController {
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -51,7 +51,7 @@ class Admin extends OB_AdminController {
      * Index
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -85,7 +85,7 @@ class Admin extends OB_AdminController {
      * Shows and Updates website settings
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null

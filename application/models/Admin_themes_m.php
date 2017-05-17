@@ -6,7 +6,7 @@
  * Admin Themes Model Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -19,7 +19,7 @@ class Admin_themes_m extends CI_Model
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -38,7 +38,7 @@ class Admin_themes_m extends CI_Model
      * gets all themes
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  object
@@ -85,7 +85,7 @@ class Admin_themes_m extends CI_Model
      * get_theme_by_id
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -99,7 +99,7 @@ class Admin_themes_m extends CI_Model
      * activate_new_theme
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  bool
@@ -168,7 +168,7 @@ class Admin_themes_m extends CI_Model
      * save_theme
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null

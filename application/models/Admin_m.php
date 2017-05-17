@@ -6,7 +6,7 @@
  * Admin Model Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -19,7 +19,7 @@ class Admin_m extends CI_Model
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -40,7 +40,7 @@ class Admin_m extends CI_Model
      * The Admin dashboard homepage
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  object
@@ -76,7 +76,7 @@ class Admin_m extends CI_Model
      * them for the form
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  object
@@ -118,7 +118,7 @@ class Admin_m extends CI_Model
      * Updates the settings from the admin 
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  bool
@@ -155,7 +155,7 @@ class Admin_m extends CI_Model
      * provides an array of required settings items
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  bool|object
@@ -172,7 +172,7 @@ class Admin_m extends CI_Model
      * published posts
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  int
@@ -189,7 +189,7 @@ class Admin_m extends CI_Model
      * modded/unmodded comments
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $modded is the comment modded (1) or not (0)
@@ -208,7 +208,7 @@ class Admin_m extends CI_Model
      * notices
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  int
@@ -226,7 +226,7 @@ class Admin_m extends CI_Model
      * @param  string $group_id 
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  object
@@ -258,7 +258,7 @@ class Admin_m extends CI_Model
      * get's the group permissions
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  object
@@ -284,7 +284,7 @@ class Admin_m extends CI_Model
      * Updates a groups permissions
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $group the group's id
@@ -348,7 +348,7 @@ class Admin_m extends CI_Model
      * latest news
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  object

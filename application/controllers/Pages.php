@@ -6,7 +6,7 @@
  * Public Pages Controller Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -17,7 +17,7 @@ class Pages extends OB_Controller
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -39,7 +39,7 @@ class Pages extends OB_Controller
      * listed in the database. 
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $page  o_O
@@ -63,7 +63,7 @@ class Pages extends OB_Controller
      * Gets single page
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $url_title (slug) for the page.

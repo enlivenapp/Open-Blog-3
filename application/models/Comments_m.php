@@ -6,7 +6,7 @@
  * Public Comments Model Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -19,7 +19,7 @@ class Comments_m extends CI_Model
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -40,7 +40,7 @@ class Comments_m extends CI_Model
      * @param  $post_id The ID of the post we need the comments from.
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * @since  v3
      * 
@@ -86,7 +86,7 @@ class Comments_m extends CI_Model
      * get_latest_comments
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -111,7 +111,7 @@ class Comments_m extends CI_Model
      * get_comment_author
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -142,7 +142,7 @@ class Comments_m extends CI_Model
      * @param  $id The ID of the post.
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  array 

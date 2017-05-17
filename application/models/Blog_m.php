@@ -6,7 +6,7 @@
  * Public Blog Model Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -19,7 +19,7 @@ class Blog_m extends CI_Model
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -41,7 +41,7 @@ class Blog_m extends CI_Model
      * Gets blog posts with pagination
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  array
@@ -94,7 +94,7 @@ class Blog_m extends CI_Model
      * footer-ish widget-ish thing...
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -150,7 +150,7 @@ class Blog_m extends CI_Model
      * get_categories
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  string
@@ -183,7 +183,7 @@ class Blog_m extends CI_Model
      * get_post_by_url
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  array|bool
@@ -226,7 +226,7 @@ class Blog_m extends CI_Model
      * AKA archived posts...
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  obj|array
@@ -270,7 +270,7 @@ class Blog_m extends CI_Model
      * get_posts_by_category
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  obj|array

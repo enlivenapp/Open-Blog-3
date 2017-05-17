@@ -47,7 +47,7 @@ class Blog extends OB_Controller {
      * Shows posts in a particular category
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -94,7 +94,7 @@ class Blog extends OB_Controller {
      * Shows archives for year/month
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -131,7 +131,7 @@ class Blog extends OB_Controller {
      * Show a single post
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 1.0
      */
 	public function post($url_title = NULL)
@@ -190,7 +190,7 @@ class Blog extends OB_Controller {
      * @param   $parent The parent comment, if any. depth = 1
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 1.0
      */
 	public function new_comment($id, $url, $parent='false')
@@ -278,7 +278,7 @@ class Blog extends OB_Controller {
      * is valid.  
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 1.0
      */
 	public function verify_recaptcha($str)

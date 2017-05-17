@@ -6,7 +6,7 @@
  * Public Notices Controller Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -16,7 +16,7 @@ class Notices extends OB_Controller {
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -32,7 +32,7 @@ class Notices extends OB_Controller {
      * index
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -49,7 +49,7 @@ class Notices extends OB_Controller {
      * as it's published
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -85,7 +85,7 @@ class Notices extends OB_Controller {
      * md5 hashed code.
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -113,7 +113,7 @@ class Notices extends OB_Controller {
      * Unsubscribes an email address
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null

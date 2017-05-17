@@ -6,7 +6,7 @@
  * Admin Comments Controller Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -18,7 +18,7 @@ class Admin_comments extends OB_AdminController
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -61,7 +61,7 @@ class Admin_comments extends OB_AdminController
      * Index
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -82,7 +82,7 @@ class Admin_comments extends OB_AdminController
      * edit_comment
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -122,7 +122,7 @@ class Admin_comments extends OB_AdminController
      * remove_comment
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the db id of the comment
@@ -150,7 +150,7 @@ class Admin_comments extends OB_AdminController
      * appear on the blog post. 
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the db id of the comment
@@ -179,7 +179,7 @@ class Admin_comments extends OB_AdminController
      * not appear on the blog post
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the db id of the comment

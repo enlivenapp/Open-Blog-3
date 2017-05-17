@@ -6,7 +6,7 @@
  * Admin Comments Controller Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -16,7 +16,7 @@ class Admin_navigation extends OB_AdminController {
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -56,7 +56,7 @@ class Admin_navigation extends OB_AdminController {
      * index
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -82,7 +82,7 @@ class Admin_navigation extends OB_AdminController {
      * add_nav
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -144,7 +144,7 @@ class Admin_navigation extends OB_AdminController {
      * edit
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -201,7 +201,7 @@ class Admin_navigation extends OB_AdminController {
      * remove_nav
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -230,7 +230,7 @@ class Admin_navigation extends OB_AdminController {
      * update_nav_order
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  json
@@ -254,7 +254,7 @@ class Admin_navigation extends OB_AdminController {
      * edit_redirect
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -299,7 +299,7 @@ class Admin_navigation extends OB_AdminController {
      * remove_redirect
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null

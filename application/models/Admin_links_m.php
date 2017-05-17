@@ -6,7 +6,7 @@
  * Admin Links Model Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -19,7 +19,7 @@ class Admin_links_m extends CI_Model
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -39,7 +39,7 @@ class Admin_links_m extends CI_Model
      * Gets all links
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  bool|object
@@ -55,7 +55,7 @@ class Admin_links_m extends CI_Model
      * Gets all links
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the ID of the link
@@ -73,7 +73,7 @@ class Admin_links_m extends CI_Model
      * Gets all links
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $data an array of link data 
@@ -92,7 +92,7 @@ class Admin_links_m extends CI_Model
      * Updates a links
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the ID of the link
@@ -112,7 +112,7 @@ class Admin_links_m extends CI_Model
      * Deletes a links
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the ID of the link

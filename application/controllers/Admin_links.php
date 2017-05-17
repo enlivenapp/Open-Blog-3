@@ -6,7 +6,7 @@
  * Admin Links Controller Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -16,7 +16,7 @@ class Admin_links extends OB_AdminController {
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -57,7 +57,7 @@ class Admin_links extends OB_AdminController {
      * Index
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -77,7 +77,7 @@ class Admin_links extends OB_AdminController {
      * Adds a new link
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -121,7 +121,7 @@ class Admin_links extends OB_AdminController {
      * Edits an existing link
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the id of the link
@@ -171,7 +171,7 @@ class Admin_links extends OB_AdminController {
      * Deletes an existing link
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the id of the link

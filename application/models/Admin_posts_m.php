@@ -6,7 +6,7 @@
  * Admin Posts Model Class
  *
  * @access  public
- * @author  Enliven Appications
+ * @author  Enliven Applications
  * @version 3.0
  * 
 */
@@ -19,7 +19,7 @@ class Admin_posts_m extends CI_Model
      * Construct
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -36,7 +36,7 @@ class Admin_posts_m extends CI_Model
      * get_posts
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  null
@@ -52,7 +52,7 @@ class Admin_posts_m extends CI_Model
      * gets a single post
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  array
@@ -82,7 +82,7 @@ class Admin_posts_m extends CI_Model
      * add_post
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  array $data the array data for the new post
@@ -135,7 +135,7 @@ class Admin_posts_m extends CI_Model
      * update_post
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the existing post id
@@ -179,7 +179,7 @@ class Admin_posts_m extends CI_Model
      * remove_post
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the id to be removed
@@ -204,7 +204,7 @@ class Admin_posts_m extends CI_Model
      * remove_post_to_cats
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $id the id to be removed
@@ -224,7 +224,7 @@ class Admin_posts_m extends CI_Model
      * existing post
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $post_id
@@ -292,7 +292,7 @@ class Admin_posts_m extends CI_Model
      * insert_cats_into_post
      *
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @param  string $post_id 
@@ -325,7 +325,7 @@ class Admin_posts_m extends CI_Model
      * builds the array to populate
      * the categories multi-select input
      * @access  public
-     * @author  Enliven Appications
+     * @author  Enliven Applications
      * @version 3.0
      * 
      * @return  array
