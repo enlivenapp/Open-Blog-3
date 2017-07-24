@@ -12,7 +12,7 @@
 * Location: http://github.com/benedmunds/ion_auth/
 *
 * Created:  21.06.2013
-* Last-Edit: 28.04.2016
+* Last-Edit: 21.06.2017
 *
 * Description:  Indonesia language file for Ion Auth example views
 *
@@ -55,7 +55,7 @@ $lang['deactivate_validation_user_id_label'] = 'ID Pengguna';
 
 // Create User
 $lang['create_user_heading']                           = 'Buat Pengguna';
-$lang['create_user_subheading']                        = 'Silakan masukan informasi Pengguna di bawah ini.';
+$lang['create_user_subheading']                        = 'Silakan masukkan informasi Pengguna di bawah ini.';
 $lang['create_user_fname_label']                       = 'Nama Awal:';
 $lang['create_user_lname_label']                       = 'Nama Akhir:';
 $lang['create_user_company_label']                     = 'Nama Perusahaan:';
@@ -76,7 +76,7 @@ $lang['create_user_validation_password_confirm_label'] = 'Konfirmasi Kata Sandi'
 
 // Edit User
 $lang['edit_user_heading']                           = 'Ubah Pengguna';
-$lang['edit_user_subheading']                        = 'Silakan masukan informasi Pengguna di bawah ini.';
+$lang['edit_user_subheading']                        = 'Silakan masukkan informasi Pengguna di bawah ini.';
 $lang['edit_user_fname_label']                       = 'Nama Awal:';
 $lang['edit_user_lname_label']                       = 'Nama Akhir:';
 $lang['edit_user_company_label']                     = 'Nama Perusahaan:';
@@ -98,7 +98,7 @@ $lang['edit_user_validation_password_confirm_label'] = 'Konfirmasi Kata Sandi';
 // Create Group
 $lang['create_group_title']                  = 'Buat Grup';
 $lang['create_group_heading']                = 'Buat Grupp';
-$lang['create_group_subheading']             = 'Silakan masukan detail Grup di bawah ini.';
+$lang['create_group_subheading']             = 'Silakan masukkan detail Grup di bawah ini.';
 $lang['create_group_name_label']             = 'Nama Grup:';
 $lang['create_group_desc_label']             = 'Deskripsi:';
 $lang['create_group_submit_btn']             = 'Buat Grup';
@@ -109,7 +109,7 @@ $lang['create_group_validation_desc_label']  = 'Deskripsi';
 $lang['edit_group_title']                    = 'Ubah Grup';
 $lang['edit_group_saved']                    = 'Grup Tersimpan';
 $lang['edit_group_heading']                  = 'Ubah Grup';
-$lang['edit_group_subheading']               = 'Silakan masukan detail Grup di bawah ini.';
+$lang['edit_group_subheading']               = 'Silakan masukkan detail Grup di bawah ini.';
 $lang['edit_group_name_label']               = 'Nama Grup:';
 $lang['edit_group_desc_label']               = 'Deskripsi:';
 $lang['edit_group_submit_btn']               = 'Simpan Grup';
@@ -147,44 +147,44 @@ $lang['reset_password_validation_new_password_confirm_label'] = 'Konfirmasi Kata
 // Please translate
 // 
 // NEW for OB
-$lang['group_removed']						= 'Group Removed';
-$lang['group_protected']					= 'Protected Group. You can not remove it.';
-$lang['group_not_removed']					= 'Failed to Remove Group.  Please try again.';
-$lang['remove_group_heading']				= 'Remove Group';
+$lang['group_removed']						= 'Grup Dihapus';
+$lang['group_protected']					= 'Protected Group. Anda tidak dapat menghapusnya.';
+$lang['group_not_removed']				= 'Gagal menghapus grup. Silakan coba kembali.';
+$lang['remove_group_heading']			= 'Hapus Grup';
 
 // permissions
-$lang['permissions_label']					= 'Permissions';
-$lang['permissions_desc']					= 'Choose the actions this group may perform.';
-$lang['admin_perm_notice']					= 'The Admin group has access to all areas of the website. Administrator permissions can not be changed.';
-$lang['index_create_perm_link']				= 'New Permission';
-$lang['permissions_name_label']				= 'Name';
-$lang['edit_perm_heading']					= 'Edit Permission';
-$lang['edit_perm_subheading']				= 'Please Edit the permission information below.';
-$lang['remove_perm_heading']				= 'Remove Permission';
-$lang['edit_perm_saved']					= 'Permission Saved';
+$lang['permissions_label']				= 'Perizinan';
+$lang['permissions_desc']					= 'Pilih tindakan yang dapat dilakukan grup ini.';
+$lang['admin_perm_notice']				= 'Grup Admin memiliki akses ke semua area situs web. Izin administrator tidak dapat diubah.';
+$lang['index_create_perm_link']		= 'Izin Baru';
+$lang['permissions_name_label']		= 'Nama';
+$lang['edit_perm_heading']				= 'Sunting Perizinan';
+$lang['edit_perm_subheading']			= 'Silahkan Edit informasi izin di bawah ini.';
+$lang['remove_perm_heading']			= 'Hapus Izin';
+$lang['edit_perm_saved']					= 'Izin tersimpan';
 
 
 
-$lang['users_perms_slug']					= 'Users';
-$lang['users_perms_desc']					= 'Is this group permitted to administer users?';
-$lang['posts_perms_slug']					= 'Posts';
-$lang['posts_perms_desc']					= 'Is this group permitted to administer posts?';
-$lang['pages_perms_slug']					= 'Pages';
-$lang['pages_perms_desc']					= 'Is this group permitted to administer pages?';
-$lang['links_perms_slug']					= 'Links';
-$lang['links_perms_desc']					= 'Is this group permitted to administer links?';
-$lang['social_perms_slug']					= 'Social';
-$lang['social_perms_desc']					= 'Is this group permitted to administer social links?';
-$lang['comments_perms_slug']					= 'Comments';
-$lang['comments_perms_desc']					= 'Is this group permitted to administer comments?';
-$lang['navigation_perms_slug']					= 'Navigation';
-$lang['navigation_perms_desc']					= 'Is this group permitted to administer navigation?';
-$lang['themes_perms_slug']					= 'Themes';
-$lang['themes_perms_desc']					= 'Is this group permitted to administer themes?';
-$lang['settings_perms_slug']					= 'Settings';
-$lang['settings_perms_desc']					= 'Is this group permitted to administer settings?';
-$lang['updates_perms_slug']					= 'Updates';
-$lang['updates_perms_desc']					= 'Is this group permitted to administer updates?';
+$lang['users_perms_slug']					= 'Pengguna';
+$lang['users_perms_desc']					= 'Apakah grup ini diizinkan untuk mengelola pengguna?';
+$lang['posts_perms_slug']					= 'Pos';
+$lang['posts_perms_desc']					= 'Apakah grup ini diizinkan untuk mengelola pos?';
+$lang['pages_perms_slug']					= 'Laman';
+$lang['pages_perms_desc']					= 'Apakah grup ini diizinkan untuk mengelola laman?';
+$lang['links_perms_slug']					= 'Tautan';
+$lang['links_perms_desc']					= 'Apakah grup ini diizinkan untuk mengelola tautan?';
+$lang['social_perms_slug']				= 'Sosial';
+$lang['social_perms_desc']				= 'Apakah grup ini diizinkan untuk mengelola tautan sosial?';
+$lang['comments_perms_slug']			= 'Komentar';
+$lang['comments_perms_desc']			= 'Apakah grup ini diizinkan untuk mengelola komentar?';
+$lang['navigation_perms_slug']		= 'Navigasi';
+$lang['navigation_perms_desc']		= 'Apakah grup ini diizinkan untuk mengelola navigasi?';
+$lang['themes_perms_slug']				= 'Tema';
+$lang['themes_perms_desc']				= 'Apakah grup ini diizinkan untuk mengelola tema?';
+$lang['settings_perms_slug']			= 'Pengaturan';
+$lang['settings_perms_desc']			= 'Apakah grup ini diizinkan untuk mengelola pengaturan?';
+$lang['updates_perms_slug']				= 'Pembaruan';
+$lang['updates_perms_desc']				= 'Apakah grup ini diizinkan untuk mengelola pembaruan?';
 
 
-$lang['perm_already_exists']					= 'Permission already exists.';
+$lang['perm_already_exists']			= 'Izin sudah ada.';
