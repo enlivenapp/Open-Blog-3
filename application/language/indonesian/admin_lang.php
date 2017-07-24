@@ -4,12 +4,12 @@
  */
 
 $lang['yes']								= 'Ya';
-$lang['no']									= 'Tidak';
+$lang['no']								= 'Tidak';
 $lang['pages']								= 'Laman';
 $lang['blog']								= 'Blog';
 
 // Settings
-$lang['settings_help_txt']					= "Pengaturan memampukan Anda untuk mengubah bagaimana situs web melakukan tindakan dan informasi dasar seperti nama situs.";
+$lang['settings_help_txt']				= "Pengaturan memampukan Anda untuk mengubah bagaimana situs web melakukan tindakan dan informasi dasar seperti nama situs.";
 $lang['allow_comments_label']				= "Izinkan komentar";
 $lang['allow_comments_desc']				= "Apakah Anda ingin mengijinkan komentar pada pos di blog Anda?";
 $lang['base_controller_label']				= "Base Controller (BETA)";
@@ -27,16 +27,16 @@ $lang['enable_rss_comments_desc']			= "Apakah Anda ingin mengaktifkan umpan kome
 $lang['enable_rss_posts_label']				= "Aktifkan Pos RSS";
 $lang['enable_rss_posts_desc']				= "Apakah Anda ingin mengaktifkan umpan pos RSS untuk blog Anda?";
 $lang['links_per_box_label']				= "Batas Tautan";
-$lang['links_per_box_desc']					= "Pilih berapa banyak item yang Anda ingin tujukan ketika memposting tautan pada beranda.";
-$lang['mod_non_user_comments_label']		= "Moderasi Komentar dari bukan pengguna";
-$lang['mod_non_user_comments_desc']			= "Do you want to moderate non-users and non-logged in users?";
+$lang['links_per_box_desc']				= "Pilih berapa banyak item yang Anda ingin tujukan ketika memposting tautan pada beranda.";
+$lang['mod_non_user_comments_label']			= "Moderasi Komentar dari bukan pengguna";
+$lang['mod_non_user_comments_desc']			= "Apakah Anda ingin memoderasi non-pengguna dan pengguna yang tidak masuk?";
 $lang['mod_user_comments_label']			= "Moderasi Komentar Pengguna";
-$lang['mod_user_comments_desc']				= "Do you want to moderate logged in users?";
+$lang['mod_user_comments_desc']				= "Apakah Anda ingin memoderasi pengguna yang masuk?";
 $lang['months_per_archive_label']			= "Batas Arsip";
 $lang['months_per_archive_desc']			= "Pilih berapa banyak daftar arsip yang Anda ingin tujukan di Beranda";
 $lang['posts_per_page_label']				= "Pos per Batas Laman";
 $lang['posts_per_page_desc']				= "Berapa banyak pos blog yang Anda ingin tampilkan di setiap laman blog Anda?";
-$lang['recaptcha_private_key_label']		= "Private Key Google Recaptcha";
+$lang['recaptcha_private_key_label']			= "Private Key Google Recaptcha";
 $lang['recaptcha_private_key_desc']			= "Masukan PRIVATE Key yang disediakan oleh google.";
 $lang['recaptcha_site_key_label']			= "Site Key Google Recaptcha";
 $lang['recaptcha_site_key_desc']			= "Masukan SITE key yang disediakan oleh google";
@@ -132,7 +132,7 @@ $lang['cat_update_fail_resp']				= "Tidak bisa mengubah Kategori. Silakan coba l
 
 // pages
 $lang['pages_hdr']							= "Laman";
-$lang['optional_hdr']						= "Optional";
+$lang['optional_hdr']						= "Opsional";
 $lang['optional_help_text']					= "Walaupun opsi di bawah ini adalah opsional, tetapi opsi ini sangat dianjurkan dan sangat membantu Search Engine Optimization (SEO). Jugaa akan menghasilkan meta tag untuk facebook dan twitter";
 $lang['page_remove_btn']					= "Hapus Laman";
 $lang['page_edit_btn']						= "Ubah Laman";
