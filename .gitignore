@@ -6,3 +6,6 @@
 /uploads/*.gif
 /uploads/*.png
 /application/cache/*
+
+# IDE Files
+/.vscode/

@@ -61,6 +61,8 @@ Open Blog v1 was released under GPL-v3 license. Open Blog v3+ will be released u
 * Indonesian
   - [Suhindra](https://github.com/suhindra)
 
+* Portuguese
+  - [Samuel Fontebasso](https://github.com/fontebasso)
 
 ## FAQ
 

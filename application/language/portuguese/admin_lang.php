@@ -3,31 +3,31 @@
 	Language variable for the admin control panel
  */
 
-$lang['yes']								= 'Yes';
-$lang['no']									= 'No';
-$lang['pages']								= 'Pages';
+$lang['yes']								= 'Sim';
+$lang['no']									= 'Não';
+$lang['pages']								= 'Páginas';
 $lang['blog']								= 'Blog';
 
 // Settings
-$lang['settings_help_txt']					= "Settings allow you to change how your website performs certain actions and basic information like your site's name.";
-$lang['allow_comments_label']				= "Allow Comments";
-$lang['allow_comments_desc']				= "Do you want to allow comments on your blog posts?";
-$lang['base_controller_label']				= "Base Controller";
-$lang['base_controller_desc']				= "Choose where the homepage is...";
-$lang['blog_description_label']				= "Blog Description";
-$lang['blog_description_desc']				= "Enter a short description (or tag line) for your blog.";
-$lang['category_list_limit_label']			= "Category Limit";
-$lang['category_list_limit_desc']			= "Choose how may items you would like shown when listing categories on the homepage.";
-$lang['enable_atom_comments_label']			= "Enable ATOM Comments";
-$lang['enable_atom_comments_desc']			= "Do you want to enable the ATOM comments feed for your blog?";
-$lang['enable_atom_posts_label']			= "Enable ATOM Posts";
-$lang['enable_atom_posts_desc']				= "Do you want to enable the ATOM posts feed for your blog?";
-$lang['enable_rss_comments_label']			= "Enable RSS Comments";
-$lang['enable_rss_comments_desc']			= "Do you want to enable the RSS comments feed for your blog?";
-$lang['enable_rss_posts_label']				= "Enable RSS Posts";
-$lang['enable_rss_posts_desc']				= "Do you want to enable the RSS posts feed for your blog?";
-$lang['links_per_box_label']				= "Link Limit";
-$lang['links_per_box_desc']					= "Choose how may items you would like shown when listing links on the homepage.";
+$lang['settings_help_txt']					= "As configurações permitem que você altere a forma como seu site executa certas ações e informações básicas como o nome do seu site.";
+$lang['allow_comments_label']				= "Permitir comentários";
+$lang['allow_comments_desc']				= "Você quer permitir comentários em suas postagens de blog?";
+$lang['base_controller_label']				= "Controlador Padrão";
+$lang['base_controller_desc']				= "Escolha onde a página inicial é...";
+$lang['blog_description_label']				= "Descrição do Blog";
+$lang['blog_description_desc']				= "Informe uma breve descrição (ou marcação) para o seu blog.";
+$lang['category_list_limit_label']			= "Limite de Categoria";
+$lang['category_list_limit_desc']			= "Escolha a quantidade de categorias exibidas na página inicial.";
+$lang['enable_atom_comments_label']			= "Habilitar comentários do ATOM";
+$lang['enable_atom_comments_desc']			= "Deseja ativar o feed de comentários ATOM para o seu blog?";
+$lang['enable_atom_posts_label']			= "Ativar postagens ATOM";
+$lang['enable_atom_posts_desc']				= "Deseja ativar o feed de posts da ATOM para o seu blog?";
+$lang['enable_rss_comments_label']			= "Habilitar comentários RSS";
+$lang['enable_rss_comments_desc']			= "Deseja ativar o feed de comentários RSS para o seu blog?";
+$lang['enable_rss_posts_label']				= "Ativar postagens RSS";
+$lang['enable_rss_posts_desc']				= "Deseja ativar o feed de posts do RSS para o seu blog?";
+$lang['links_per_box_label']				= "Limite de Links";
+$lang['links_per_box_desc']					= "Escolha a quantidade de links exibidos na página inicial.";
 $lang['mod_non_user_comments_label']		= "Moderate Non User Comments";
 $lang['mod_non_user_comments_desc']			= "Do you want to moderate non-users and non-logged in users?";
 $lang['mod_user_comments_label']			= "Moderate User Comments";
@@ -69,7 +69,7 @@ $lang['server_email_label']					= "Server Email";
 $lang['server_email_desc']					= "The email address in which you would like the server to set as 'From'. This can be 'noreply@' or your email address so people can reply and get a human.";
 
 
-$lang['email_activation_label']					= "Email Activation";
+$lang['email_activation_label']					= "Ativação de e-mail";
 $lang['email_activation_desc']					= "Would you like new users to verify their email prior to being allowed to log in and comment? (Recommended ON)";
 $lang['manual_activation_label']				= "Manual Activation";
 $lang['manual_activation_desc']					= "Would you like to manually verify each user who registers?";
@@ -84,55 +84,55 @@ $lang['allow_registrations_desc']				= "Do you wish to allow users to create an 
 
 // Links
 $lang['links_hdr']							= "Links";
-$lang['link_remove_btn']					= "Remove Link";
-$lang['link_edit_btn']						= "Edit Link";
-$lang['index_add_new_link']					= "Add New Link";
-$lang['add_link_subheading']				= "Please add the link information below. These are external links, make sure to prepend http:// or https:// to your link url.";
-$lang['link_form_name']						= "Link Name";
+$lang['link_remove_btn']					= "Remover Link";
+$lang['link_edit_btn']						= "Editar Link";
+$lang['index_add_new_link']					= "Adicionar Novo Link";
+$lang['add_link_subheading']				= "Adicione as informações do link abaixo. Estes são links externos, certifique-se de adicionar http: // ou https: // para a URL do seu link.";
+$lang['link_form_name']						= "Nome do Link";
 $lang['link_form_url']						= "http://";
-$lang['link_form_desc']						= "Description";
-$lang['link_form_position']					= "Order";
-$lang['link_form_target']					= "Target";
-$lang['link_form_visibility']				= "Visibility";
-$lang['blank_window']						= "Open in new window";
-$lang['same_window']						= "Open in same window";
-$lang['visible']							= "Visible";
-$lang['not_visible']						= "Hidden";
-$lang['save_link_btn']						= "Save Link";
-$lang['link_added_success_resp']			= "Link added successfully";
-$lang['link_added_fail_resp']				= "Could not add Link.  Please try again.";
-$lang['link_removed_success_resp']			= "Link removed successfully";
-$lang['link_removed_fail_resp']				= "Could not remove Link.  Please try again.";
-$lang['link_update_success_resp']			= "Link updated successfully";
-$lang['link_update_fail_resp']				= "Could not update Link.  Please try again.";
+$lang['link_form_desc']						= "Descrição";
+$lang['link_form_position']					= "Posição";
+$lang['link_form_target']					= "Alvo";
+$lang['link_form_visibility']				= "Visibilidade";
+$lang['blank_window']						= "Abrir em nova janela";
+$lang['same_window']						= "Abrir na mesma janela";
+$lang['visible']							= "Visível";
+$lang['not_visible']						= "Escondido";
+$lang['save_link_btn']						= "Salvar Link";
+$lang['link_added_success_resp']			= "Link adicionado com sucesso";
+$lang['link_added_fail_resp']				= "Não foi possível adicionar Link. Por favor, tente novamente.";
+$lang['link_removed_success_resp']			= "Link removido com sucesso";
+$lang['link_removed_fail_resp']				= "Não foi possível remover o link. Por favor, tente novamente.";
+$lang['link_update_success_resp']			= "Link atualizado com sucesso";
+$lang['link_update_fail_resp']				= "Não foi possível atualizar o Link. Por favor, tente novamente.";
 
 
 
 // Categories
-$lang['cats_hdr']							= "Categories";
-$lang['cat_remove_btn']						= "Remove Category";
-$lang['cat_edit_btn']						= "Edit Category";
-$lang['index_add_new_cat']					= "Add New Category";
-$lang['add_cat_subheading']					= "Please add the category information below.";
-$lang['cat_form_name']						= "Category Name";
-$lang['cat_form_url']						= "(same as above, all lowercase, no spaces)";
-$lang['cat_form_desc']						= "Description";
-$lang['blank_window']						= "Open in new window";
-$lang['same_window']						= "Open in same window";
-$lang['visible']							= "Visible";
-$lang['not_visible']						= "Hidden";
-$lang['save_cat_btn']						= "Save Category";
-$lang['cat_added_success_resp']				= "Category added successfully";
-$lang['cat_added_fail_resp']				= "Could not add Category.  Please try again.";
-$lang['cat_removed_success_resp']			= "Category removed successfully";
-$lang['cat_removed_fail_resp']				= "Could not remove Category.  Please try again.";
-$lang['cat_update_success_resp']			= "Category updated successfully";
-$lang['cat_update_fail_resp']				= "Could not update Category.  Please try again.";
+$lang['cats_hdr']							= "Categorias";
+$lang['cat_remove_btn']						= "Remover Categoria";
+$lang['cat_edit_btn']						= "Editar Categoria";
+$lang['index_add_new_cat']					= "Adicionar Nova Categoria";
+$lang['add_cat_subheading']					= "Adicione as informações da categoria abaixo.";
+$lang['cat_form_name']						= "Nome da Categoria";
+$lang['cat_form_url']						= "(do mesmo modo acima, tudo em minúsculas, sem espaços)";
+$lang['cat_form_desc']						= "Descrição";
+$lang['blank_window']						= "Abrir em nova janela";
+$lang['same_window']						= "Abrir ";
+$lang['visible']							= "Visível";
+$lang['not_visible']						= "Escondido";
+$lang['save_cat_btn']						= "Salvar Categoria";
+$lang['cat_added_success_resp']				= "Categoria adicionada com sucesso";
+$lang['cat_added_fail_resp']				= "Não foi possível adicionar Categoria. Por favor, tente novamente.";
+$lang['cat_removed_success_resp']			= "Categoria removida com sucesso";
+$lang['cat_removed_fail_resp']				= "Não foi possível remover a Categoria. Por favor, tente novamente.";
+$lang['cat_update_success_resp']			= "Categoria atualizada com sucesso";
+$lang['cat_update_fail_resp']				= "Não foi possível atualizar a categoria. Por favor, tente novamente.";
 
 
 // pages
-$lang['pages_hdr']							= "Pages";
-$lang['optional_hdr']						= "Optional";
+$lang['pages_hdr']							= "Páginas";
+$lang['optional_hdr']						= "Opcional";
 $lang['optional_help_text']					= "While the options below are optional, they are highly recommended and greatly help with Search Engine Optimization (SEO). We also generate meta tags for facebook and twitter with these values.";
 $lang['page_remove_btn']					= "Remove Page";
 $lang['page_edit_btn']						= "Edit Page";
@@ -173,13 +173,13 @@ $lang['page_form_redirect_temp']			= "Temporarily Redirect to new URL Title";
 
 // posts
 $lang['posts_hdr']							= "Posts";
-$lang['optional_hdr']						= "Optional";
+$lang['optional_hdr']						= "Opcional";
 $lang['optional_help_text']					= "While the options below are optional, they are highly recommended and greatly help with Search Engine Optimization (SEO). We also generate meta tags for facebook and twitter with these values.";
 $lang['post_remove_btn']					= "Remove Post";
 $lang['post_edit_btn']						= "Edit Post";
-$lang['index_add_new_post']					= "Add New Post";
-$lang['index_edit_post']					= "Edit Post";
-$lang['save_post_btn']						= "Save Post";
+$lang['index_add_new_post']					= "Adicionar Novo Post";
+$lang['index_edit_post']					= "Editar Post";
+$lang['save_post_btn']						= "Salvar Post";
 $lang['post_added_success_resp']			= "Post added successfully";
 $lang['post_added_fail_resp']				= "Could not add post.  Please try again.";
 $lang['post_removed_success_resp']			= "Post removed successfully";
