@@ -19,9 +19,9 @@
 $lang['error_csrf'] = 'O envio desse formulario não atendeu a requisitos de segurança.';
 
 // Login
-$lang['login_heading']         = 'Login';
-$lang['login_subheading']      = 'Por favor entre com seu login/email e senha abaixo.';
-$lang['login_identity_label']  = 'Login/Email:';
+$lang['login_heading']         = 'Conectar';
+$lang['login_subheading']      = 'Por favor entre com seu usuário/email e senha abaixo.';
+$lang['login_identity_label']  = 'Usuário/E-mail:';
 $lang['login_password_label']  = 'Senha:';
 $lang['login_remember_label']  = 'Lembre-me:';
 $lang['login_submit_btn']      = 'Login';
@@ -48,14 +48,14 @@ $lang['deactivate_confirm_y_label']          = 'Sim:';
 $lang['deactivate_confirm_n_label']          = 'Não:';
 $lang['deactivate_submit_btn']               = 'Enviar';
 $lang['deactivate_validation_confirm_label'] = 'confirmação';
-$lang['deactivate_validation_user_id_label'] = 'user ID';
+$lang['deactivate_validation_user_id_label'] = 'ID do usuário';
 
 // Create User
 $lang['create_user_heading']                           = 'Criar Usuário';
 $lang['create_user_subheading']                        = 'Por favor informe os dados do usuário.';
 $lang['create_user_fname_label']                       = 'Nome:';
 $lang['create_user_lname_label']                       = 'Sobrenome:';
-$lang['create_user_identity_label']                    = 'Identity:';
+$lang['create_user_identity_label']                    = 'Identidade:';
 $lang['create_user_company_label']                     = 'Empresa:';
 $lang['create_user_email_label']                       = 'Email:';
 $lang['create_user_phone_label']                       = 'Telefone:';
@@ -64,7 +64,7 @@ $lang['create_user_password_confirm_label']            = 'Confirmar senha:';
 $lang['create_user_submit_btn']                        = 'Criar Usuário';
 $lang['create_user_validation_fname_label']            = 'Nome';
 $lang['create_user_validation_lname_label']            = 'Sobrenome';
-$lang['create_user_validation_identity_label']         = 'Identity';
+$lang['create_user_validation_identity_label']         = 'Identidade';
 $lang['create_user_validation_email_label']            = 'Email';
 $lang['create_user_validation_phone1_label']           = 'Primeira parte do telefone';
 $lang['create_user_validation_phone2_label']           = 'Segunda parte do telefone';
@@ -148,44 +148,44 @@ $lang['reset_password_validation_new_password_confirm_label'] = 'Confirme sua No
 // Please translate
 // 
 // NEW for OB
-$lang['group_removed']						= 'Group Removed';
-$lang['group_protected']					= 'Protected Group. You can not remove it.';
-$lang['group_not_removed']					= 'Failed to Remove Group.  Please try again.';
-$lang['remove_group_heading']				= 'Remove Group';
+$lang['group_removed']						= 'Grupo excluído';
+$lang['group_protected']					= 'Grupo protegido. Você não pode removê-lo.';
+$lang['group_not_removed']					= 'Falha ao excluir o grupo. Por favor, tente novamente.';
+$lang['remove_group_heading']				= 'Excluir Grupo';
 
 // permissions
-$lang['permissions_label']					= 'Permissions';
-$lang['permissions_desc']					= 'Choose the actions this group may perform.';
-$lang['admin_perm_notice']					= 'The Admin group has access to all areas of the website. Administrator permissions can not be changed.';
-$lang['index_create_perm_link']				= 'New Permission';
-$lang['permissions_name_label']				= 'Name';
-$lang['edit_perm_heading']					= 'Edit Permission';
-$lang['edit_perm_subheading']				= 'Please Edit the permission information below.';
-$lang['remove_perm_heading']				= 'Remove Permission';
-$lang['edit_perm_saved']					= 'Permission Saved';
+$lang['permissions_label']					= 'Permissões';
+$lang['permissions_desc']					= 'Escolha as ações que esse grupo pode executar.';
+$lang['admin_perm_notice']					= 'O grupo Admin tem acesso a todas as áreas do site. As permissões de administrador não podem ser alteradas.';
+$lang['index_create_perm_link']				= 'Nova Permissão';
+$lang['permissions_name_label']				= 'Nome';
+$lang['edit_perm_heading']					= 'Editar Permissão';
+$lang['edit_perm_subheading']				= 'Edite a informação de permissão abaixo.';
+$lang['remove_perm_heading']				= 'Excluir Permissão';
+$lang['edit_perm_saved']					= 'Permissão Salva';
 
 
 
-$lang['users_perms_slug']					= 'Users';
-$lang['users_perms_desc']					= 'Is this group permitted to administer users?';
-$lang['posts_perms_slug']					= 'Posts';
-$lang['posts_perms_desc']					= 'Is this group permitted to administer posts?';
-$lang['pages_perms_slug']					= 'Pages';
-$lang['pages_perms_desc']					= 'Is this group permitted to administer pages?';
+$lang['users_perms_slug']					= 'Usuários';
+$lang['users_perms_desc']					= 'Esse grupo está autorizado a administrar usuários?';
+$lang['posts_perms_slug']					= 'Publicações';
+$lang['posts_perms_desc']					= 'Esse grupo está autorizado a administrar publicações?';
+$lang['pages_perms_slug']					= 'Páginas';
+$lang['pages_perms_desc']					= 'Este grupo está autorizado a administrar páginas?';
 $lang['links_perms_slug']					= 'Links';
-$lang['links_perms_desc']					= 'Is this group permitted to administer links?';
-$lang['social_perms_slug']					= 'Social';
-$lang['social_perms_desc']					= 'Is this group permitted to administer social links?';
-$lang['comments_perms_slug']					= 'Comments';
-$lang['comments_perms_desc']					= 'Is this group permitted to administer comments?';
-$lang['navigation_perms_slug']					= 'Navigation';
-$lang['navigation_perms_desc']					= 'Is this group permitted to administer navigation?';
-$lang['themes_perms_slug']					= 'Themes';
-$lang['themes_perms_desc']					= 'Is this group permitted to administer themes?';
-$lang['settings_perms_slug']					= 'Settings';
-$lang['settings_perms_desc']					= 'Is this group permitted to administer settings?';
-$lang['updates_perms_slug']					= 'Updates';
-$lang['updates_perms_desc']					= 'Is this group permitted to administer updates?';
+$lang['links_perms_desc']					= 'Este grupo está autorizado a administrar links?';
+$lang['social_perms_slug']					= 'Redes Sociais';
+$lang['social_perms_desc']					= 'Este grupo está autorizado a administrar links de redes sociais?';
+$lang['comments_perms_slug']			    = 'Comentários';
+$lang['comments_perms_desc']				= 'Esse grupo está autorizado a administrar comentários?';
+$lang['navigation_perms_slug']				= 'Menu Principal';
+$lang['navigation_perms_desc']				= 'Esse grupo está autorizado a administrar o menu principal?';
+$lang['themes_perms_slug']					= 'Temas';
+$lang['themes_perms_desc']					= 'Esse grupo está autorizado a administrar temas?';
+$lang['settings_perms_slug']				= 'Configurações';
+$lang['settings_perms_desc']				= 'Este grupo está autorizado a administrar configurações?';
+$lang['updates_perms_slug']					= 'Atualizações';
+$lang['updates_perms_desc']					= 'Esse grupo está autorizado a administrar atualizações?';
 
 
-$lang['perm_already_exists']					= 'Permission already exists.';
+$lang['perm_already_exists']				= 'A permissão já existe.';
