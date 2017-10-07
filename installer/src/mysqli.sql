@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}categories` (
 -- split --
 
 INSERT INTO `{PREFIX}categories` (`id`, `name`, `url_name`, `description`) VALUES
-(1, 'Uncategorized', 'uncategorized', 'Uncategorized');
+  (1, 'Uncategorized', 'uncategorized', 'Uncategorized');
 
 -- split --
 
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}comments` (
   `author_email` varchar(100) DEFAULT NULL,
   `author_ip` varchar(100) NOT NULL,
   `content` text,
-  `date` datetime DEFAULT '0000-00-00 00:00:00',
+  `date` datetime DEFAULT CURRENT_TIMESTAMP,
   `modded` int(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
@@ -51,10 +51,10 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}groups` (
 -- split --
 
 INSERT INTO `{PREFIX}groups` (`id`, `name`, `description`, `protected`) VALUES
-(1, 'admin', 'Administrator', 1),
-(2, 'members', 'General User', 1),
-(3, 'contributors', 'Contributor', 1),
-(4, 'editors', 'Editor', 1);
+  (1, 'admin', 'Administrator', 1),
+  (2, 'members', 'General User', 1),
+  (3, 'contributors', 'Contributor', 1),
+  (4, 'editors', 'Editor', 1);
 
 -- split --
 
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}groups_perms` (
 -- split --
 
 INSERT INTO `{PREFIX}groups_perms` (`id`, `perms_id`, `group_id`) VALUES
-(1, 1, 2);
+  (1, 1, 2);
 
 -- split --
 
@@ -92,19 +92,19 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}group_permissions` (
 -- split --
 
 INSERT INTO `{PREFIX}group_permissions` (`id`, `name`, `description`, `protected`, `form_name`) VALUES
-(1, 'users', 'Users', 1, ''),
-(2, 'posts', 'Posts', 1, ''),
-(3, 'pages', 'Pages', 1, ''),
-(4, 'links', 'Links', 1, ''),
-(5, 'social', 'Social', 1, ''),
-(6, 'comments', 'Comments', 1, ''),
-(7, 'navigation', 'Navigation', 1, ''),
-(8, 'themes', 'Themes', 1, ''),
-(9, 'settings', 'Settings', 1, ''),
-(10, 'updates', 'Updates!', 1, ''),
-(11, 'dashboard', 'Dashboard', 1, ''),
-(12, 'cats', 'Categories', 1, ''),
-(13, 'lang', 'Language', 1, '');
+  (1, 'users', 'Users', 1, ''),
+  (2, 'posts', 'Posts', 1, ''),
+  (3, 'pages', 'Pages', 1, ''),
+  (4, 'links', 'Links', 1, ''),
+  (5, 'social', 'Social', 1, ''),
+  (6, 'comments', 'Comments', 1, ''),
+  (7, 'navigation', 'Navigation', 1, ''),
+  (8, 'themes', 'Themes', 1, ''),
+  (9, 'settings', 'Settings', 1, ''),
+  (10, 'updates', 'Updates!', 1, ''),
+  (11, 'dashboard', 'Dashboard', 1, ''),
+  (12, 'cats', 'Categories', 1, ''),
+  (13, 'lang', 'Language', 1, '');
 
 -- split --
 
@@ -115,7 +115,7 @@ DROP TABLE IF EXISTS `{PREFIX}languages`;
 CREATE TABLE IF NOT EXISTS `{PREFIX}languages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `language` varchar(100) DEFAULT NULL,
-  `abbreviation` varchar(3) DEFAULT NULL,
+  `abbreviation` varchar(7) DEFAULT NULL,
   `author` varchar(100) DEFAULT NULL,
   `author_website` varchar(255) NOT NULL,
   `is_default` enum('0','1') DEFAULT NULL,
@@ -126,25 +126,25 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}languages` (
 -- split --
 
 INSERT INTO `{PREFIX}languages` (`id`, `language`, `abbreviation`, `author`, `author_website`, `is_default`, `is_avail`) VALUES
-(1, 'english', 'en', 'Enliven Applications', 'http://www.open-blog.org', '1', 1),
-(2, 'indonesian', 'id', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
-(3, 'arabic', 'ar', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
-(4, 'bulgarian', 'bg', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
-(5, 'czech', 'cs', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
-(6, 'french', 'fr', 'Enliven Applications', 'http://www.open-blog.org', '0', 1),
-(7, 'hungarian', 'hu', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
-(8, 'italian', 'it', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
-(9, 'latvian', 'lv', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
-(10, 'norwegian', 'no', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
-(11, 'polish', 'pl', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
-(12, 'portuguese', 'pt', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
-(13, 'simplified-chinese', 'zh-hans', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
-(14, 'slovak', 'sk', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
-(15, 'slovenian', 'sl', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
-(16, 'spanish', 'es', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
-(17, 'traditional-chinese', 'zh-hant', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
-(18, 'turkish', 'tr', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
-(19, 'ukranian', 'uk', 'Enliven Applications', 'http://www.open-blog.org', '0', 0);
+  (1, 'english', 'en', 'Enliven Applications', 'http://www.open-blog.org', '1', 1),
+  (2, 'indonesian', 'id', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+  (3, 'arabic', 'ar', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+  (4, 'bulgarian', 'bg', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+  (5, 'czech', 'cs', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+  (6, 'french', 'fr', 'Enliven Applications', 'http://www.open-blog.org', '0', 1),
+  (7, 'hungarian', 'hu', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+  (8, 'italian', 'it', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+  (9, 'latvian', 'lv', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+  (10, 'norwegian', 'no', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+  (11, 'polish', 'pl', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+  (12, 'portuguese', 'pt', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+  (13, 'simplified-chinese', 'zh-hans', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+  (14, 'slovak', 'sk', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+  (15, 'slovenian', 'sl', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+  (16, 'spanish', 'es', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+  (17, 'traditional-chinese', 'zh-hant', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+  (18, 'turkish', 'tr', 'Enliven Applications', 'http://www.open-blog.org', '0', 0),
+  (19, 'ukranian', 'uk', 'Enliven Applications', 'http://www.open-blog.org', '0', 0);
 
 -- split --
 
@@ -166,9 +166,9 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}links` (
 -- split --
 
 INSERT INTO `{PREFIX}links` (`id`, `name`, `url`, `target`, `description`, `visible`, `position`) VALUES
-(1, 'Open Blog', 'http://open-blog.org', '_blank', 'Open Blog', 'yes', 3),
-(2, 'CodeIgniter', 'http://codeigniter.com', '_blank', 'CodeIgniter', 'yes', 2),
-(3, 'Enliven Applications', 'http://enlivenapp.com', '_blank', 'Enliven Applications', 'yes', 1);
+  (1, 'Open Blog', 'http://open-blog.org', '_blank', 'Open Blog', 'yes', 3),
+  (2, 'CodeIgniter', 'http://codeigniter.com', '_blank', 'CodeIgniter', 'yes', 2),
+  (3, 'Enliven Applications', 'http://enlivenapp.com', '_blank', 'Enliven Applications', 'yes', 1);
 
 -- split --
 
@@ -203,8 +203,8 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}navigation` (
 -- split --
 
 INSERT INTO `{PREFIX}navigation` (`id`, `title`, `description`, `url`, `external`, `position`) VALUES
-(1, 'Home', 'Home', '', '0', '0'),
-(2, 'Welcome (page)', 'Welcome Page', 'pages/', '0', '1');
+  (1, 'Home', 'Home', '', '0', '0'),
+  (2, 'Welcome (page)', 'Welcome Page', 'pages/', '0', '1');
 
 -- split --
 
@@ -244,7 +244,7 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}pages` (
 -- split --
 
 INSERT INTO `{PREFIX}pages` (`id`, `title`, `url_title`, `author`, `date`, `content`, `status`, `is_home`, `meta_title`, `meta_keywords`, `meta_description`) VALUES
-(1, 'Welcome to Open Blog', 'welcome-to-open-blog', 1, '2016-12-22', '### Welcome\r\n\r\nIf you can see this page, this means Open Blog was successfully installed.\r\n\r\nIf you need help, don\'t hesitate and visit the Open Blog home page.\r\n\r\nSincerely,\r\n\r\nThe Open Blog team\r\n\r\n*Since this is just an example post, feel free to delete it.*', 'active', 1, 'Open Blog Home Page', 'Open, Blog, Open Blog', 'The Open Blog Homepage');
+  (1, 'Welcome to Open Blog', 'welcome-to-open-blog', 1, '2016-12-22', '### Welcome\r\n\r\nIf you can see this page, this means Open Blog was successfully installed.\r\n\r\nIf you need help, don\'t hesitate and visit the Open Blog home page.\r\n\r\nSincerely,\r\n\r\nThe Open Blog team\r\n\r\n*Since this is just an example post, feel free to delete it.*', 'active', 1, 'Open Blog Home Page', 'Open, Blog, Open Blog', 'The Open Blog Homepage');
 
 -- split --
 
@@ -255,7 +255,7 @@ DROP TABLE IF EXISTS `{PREFIX}posts`;
 CREATE TABLE IF NOT EXISTS `{PREFIX}posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `author` int(11) NOT NULL DEFAULT '0',
-  `date_posted` date NOT NULL DEFAULT '0000-00-00',
+  `date_posted` date DEFAULT NULL,
   `title` varchar(200) NOT NULL,
   `url_title` varchar(200) NOT NULL,
   `excerpt` text NOT NULL,
@@ -273,7 +273,7 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}posts` (
 -- split --
 
 INSERT INTO `{PREFIX}posts` (`id`, `author`, `date_posted`, `title`, `url_title`, `excerpt`, `content`, `feature_image`, `allow_comments`, `sticky`, `status`, `meta_title`, `meta_keywords`, `meta_description`) VALUES
-(1, 1, '2016-12-21', 'Welcome to Open Blog', 'welcome-to-open-blog', 'Congratulations! If you can see this page, this means Open Blog was successfully installed. If you need help, don\'t hesitate and visit the Open Blog home page.\r\n', '#### Congratulations!\r\n\r\nIf you can see this page, this means Open Blog was successfully installed.\r\n\r\nIf you need help, don\'t hesitate and visit the Open Blog home page.\r\n\r\nSincerely,\r\n\r\nThe Open Blog team\r\n\r\n*Since this is just an example post, feel free to delete it.*', NULL ,'1', '0', 'published', 'Open Blog Home Page', 'Open, Blog, Open Blog', 'The Open Blog Homepage');
+  (1, 1, '2016-12-21', 'Welcome to Open Blog', 'welcome-to-open-blog', 'Congratulations! If you can see this page, this means Open Blog was successfully installed. If you need help, don\'t hesitate and visit the Open Blog home page.\r\n', '#### Congratulations!\r\n\r\nIf you can see this page, this means Open Blog was successfully installed.\r\n\r\nIf you need help, don\'t hesitate and visit the Open Blog home page.\r\n\r\nSincerely,\r\n\r\nThe Open Blog team\r\n\r\n*Since this is just an example post, feel free to delete it.*', NULL ,'1', '0', 'published', 'Open Blog Home Page', 'Open, Blog, Open Blog', 'The Open Blog Homepage');
 
 -- split --
 
@@ -291,7 +291,7 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}posts_to_categories` (
 -- split --
 
 INSERT INTO `{PREFIX}posts_to_categories` (`id`, `post_id`, `category_id`) VALUES
-(1, 1, 1);
+  (1, 1, 1);
 
 -- split --
 
@@ -327,31 +327,31 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}settings` (
 -- split --
 
 INSERT INTO `{PREFIX}settings` (`name`, `value`, `tab`, `field_type`, `options`, `required`) VALUES
-('admin_email', '{USER-EMAIL}', 'email', 'text', '', 1),
-('allow_comments', '1', 'comments', 'dropdown', '1=yes|0=no', 1),
-('allow_registrations', 'true', 'users', 'dropdown', 'true=yes|false=no', 1),
-('base_controller', 'blog', 'general', 'dropdown', 'blog=blog|pages=pages', 1),
-('blog_description', 'A blog application written with CodeIgniter. Requires PHP and MySQL', 'general', 'text', '', 0),
-('category_list_limit', '10', 'categories', 'dropdown', '10=10|20=20|30=30', 1),
-('email_activation', 'true', 'users', 'dropdown', 'true=yes|false=no', 1),
-('links_per_box', '10', 'links', 'dropdown', '10=10|20=20|30=30', 1),
-('manual_activation', 'false', 'users', 'dropdown', 'true=yes|false=no', 1),
-('mail_protocol', 'mail', 'email', 'dropdown', 'mail=mail|smtp=smtp|sendmail=sendmail', 1),
-('mod_non_user_comments', '1', 'comments', 'dropdown', '1=yes|0=no', 1),
-('mod_user_comments', '0', 'comments', 'dropdown', '1=yes|0=no', 1),
-('months_per_archive', '10', 'archives', 'dropdown', '10=10|20=20|30=30', 1),
-('posts_per_page', '10', 'blog', 'dropdown', '10=10|20=20|30=30', 1),
-('recaptcha_private_key', '', 'captcha', 'text', '', 0),
-('recaptcha_site_key', '', 'captcha', 'text', '', 0),
-('sendmail_path', '/usr/sbin/sendmail', 'email', 'text', '', 0),
-('server_email', '{USER-EMAIL}', 'email', 'text', '', 1),
-('site_name', 'Open Blog', 'general', 'text', '', 1),
-('smtp_host', '', 'email', 'text', '', 0),
-('smtp_pass', '', 'email', 'text', '', 0),
-('smtp_port', '', 'email', 'text', '', 0),
-('smtp_user', '', 'email', 'text', '', 0),
-('use_honeypot', '0', 'captcha', 'dropdown', '1=yes|0=no', 1),
-('use_recaptcha', '0', 'captcha', 'dropdown', '1=yes|0=no', 1);
+  ('admin_email', '{USER-EMAIL}', 'email', 'text', '', 1),
+  ('allow_comments', '1', 'comments', 'dropdown', '1=yes|0=no', 1),
+  ('allow_registrations', 'true', 'users', 'dropdown', 'true=yes|false=no', 1),
+  ('base_controller', 'blog', 'general', 'dropdown', 'blog=blog|pages=pages', 1),
+  ('blog_description', 'A blog application written with CodeIgniter. Requires PHP and MySQL', 'general', 'text', '', 0),
+  ('category_list_limit', '10', 'categories', 'dropdown', '10=10|20=20|30=30', 1),
+  ('email_activation', 'true', 'users', 'dropdown', 'true=yes|false=no', 1),
+  ('links_per_box', '10', 'links', 'dropdown', '10=10|20=20|30=30', 1),
+  ('manual_activation', 'false', 'users', 'dropdown', 'true=yes|false=no', 1),
+  ('mail_protocol', 'mail', 'email', 'dropdown', 'mail=mail|smtp=smtp|sendmail=sendmail', 1),
+  ('mod_non_user_comments', '1', 'comments', 'dropdown', '1=yes|0=no', 1),
+  ('mod_user_comments', '0', 'comments', 'dropdown', '1=yes|0=no', 1),
+  ('months_per_archive', '10', 'archives', 'dropdown', '10=10|20=20|30=30', 1),
+  ('posts_per_page', '10', 'blog', 'dropdown', '10=10|20=20|30=30', 1),
+  ('recaptcha_private_key', '', 'captcha', 'text', '', 0),
+  ('recaptcha_site_key', '', 'captcha', 'text', '', 0),
+  ('sendmail_path', '/usr/sbin/sendmail', 'email', 'text', '', 0),
+  ('server_email', '{USER-EMAIL}', 'email', 'text', '', 1),
+  ('site_name', 'Open Blog', 'general', 'text', '', 1),
+  ('smtp_host', '', 'email', 'text', '', 0),
+  ('smtp_pass', '', 'email', 'text', '', 0),
+  ('smtp_port', '', 'email', 'text', '', 0),
+  ('smtp_user', '', 'email', 'text', '', 0),
+  ('use_honeypot', '0', 'captcha', 'dropdown', '1=yes|0=no', 1),
+  ('use_recaptcha', '0', 'captcha', 'dropdown', '1=yes|0=no', 1);
 
 -- split --
 
@@ -371,13 +371,13 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}sidebar` (
 -- split --
 
 INSERT INTO `{PREFIX}sidebar` (`id`, `title`, `file`, `status`, `position`) VALUES
-(1, 'Search', 'search', 'enabled', '1'),
-(2, 'Archive', 'archive', 'enabled', '2'),
-(3, 'Categories', 'categories', 'enabled', '3'),
-(4, 'Tag_cloud', 'tag_cloud', 'enabled', '4'),
-(5, 'Feeds', 'feeds', 'enabled', '5'),
-(6, 'Links', 'links', 'enabled', '6'),
-(7, 'Other', 'other', 'enabled', '7');
+  (1, 'Search', 'search', 'enabled', '1'),
+  (2, 'Archive', 'archive', 'enabled', '2'),
+  (3, 'Categories', 'categories', 'enabled', '3'),
+  (4, 'Tag_cloud', 'tag_cloud', 'enabled', '4'),
+  (5, 'Feeds', 'feeds', 'enabled', '5'),
+  (6, 'Links', 'links', 'enabled', '6'),
+  (7, 'Other', 'other', 'enabled', '7');
 
 -- split --
 
@@ -396,8 +396,8 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}social` (
 -- split --
 
 INSERT INTO `{PREFIX}social` (`id`, `name`, `url`, `enabled`) VALUES
-(1, 'Facebook', NULL, 0),
-(2, 'Twitter', NULL, 0);
+  (1, 'Facebook', NULL, 0),
+  (2, 'Twitter', NULL, 0);
 
 -- split --
 
@@ -423,8 +423,8 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}templates` (
 -- split --
 
 INSERT INTO `{PREFIX}templates` (`id`, `name`, `description`, `author`, `author_email`, `path`, `image`, `is_default`, `is_active`, `is_admin`, `version`) VALUES
-(1, 'Default', 'The default theme for Open Blog', 'Enliven Applications', 'info@open-blog.org', 'default', 'default.png', '1', '1', '0', '1.0.0'),
-(2, 'Default Admin', 'The default admin theme for Open Blog', 'Enliven Applications', 'info@open-blog.org', 'default_admin', 'default_admin.png', '1', '1', '1', '1.0.0');
+  (1, 'Default', 'The default theme for Open Blog', 'Enliven Applications', 'info@open-blog.org', 'default', 'default.png', '1', '1', '0', '1.0.0'),
+  (2, 'Default Admin', 'The default admin theme for Open Blog', 'Enliven Applications', 'info@open-blog.org', 'default_admin', 'default_admin.png', '1', '1', '1', '1.0.0');
 
 -- split --
 
@@ -456,7 +456,7 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}users` (
 -- split --
 
 INSERT INTO {PREFIX}users (id, ip_address, username, `password`, salt, email, activation_code, forgotten_password_code, forgotten_password_time, remember_code, created_on, last_login, active, first_name, last_name, company, phone) VALUES
-(1, '127.0.0.1', '{USER-NAME}', '{PASSWORD}', '{SALT}', '{USER-EMAIL}', NULL, NULL, NULL, NULL, {NOW}, {NOW}, 1, '{FIRST-NAME}', '{LAST-NAME}', NULL, NULL);
+  (1, '127.0.0.1', '{USER-NAME}', '{PASSWORD}', '{SALT}', '{USER-EMAIL}', NULL, NULL, NULL, NULL, UNIX_TIMESTAMP(), UNIX_TIMESTAMP(), 1, '{FIRST-NAME}', '{LAST-NAME}', NULL, NULL);
 
 -- split --
 
@@ -477,7 +477,7 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}users_groups` (
 -- split --
 
 INSERT INTO `{PREFIX}users_groups` (`id`, `user_id`, `group_id`) VALUES
-(1, 1, 1);
+  (1, 1, 1);
 
 -- split --
 
