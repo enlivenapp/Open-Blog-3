@@ -27,27 +27,26 @@ Please use the [Issues Tracker](https://github.com/enlivenapp/Open-Blog-3/issues
 
 [Open-Blog.org Home](http://open-blog.org)
 
-[Open-Blog.org Blog](http://blog.open-blog.org)  (Working Example and Live Blog)
+[Open-Blog.org Website](http://blog.open-blog.org)  (Working Example and Live Blog)
+[Facebook Page](https://www.facebook.com/openblog.org/)
 
 [User Docs](http://docs.open-blog.org)
 
-OBv1 Project announcement thread - [old, dead link](http://ellislab.com/forums/viewthread/102179/)
-
-OBv1 Project announcement thread - [found original](https://forum.codeigniter.com/thread-14724.html)
+OBv1 Project announcement thread - [old, dead link](http://ellislab.com/forums/viewthread/102179/) - [found original](https://forum.codeigniter.com/thread-14724.html)
 
 ## License Change Notice
 
-Open Blog v1 was released under GPL-v3 license. Open Blog v3+ will be released under the MIT Open Source License.
+Open Blog v3+ is released under the MIT Open Source License.
 
 ## Special Thanks
 
-* [Kami - Original Developer](https://github.com/Kami)
+* [Kami - Original Developer (v1.0.0 - v 1.2.1)](https://github.com/Kami)
+* [Jason Baier](https://github.com/JasonBaier)
 
-## Contributors 
+## Contributors & Team Members 
 
 [Contributing Guidelines](https://github.com/enlivenapp/Open-Blog-3/blob/master/CONTRIBUTING.md) 
 
-* [Jason Baier](https://github.com/JasonBaier)
 * [Samuel Fontebasso](https://github.com/fontebasso) - Tech Support and Team Member
 
 ## Translators
@@ -64,21 +63,3 @@ Open Blog v1 was released under GPL-v3 license. Open Blog v3+ will be released u
 
 * Portuguese
   - [Samuel Fontebasso](https://github.com/fontebasso)
-
-## FAQ
-
-#### Where's Open Blog v2?
-
-A: There isn't one.  Open Blog v2 should have been packaged with Codeigniter 2, however, Open Blog development stopped in 2010 and langished until Dec 2016. 
-
-#### What's going on with OB now?
-
-A: We receive ownership of the code, name and domains in Dec 2016. We're rebuilding the blog software with the latest version of Codeigniter and some fun new things.
-
-#### Will OB be release when Codeigniter 4 is released?
-
-A: Yes, as soon as we can manage, Open Blog v4 will be released with Codeigniter 4.
-
-#### How easy will it be to upgrade from Open Blog 3 to Open Blog 4
-
-A: We don't know yet but we will make the upgrade path as easy as possible.
