@@ -51,9 +51,6 @@ Open Blog v1 was released under GPL-v3 license. Open Blog v3+ will be released u
 * [Samuel Fontebasso](https://github.com/fontebasso) - Tech Support and Team Member
 
 ## Translators
-
-* Portuguese
-  - [Samuel Fontebasso](https://github.com/fontebasso)
   
 * French
   - [Paul DUBOT](https://github.com/keeganpa)
