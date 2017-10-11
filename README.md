@@ -48,9 +48,13 @@ Open Blog v1 was released under GPL-v3 license. Open Blog v3+ will be released u
 [Contributing Guidelines](https://github.com/enlivenapp/Open-Blog-3/blob/master/CONTRIBUTING.md) 
 
 * [Jason Baier](https://github.com/JasonBaier)
+* [Samuel Fontebasso](https://github.com/fontebasso) - Tech Support and Team Member
 
 ## Translators
 
+* Portuguese
+  - [Samuel Fontebasso](https://github.com/fontebasso)
+  
 * French
   - [Paul DUBOT](https://github.com/keeganpa)
   - [Léonard GAURIAU](https://github.com/leoDisjonct)
