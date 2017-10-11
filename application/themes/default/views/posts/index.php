@@ -27,9 +27,12 @@
           	<span class="glyphicon glyphicon-user" aria-hidden="true"></span> <?php echo $post->display_name ?>
           	<span class="glyphicon glyphicon-comment" aria-hidden="true"></span> <?php echo $post->comment_count ?>
             <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+            <?php if ($post->categories): ?>
             <?php foreach ($post->categories as $cat): ?>
                 <?php echo $cat->name ?> 
-              <?php endforeach ?>               
+              <?php endforeach ?> 
+              <?php endif ?>
+
           </small>
         </h4>
         <p><?php echo $post->excerpt ?></p>
