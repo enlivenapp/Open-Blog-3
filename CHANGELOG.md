@@ -3,20 +3,20 @@
 
 ## v3.0.2
 
-	- Updated README
-	- CodeIgniter Updated from 3.1.3 -> 3.1.6
-	- mcrypt_create_iv() depreciated in PHP 7.1+, Updated to check random_bytes() first, then mcrypt_create_iv() for PHP 5.6 - 7.1.x compatibility.
-	- foreach() error in themes/default/views/posts/index.php (Default Theme)
-	- spelling error in application/language/english/blog_lang.php
-	- Portuguese Translation Added
-	- Added this CHANGELOG file
+* Updated README
+* CodeIgniter Updated from 3.1.3 -> 3.1.6
+* mcrypt_create_iv() depreciated in PHP 7.1+, Updated to check random_bytes() first, then mcrypt_create_iv() for PHP 5.6 - 7.1.x compatibility.
+* foreach() error in themes/default/views/posts/index.php (Default Theme)
+* spelling error in application/language/english/blog_lang.php
+* Portuguese Translation Added
+* Added this CHANGELOG file
 
 ## v3.0.1 
 
-	- Fix #56 create mysql 5.7 tables with STRICT_TRANS_TABLES enabled
+* Fix #56 create mysql 5.7 tables with STRICT_TRANS_TABLES enabled
 
 ## v3.0.0 - Initial Public Release
 
-	- Initial Public release with basic functionality
+* Initial Public release with basic functionality
 
 
