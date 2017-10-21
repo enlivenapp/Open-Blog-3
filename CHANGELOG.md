@@ -1,5 +1,11 @@
 # Change Log for Open Blog v3
 
+## v3.0.3
+
+* Fixes #60 (issue)
+* Ion_auth security update
+* MySQL update: ob_login_attempts table -> `ip_address` varchar(15) NOT NULL, TO `ip_address` varchar(45) NOT NULL,
+
 
 ## v3.0.2
 
