@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 
 
-$config['ob_version'] 	= '3.0.2';
+$config['ob_version'] 	= '3.0.3';
 $config['ob_author']	= 'Enliven Applications';
 $config['ob_email']		= 'info@open-blog.org';
 

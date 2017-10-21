@@ -792,8 +792,8 @@ class Ion_auth_model extends CI_Model
 				$key = preg_replace("/[^".$this->config->item('permitted_uri_chars')."]+/i", "-", $key);
 			}
 		}
-
-		$this->forgotten_password_code = $key;
+		// Limit to 40 characters since that's how our DB field is setup
+		$this->forgotten_password_code = substr($key, 0, 40);
 
 		$this->trigger_events('extra_where');
 
@@ -1027,6 +1027,50 @@ class Ion_auth_model extends CI_Model
 
 		return FALSE;
 	}
+
+	/**
+     * recheck_session verifies if the session should be rechecked according to
+     * the configuration item recheck_timer. If it does, then it will check if the user is still active
+     * @return bool
+     */
+	public function recheck_session()
+    {
+        $recheck = (null !== $this->config->item('recheck_timer', 'ion_auth')) ? $this->config->item('recheck_timer', 'ion_auth') : 0;
+        if($recheck!==0)
+        {
+            $last_login = $this->session->userdata('last_check');
+            if($last_login+$recheck < time())
+            {
+                $query = $this->db->select('id')
+                    ->where(array($this->identity_column=>$this->session->userdata('identity'),'active'=>'1'))
+                    ->limit(1)
+                    ->order_by('id', 'desc')
+                    ->get($this->tables['users']);
+                if ($query->num_rows() === 1)
+                {
+                    $this->session->set_userdata('last_check',time());
+                }
+                else
+                {
+                    $this->trigger_events('logout');
+                    $identity = $this->config->item('identity', 'ion_auth');
+                    if (substr(CI_VERSION, 0, 1) == '2')
+                    {
+                        $this->session->unset_userdata( array($identity => '', 'id' => '', 'user_id' => '') );
+                    }
+                    else
+                    {
+                        $this->session->unset_userdata( array($identity, 'id', 'user_id') );
+                    }
+                    return false;
+                }
+            }
+        }
+        return (bool) $this->session->userdata('identity');
+    }
+
+
+
 
 	/**
 	 * is_max_login_attempts_exceeded

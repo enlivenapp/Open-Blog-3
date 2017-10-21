@@ -178,7 +178,7 @@ DROP TABLE IF EXISTS `{PREFIX}login_attempts`;
 
 CREATE TABLE IF NOT EXISTS `{PREFIX}login_attempts` (
   `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `ip_address` varchar(15) NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
   `login` varchar(100) NOT NULL,
   `time` int(11) UNSIGNED DEFAULT NULL,
   PRIMARY KEY (`id`)
