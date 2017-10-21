@@ -5,7 +5,7 @@
 * Fixes #60 (issue)
 * Ion_auth security update
 * MySQL update: ob_login_attempts table -> `ip_address` varchar(15) NOT NULL, TO `ip_address` varchar(45) NOT NULL,
-
+* Added migration (IPV6 Support) for existing installations
 
 ## v3.0.2
 
