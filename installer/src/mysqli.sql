@@ -328,17 +328,17 @@ CREATE TABLE IF NOT EXISTS `{PREFIX}settings` (
 
 INSERT INTO `{PREFIX}settings` (`name`, `value`, `tab`, `field_type`, `options`, `required`) VALUES
   ('admin_email', '{USER-EMAIL}', 'email', 'text', '', 1),
-  ('allow_comments', '1', 'comments', 'dropdown', '1=yes|0=no', 1),
-  ('allow_registrations', 'true', 'users', 'dropdown', 'true=yes|false=no', 1),
+  ('allow_comments', '1', 'comments', 'checkbox', '', 1),
+  ('allow_registrations', '1', 'users', 'checkbox', '', 1),
   ('base_controller', 'blog', 'general', 'dropdown', 'blog=blog|pages=pages', 1),
   ('blog_description', 'A blog application written with CodeIgniter. Requires PHP and MySQL', 'general', 'text', '', 0),
   ('category_list_limit', '10', 'categories', 'dropdown', '10=10|20=20|30=30', 1),
-  ('email_activation', 'true', 'users', 'dropdown', 'true=yes|false=no', 1),
+  ('email_activation', '1', 'users', 'checkbox', '', 1),
   ('links_per_box', '10', 'links', 'dropdown', '10=10|20=20|30=30', 1),
-  ('manual_activation', 'false', 'users', 'dropdown', 'true=yes|false=no', 1),
+  ('manual_activation', '0', 'users', 'checkbox', '', 1),
   ('mail_protocol', 'mail', 'email', 'dropdown', 'mail=mail|smtp=smtp|sendmail=sendmail', 1),
-  ('mod_non_user_comments', '1', 'comments', 'dropdown', '1=yes|0=no', 1),
-  ('mod_user_comments', '0', 'comments', 'dropdown', '1=yes|0=no', 1),
+  ('mod_non_user_comments', '1', 'comments', 'checkbox', '', 1),
+  ('mod_user_comments', '0', 'comments', 'checkbox', '', 1),
   ('months_per_archive', '10', 'archives', 'dropdown', '10=10|20=20|30=30', 1),
   ('posts_per_page', '10', 'blog', 'dropdown', '10=10|20=20|30=30', 1),
   ('recaptcha_private_key', '', 'captcha', 'text', '', 0),
@@ -350,8 +350,8 @@ INSERT INTO `{PREFIX}settings` (`name`, `value`, `tab`, `field_type`, `options`,
   ('smtp_pass', '', 'email', 'text', '', 0),
   ('smtp_port', '', 'email', 'text', '', 0),
   ('smtp_user', '', 'email', 'text', '', 0),
-  ('use_honeypot', '0', 'captcha', 'dropdown', '1=yes|0=no', 1),
-  ('use_recaptcha', '0', 'captcha', 'dropdown', '1=yes|0=no', 1);
+  ('use_honeypot', '0', 'captcha', 'checkbox', '', 1),
+  ('use_recaptcha', '0', 'captcha', 'checkbox', '', 1);
 
 -- split --
 

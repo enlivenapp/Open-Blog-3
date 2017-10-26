@@ -112,8 +112,8 @@ class Obcore
 	}
 
 
-
-		public function build_form_field($field_type, $name, $cur_val, $options=null)
+	// show_text applies to radio and check boxes only.
+	public function build_form_field($field_type, $name, $cur_val, $options=null, $inline=true, $show_text=false)
 	{
 		if ($field_type == 'radio')
 		{
@@ -132,11 +132,39 @@ class Obcore
 						'class'		=> 'form-control',
 						'checked'	=> $checked
 					];
-					$radio .= '<label>' . form_radio($data) . ' ' . lang($parts[1]) . '</label><br>';
+
+					if ($inline)
+					{
+						$radio .= '<label class="radio-inline">';
+  						$radio .= form_radio($data);
+
+  						if ($show_text)
+  						{
+  							$radio .= ' ' . lang($parts[1]);
+  						} 
+						$radio .= '</label>';
+					}
+					else
+					{
+						$radio .= '<label>' . form_radio($data) . ' ' . lang($parts[1]) . '</label> ';
+					}
+					
 				}
 
 			}
 			return $radio;
+		}
+
+		if ($field_type == 'checkbox')
+		{
+			$checked = ($cur_val == '1') ? " " . humanize($name) : '';
+			
+			$checkbox = '<div class="checkbox"><label>';
+			$checkbox .= form_checkbox($name, '1', $checked);
+			$checkbox .= ($show_text) ? TRUE : FALSE;
+			$checkbox .= '</label></div>';
+
+  			return $checkbox;
 		}
 		// it's a dropdown
 		elseif ($field_type == 'dropdown')

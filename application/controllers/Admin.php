@@ -121,8 +121,11 @@ class Admin extends OB_AdminController {
             {
             	// get the list of settings
 				$data = $this->Admin_m->get_settings_list();
+				$data->message = lang('settings_update_failed');
                 $this->template->build('admin/settings/index', $data);
             }
+
+
             // form_validation succeeded
             // let's insert the new values
             // and move on.
@@ -133,9 +136,9 @@ class Admin extends OB_AdminController {
             }
             else
             {
-            	$data['message'] = lang('settings_update_failed');
             	// get the list of settings
 				$data = $this->Admin_m->get_settings_list();
+				$data->message = lang('settings_update_failed');
 				$this->template->build('admin/settings/index', $data);
             }
 		}
@@ -143,7 +146,6 @@ class Admin extends OB_AdminController {
 		{
 			// get the list of settings
 			$data = $this->Admin_m->get_settings_list();
-
 			$this->template->build('admin/settings/index', $data);
 		}
 	}

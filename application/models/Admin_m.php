@@ -116,6 +116,7 @@ class Admin_m extends CI_Model
      * update_settings
      * 
      * Updates the settings from the admin 
+     * Refactored for v3.1
      *
      * @access  public
      * @author  Enliven Applications
@@ -131,22 +132,37 @@ class Admin_m extends CI_Model
 			// nope, fail
 			return FALSE;
 		}
+		$new_settings = $this->input->post();
 
-		// there is, so we'll check the db for that $k
-		foreach ($this->input->post() as $k => $v)
+		$settings_list = $this->db->get('settings')->result();
+
+		foreach ($settings_list as $setting)
 		{
-			// does $k exist in the db?
-			// if so, update it.
-			if (! $this->db->where('name', $k)->update('settings', ['value' => $v]))
+			
+			if ( ! array_key_exists($setting->name, $new_settings) && $setting->field_type == 'checkbox')
 			{
-				// no, someone adding stuff to the
-				// post()?  fail and bail!
-				return false;
+				if (! $this->db->where('name', $setting->name)->update('settings', ['value' => '0']))
+				{
+					// fail!  no cookie for you
+					return false;
+				}
+			}
+			else
+			{
+				foreach ($this->input->post() as $k => $v)
+				{
+					// does $k exist in the db?
+					// if so, update it.
+					if (! $this->db->where('name', $k)->update('settings', ['value' => $v]))
+					{
+						// no, someone adding stuff to the
+						// post() or the db went away?  fail and bail!
+						return false;
+					}
+				}
 			}
 		}
-
-		// something's gone wrong, fail and bail
-		return false;
+		return true;
 	}
 
 	/**
@@ -162,7 +178,7 @@ class Admin_m extends CI_Model
      */
 	public function get_required_settings()
 	{
-		return $this->db->where('required', 1)->get('settings')->result();
+		return $this->db->where('required', 1)->where_not_in('field_type', 'checkbox')->get('settings')->result();
 	}
 
 	/**

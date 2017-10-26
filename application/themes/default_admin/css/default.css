@@ -129,3 +129,12 @@ img {
 .main .page-header {
   margin-top: 0;
 }
+
+.settingshr {
+  margin-top: 20px;
+margin-bottom: 20px;
+border: 0;
+border-top: 1px dashed #ddd
+}
+
+

@@ -6,7 +6,7 @@
         <?= validation_errors() ?>
     </div>
     <?php if (isset($message)): ?>
-    <div>
+    <div class="alert alert-warning" role="alert">
         <?= $message ?>
     </div>
     <?php endif ?>
@@ -26,14 +26,28 @@
         <div role="tabpanel" class="tab-pane fade<?php echo ($count == 0) ? ' in active': ''; ?>" id="<?= $tab->tab ?>">
             <?php foreach ($tab->list as $item): ?>
             <div class="form-group">
-                <label for="<?= $item->name ?>" class="col-sm-2 control-label"><?= lang($item->name . '_label') ?></label>
-                <div class="col-sm-10">
+                <label for="<?= $item->name ?>" class="col-sm-8 control-label"><?= lang($item->name . '_label') ?>
                     <span id="helpBlock" class="help-block"><?= lang($item->name . '_desc') ?></span>
-                    <?= $item->input ?>
-                    <hr>
+                </label>
+
+                <div class="col-sm-4">
+                    <p><?= $item->input ?></p>
                 </div>
             </div>
+            <hr><p class="settingshr">&nbsp;</p>
+            <?php if ($item->field_type == 'radio' || $item->field_type == 'checkbox'): ?>
+                <script type="text/javascript">
+                    var options = {
+                        onText: "<?= lang('yes') ?>",
+                        offText: "<?= lang('no') ?>",
+                        onColor: 'success',
+                    };
+                    $("[name='<?= $item->name ?>']").bootstrapSwitch(options);
+                </script>
+            <?php endif ?>
+
             <?php endforeach ?>
+
         </div>
     <?php $count++ ?>
     <?php endforeach ?>
