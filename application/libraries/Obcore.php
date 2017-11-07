@@ -117,9 +117,10 @@ class Obcore
 	{
 		if ($field_type == 'radio')
 		{
+			$radio = '';
 			if (!empty($options))
 			{
-				$radio = '';
+				
 				$options_arr = explode("|", $options);
 				foreach ($options_arr as $option)
 				{
