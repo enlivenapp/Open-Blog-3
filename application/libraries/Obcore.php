@@ -317,6 +317,7 @@ class Obcore
 				$config['smtp_user'] = $this->ci->config->item('smtp_user');
 				$config['smtp_pass'] = $this->ci->config->item('smtp_pass');
 				$config['smtp_port'] = $this->ci->config->item('smtp_port');
+				$config['smtp_crypto'] = $this->ci->config->item('smtp_crypto');
 				break;
 
 			// lastly, sendmail
