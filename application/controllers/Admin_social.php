@@ -93,7 +93,7 @@ class Admin_social extends OB_AdminController {
 		{
 			// yup, set rules
 			$this->form_validation->set_rules('name', lang('social_form_name'), 'required');
-			$this->form_validation->set_rules('url', lang('social_form_url'), 'required');
+			$this->form_validation->set_rules('url', lang('social_form_url'), 'required|prep_url');
 			$this->form_validation->set_rules('enabled', lang('social_form_active'), 'required');
 		}
 
@@ -134,7 +134,7 @@ class Admin_social extends OB_AdminController {
 		{
 			// yup, set validation rules
 			$this->form_validation->set_rules('name', lang('social_form_name'), 'required');
-			$this->form_validation->set_rules('url', lang('social_form_url'), 'required');
+			$this->form_validation->set_rules('url', lang('social_form_url'), 'required|prep_url');
 			$this->form_validation->set_rules('enabled', lang('social_form_active'), 'required');
 		}
 
