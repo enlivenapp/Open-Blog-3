@@ -63,6 +63,8 @@ $lang['smtp_pass_label']					= "SMTP Password";
 $lang['smtp_pass_desc']						= "(Required if usung SMTP) Enter the SMTP Password for your username";
 $lang['smtp_port_label']					= "SMTP Port";
 $lang['smtp_port_desc']						= "(Required if usung SMTP) Enter the SMTP Port number provided by your host.";
+$lang['smtp_crypto_label']					= "SMTP Crypt";
+$lang['smtp_crypto_desc']					= "(Required if usung SMTP) Choose a Cryptographic method your server requires to connect to it.";
 $lang['admin_email_label']					= "Admin Email";
 $lang['admin_email_desc']					= "The email address in which you would like to receive notices from the website.";
 $lang['server_email_label']					= "Server Email";
@@ -403,4 +405,6 @@ $lang['permission_check_failed']			= "You must be an logged in and have permissi
 // installer directory warning
 $lang['installer_dir_warning_notice']		= "The /installer/ directory is still present.  For better security you should delete the installer/ directory and it's contents immediately!";
 
+$lang['SSL']						= "Secure Socket layer (SSL)";
+$lang['TLS']						= "Transport Layer Security (TLS)";
 

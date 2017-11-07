@@ -63,6 +63,8 @@ $lang['smtp_pass_label']					= "SMTP Password";
 $lang['smtp_pass_desc']						= "(Nécessaire si vous utilisez SMTP) Entrez le mot de passe de votre compte SMTP.";
 $lang['smtp_port_label']					= "SMTP Port";
 $lang['smtp_port_desc']						= "(Nécessaire si vous utilisez SMTP) Entrez le port renseigné par l'hôte de votre serveur SMTP.";
+$lang['smtp_crypto_label']					= "SMTP Crypt";
+$lang['smtp_crypto_desc']					= "(Required if usung SMTP) Choose a Cryptographic method your server requires to connect to it.";
 $lang['admin_email_label']					= "EMail Admin";
 $lang['admin_email_desc']					= "L'adresse mail sur laquelle vous souhaitez recevoir des notifications à propos du site.";
 $lang['server_email_label']					= "Email Serveur";
@@ -392,3 +394,6 @@ $lang['permission_check_failed']			= "Vous devez être connecté et avoir les pe
 
 // installer directory warning
 $lang['installer_dir_warning_notice']		= "Le dossier /installer/ est toujours présent.  Pour plus de sécurité le dossier installer/ et son contenu doivent être supprimés immédiatement!";
+
+$lang['SSL']						= "Secure Socket layer (SSL)";
+$lang['TLS']						= "Transport Layer Security (TLS)";

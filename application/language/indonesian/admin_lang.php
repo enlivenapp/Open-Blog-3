@@ -63,6 +63,8 @@ $lang['smtp_pass_label']					= "Password SMTP";
 $lang['smtp_pass_desc']						= "(Diperlukan jika menggunakan SMTP) Masukkan Password SMTP untuk username Anda";
 $lang['smtp_port_label']					= "Port SMTP";
 $lang['smtp_port_desc']						= "(Diperlukan jika menggunakan SMTP) Masukkan nomor Port SMTP yang disediakan oleh host Anda.";
+$lang['smtp_crypto_label']					= "SMTP Crypt";
+$lang['smtp_crypto_desc']					= "(Required if usung SMTP) Choose a Cryptographic method your server requires to connect to it.";
 $lang['admin_email_label']					= "Admin Email";
 $lang['admin_email_desc']					= "Alamat email di mana Anda ingin menerima pemberitahuan dari situs web.";
 $lang['server_email_label']					= "Server Email";
@@ -404,3 +406,5 @@ $lang['permission_check_failed']			= "Anda harus masuk log dan memiliki izin unt
 $lang['installer_dir_warning_notice']		= "Direktori /installer/ masih ada.  Untuk keamanan yang lebih baik, Anda harus menghapus direktori installer/ dan isi itu segera!";
 
 
+$lang['SSL']						= "Secure Socket layer (SSL)";
+$lang['TLS']						= "Transport Layer Security (TLS)";
