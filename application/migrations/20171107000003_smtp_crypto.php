@@ -7,7 +7,9 @@ class Migration_smtp_crypto extends CI_Migration {
         public function up()
         {
 
-			$insert_smtp_crypto = array(
+        	if ( ! $this->db->field_exists('smtp_crypto', 'settings'))
+			{
+			        $insert_smtp_crypto = array(
 							'name' 			=> 'smtp_crypto',
 							'value' 		=> 'tls',
 							'tab' 			=>	'email',
@@ -15,7 +17,8 @@ class Migration_smtp_crypto extends CI_Migration {
 							'options' 		=> 'tls=TLS|ssl=SSL',
 							'required' 		=> '0'
 						);
-			$this->db->insert('settings', $insert_smtp_crypto);    
+					$this->db->insert('settings', $insert_smtp_crypto);
+			}
 
 			$this->db->where('name', 'category_list_limit')->update('settings', array('tab' => 'limits'));
 			$this->db->where('name', 'links_per_box')->update('settings', array('tab' => 'limits'));
