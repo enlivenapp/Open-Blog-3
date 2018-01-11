@@ -350,7 +350,6 @@ INSERT INTO `{PREFIX}settings` (`name`, `value`, `tab`, `field_type`, `options`,
   ('smtp_pass', '', 'email', 'text', '', 0),
   ('smtp_port', '', 'email', 'text', '', 0),
   ('smtp_user', '', 'email', 'text', '', 0),
-  ('smtp_crypto', '', 'email', 'dropdown', 'tls=TLS|ssl=SSL', 0),
   ('use_honeypot', '0', 'captcha', 'dropdown', '1=yes|0=no', 1),
   ('use_recaptcha', '0', 'captcha', 'dropdown', '1=yes|0=no', 1);
 
