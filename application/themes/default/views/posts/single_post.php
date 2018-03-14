@@ -1,22 +1,29 @@
 <?php if ($post): ?>
 <div class="row">
 	<div class="col-sm-9">
-		<h3><?php echo $post['title'] ?></h3>
-		<?php if($post['feature_image']): ?>
-          <img src="<?= base_url('uploads/' . $post['feature_image']) ?>" class="img-responsive" alt="<?php echo $post['title'] ?>">
-        <?php endif ?>
+		<div class="post-title">
+			<h3><?php echo $post['title'] ?></h3>
+		</div>
+		<div class="feature-image">
+			<?php if($post['feature_image']): ?>
+          		<img src="<?= base_url('uploads/' . $post['feature_image']) ?>" class="img-responsive" alt="<?php echo $post['title'] ?>">
+        	<?php endif ?>
+    	</div>
         <h4>
           <small class="text-muted">
-          	<span class="glyphicon glyphicon-time" aria-hidden="true"><time class="post-date" datetime="<?php echo date("D, d M Y H:i:s T", strtotime($post['date_posted'])) ?>"></span> <?= $post['date_posted'] ?>
-          	<span class="glyphicon glyphicon-user" aria-hidden="true"></span> <?php echo $post['display_name'] ?>
-            <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> <?php echo $post['comment_count'] ?>
-            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> 
+          	<span class="glyphicon glyphicon-time date-posted" aria-hidden="true"><time class="post-date" datetime="<?php echo date("D, d M Y H:i:s T", strtotime($post['date_posted'])) ?>"></span> <?= $post['date_posted'] ?>
+          	<span class="glyphicon glyphicon-user post-username" aria-hidden="true"></span> <?php echo $post['display_name'] ?>
+            <span class="glyphicon glyphicon-comment post-comment-count" aria-hidden="true"></span> <?php echo $post['comment_count'] ?>
+            <span class="glyphicon glyphicon-list-alt post-categories" aria-hidden="true"></span> 
               <?php foreach ($post['categories'] as $cat): ?>
                 <?php echo $cat->name ?> 
               <?php endforeach ?> 
           </small>
         </h4>
-        <?php echo $post['content'] ?>
+        <div class="post-content">
+        	<?php echo $post['content'] ?>
+        </div>
+        
         <h4>
           <small class="text-muted">
             
