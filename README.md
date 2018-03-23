@@ -1,5 +1,14 @@
 # Open-Blog v3
 
+## Open Blog is now Pubvana
+
+[Github](https://github.com/enlivenapp/pubvana)  [Website](https://pubvana.org)
+
+
+### This repo is no longer maintained.  Use Pubvana.
+
+------
+
 Open Blog is a free and open source blogging platform built using the CodeIgniter PHP framework. It provides users with a very powerful yet easy to use interface which makes blogging simple and enjoyable.
 
 
